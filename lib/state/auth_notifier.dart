@@ -43,7 +43,13 @@ class AuthNotifier extends ChangeNotifier {
   void clearNotice() => _notice = null;
 
   Future<void> restore() async {
-    final raw = _prefs.getString(_storageKey);
+    String? raw;
+    try {
+      raw = _prefs.getString(_storageKey);
+    } catch (_) {
+      await _forget();
+      return;
+    }
     if (raw == null) return;
     try {
       final map = jsonDecode(raw) as Map<String, dynamic>;

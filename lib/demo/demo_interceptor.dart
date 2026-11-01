@@ -30,7 +30,12 @@ class DemoInterceptor extends Interceptor {
     final schema =
         jsonDecode(await rootBundle.loadString('assets/demo_schema.json'))
             as Map<String, dynamic>;
-    final stored = prefs.getString(_storageKey);
+    String? stored;
+    try {
+      stored = prefs.getString(_storageKey);
+    } catch (_) {
+      stored = null;
+    }
     if (stored != null) {
       try {
         final state = jsonDecode(stored) as Map<String, dynamic>;

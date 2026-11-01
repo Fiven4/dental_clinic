@@ -28,8 +28,9 @@ Future<Harness> pumpApp(
   WidgetTester tester, {
   (String, String)? login,
   String location = '/',
+  Size size = const Size(1400, 900),
 }) async {
-  tester.view.physicalSize = const Size(1400, 900);
+  tester.view.physicalSize = size;
   tester.view.devicePixelRatio = 1.0;
   addTearDown(tester.view.reset);
   final env = await DemoEnv.create();
@@ -285,4 +286,66 @@ void main() {
     expect(find.byKey(const ValueKey('nav-cash')), findsOneWidget);
     expect(find.byKey(const ValueKey('nav-users')), findsNothing);
   });
+
+  const sweeps = {
+    'администратор': (
+      _admin,
+      [
+        '/report',
+        '/schedule',
+        '/appointments',
+        '/patients',
+        '/cards',
+        '/doctors',
+        '/services',
+        '/categories',
+        '/specializations',
+        '/cabinets',
+        '/admin/users',
+        '/appointments/new',
+        '/patients/new',
+        '/doctors/new',
+        '/services/new',
+        '/admin/users/new',
+      ],
+    ),
+    'регистратор': (
+      _registrar,
+      [
+        '/schedule',
+        '/appointments',
+        '/patients',
+        '/cards',
+        '/cash',
+        '/cash/new',
+      ],
+    ),
+    'врач': (
+      _doctor,
+      ['/my-day', '/appointments', '/patients', '/cards', '/services'],
+    ),
+  };
+  for (final entry in sweeps.entries) {
+    for (final width in [360.0, 768.0, 1920.0]) {
+      testWidgets(
+        'адаптивность: ${entry.key}, ширина ${width.toInt()} px — экраны без переполнений',
+        (tester) async {
+          final h = await pumpApp(
+            tester,
+            login: entry.value.$1,
+            size: Size(width, width < 600 ? 740 : 1000),
+          );
+          for (final route in entry.value.$2) {
+            h.router.go(route);
+            await tester.pumpAndSettle();
+            expect(
+              tester.takeException(),
+              isNull,
+              reason: 'маршрут $route при ширине $width',
+            );
+          }
+        },
+      );
+    }
+  }
 }
