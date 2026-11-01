@@ -1,0 +1,8437 @@
+{
+ "users": [
+  {
+   "name": "Смирнова Елена Александровна",
+   "email": "admin@clinic.test",
+   "password": "Admin123!",
+   "role": "admin"
+  },
+  {
+   "name": "Кузнецова Наталья Владимировна",
+   "email": "registrar@clinic.test",
+   "password": "Registrar123!",
+   "role": "registrar"
+  },
+  {
+   "name": "Попова Ирина Сергеевна",
+   "email": "registrar2@clinic.test",
+   "password": "Registrar123!",
+   "role": "registrar"
+  },
+  {
+   "name": "Соколова Анна Петровна",
+   "email": "doctor@clinic.test",
+   "password": "Doctor123!",
+   "role": "doctor"
+  },
+  {
+   "name": "Громов Дмитрий Игоревич",
+   "email": "doctor2@clinic.test",
+   "password": "Doctor123!",
+   "role": "doctor"
+  },
+  {
+   "name": "Рябов Михаил Сергеевич",
+   "email": "doctor3@clinic.test",
+   "password": "Doctor123!",
+   "role": "doctor"
+  },
+  {
+   "name": "Ефимова Ольга Викторовна",
+   "email": "doctor4@clinic.test",
+   "password": "Doctor123!",
+   "role": "doctor"
+  },
+  {
+   "name": "Белова Татьяна Николаевна",
+   "email": "doctor5@clinic.test",
+   "password": "Doctor123!",
+   "role": "doctor"
+  },
+  {
+   "name": "Орлова Екатерина Андреевна",
+   "email": "doctor6@clinic.test",
+   "password": "Doctor123!",
+   "role": "doctor"
+  }
+ ],
+ "specializations": [
+  {
+   "name": "Терапевт",
+   "description": "Лечение кариеса, пульпита, реставрация зубов"
+  },
+  {
+   "name": "Ортодонт",
+   "description": "Исправление прикуса, брекет-системы, элайнеры"
+  },
+  {
+   "name": "Хирург-имплантолог",
+   "description": "Удаление зубов, имплантация, костная пластика"
+  },
+  {
+   "name": "Ортопед",
+   "description": "Коронки, виниры, протезирование"
+  },
+  {
+   "name": "Детский стоматолог",
+   "description": "Лечение и профилактика у детей"
+  },
+  {
+   "name": "Гигиенист",
+   "description": "Профессиональная чистка и отбеливание"
+  }
+ ],
+ "cabinets": [
+  {
+   "number": "101",
+   "floor": 1,
+   "equipment": "Стоматологическая установка, радиовизиограф"
+  },
+  {
+   "number": "102",
+   "floor": 1,
+   "equipment": "Стоматологическая установка, микроскоп"
+  },
+  {
+   "number": "103",
+   "floor": 1,
+   "equipment": "Установка для гигиены, пескоструйный аппарат"
+  },
+  {
+   "number": "201",
+   "floor": 2,
+   "equipment": "Операционная, конусно-лучевой томограф"
+  },
+  {
+   "number": "202",
+   "floor": 2,
+   "equipment": "Ортопедический кабинет, 3D-сканер"
+  },
+  {
+   "number": "104",
+   "floor": 1,
+   "equipment": "Детский кабинет, игровая зона"
+  }
+ ],
+ "categories": [
+  {
+   "name": "Диагностика",
+   "description": "Осмотр, снимки, консультации"
+  },
+  {
+   "name": "Терапия",
+   "description": "Лечение зубов"
+  },
+  {
+   "name": "Хирургия",
+   "description": "Удаление и имплантация"
+  },
+  {
+   "name": "Ортопедия",
+   "description": "Протезирование"
+  },
+  {
+   "name": "Ортодонтия",
+   "description": "Исправление прикуса"
+  },
+  {
+   "name": "Гигиена",
+   "description": "Чистка и отбеливание"
+  }
+ ],
+ "services": [
+  {
+   "name": "Первичная консультация",
+   "category": 0,
+   "price": 800,
+   "durationMin": 30,
+   "description": ""
+  },
+  {
+   "name": "Осмотр и план лечения",
+   "category": 0,
+   "price": 0,
+   "durationMin": 20,
+   "description": ""
+  },
+  {
+   "name": "Прицельный снимок зуба",
+   "category": 0,
+   "price": 500,
+   "durationMin": 10,
+   "description": ""
+  },
+  {
+   "name": "Панорамный снимок",
+   "category": 0,
+   "price": 1500,
+   "durationMin": 15,
+   "description": ""
+  },
+  {
+   "name": "Лечение кариеса",
+   "category": 1,
+   "price": 4500,
+   "durationMin": 60,
+   "description": ""
+  },
+  {
+   "name": "Лечение пульпита (один канал)",
+   "category": 1,
+   "price": 7500,
+   "durationMin": 90,
+   "description": ""
+  },
+  {
+   "name": "Пломба светоотверждаемая",
+   "category": 1,
+   "price": 3500,
+   "durationMin": 45,
+   "description": ""
+  },
+  {
+   "name": "Лечение каналов (повторное)",
+   "category": 1,
+   "price": 9500,
+   "durationMin": 90,
+   "description": ""
+  },
+  {
+   "name": "Удаление зуба простое",
+   "category": 2,
+   "price": 3000,
+   "durationMin": 30,
+   "description": ""
+  },
+  {
+   "name": "Удаление зуба мудрости",
+   "category": 2,
+   "price": 7500,
+   "durationMin": 60,
+   "description": ""
+  },
+  {
+   "name": "Имплантация (системa Osstem)",
+   "category": 2,
+   "price": 38000,
+   "durationMin": 90,
+   "description": ""
+  },
+  {
+   "name": "Синус-лифтинг",
+   "category": 2,
+   "price": 28000,
+   "durationMin": 90,
+   "description": ""
+  },
+  {
+   "name": "Коронка металлокерамическая",
+   "category": 3,
+   "price": 14000,
+   "durationMin": 60,
+   "description": ""
+  },
+  {
+   "name": "Коронка циркониевая",
+   "category": 3,
+   "price": 28000,
+   "durationMin": 60,
+   "description": ""
+  },
+  {
+   "name": "Винир керамический",
+   "category": 3,
+   "price": 32000,
+   "durationMin": 90,
+   "description": ""
+  },
+  {
+   "name": "Снятие слепка",
+   "category": 3,
+   "price": 1500,
+   "durationMin": 20,
+   "description": ""
+  },
+  {
+   "name": "Установка брекет-системы",
+   "category": 4,
+   "price": 45000,
+   "durationMin": 120,
+   "description": ""
+  },
+  {
+   "name": "Коррекция брекетов",
+   "category": 4,
+   "price": 3500,
+   "durationMin": 30,
+   "description": ""
+  },
+  {
+   "name": "Изготовление элайнеров",
+   "category": 4,
+   "price": 90000,
+   "durationMin": 60,
+   "description": ""
+  },
+  {
+   "name": "Профессиональная гигиена",
+   "category": 5,
+   "price": 5500,
+   "durationMin": 60,
+   "description": ""
+  },
+  {
+   "name": "Отбеливание Zoom",
+   "category": 5,
+   "price": 18000,
+   "durationMin": 90,
+   "description": ""
+  },
+  {
+   "name": "Покрытие фторлаком",
+   "category": 5,
+   "price": 1800,
+   "durationMin": 20,
+   "description": ""
+  },
+  {
+   "name": "Герметизация фиссур",
+   "category": 5,
+   "price": 2500,
+   "durationMin": 30,
+   "description": ""
+  },
+  {
+   "name": "Лечение молочного зуба",
+   "category": 1,
+   "price": 3800,
+   "durationMin": 45,
+   "description": ""
+  }
+ ],
+ "doctors": [
+  {
+   "fullName": "Соколова Анна Петровна",
+   "specialization": 0,
+   "cabinet": 0,
+   "experienceYears": 12,
+   "phone": "+7 495 100-20-01",
+   "userEmail": "doctor@clinic.test"
+  },
+  {
+   "fullName": "Громов Дмитрий Игоревич",
+   "specialization": 1,
+   "cabinet": 1,
+   "experienceYears": 9,
+   "phone": "+7 495 100-20-02",
+   "userEmail": "doctor2@clinic.test"
+  },
+  {
+   "fullName": "Рябов Михаил Сергеевич",
+   "specialization": 2,
+   "cabinet": 3,
+   "experienceYears": 15,
+   "phone": "+7 495 100-20-03",
+   "userEmail": "doctor3@clinic.test"
+  },
+  {
+   "fullName": "Ефимова Ольга Викторовна",
+   "specialization": 3,
+   "cabinet": 4,
+   "experienceYears": 11,
+   "phone": "+7 495 100-20-04",
+   "userEmail": "doctor4@clinic.test"
+  },
+  {
+   "fullName": "Белова Татьяна Николаевна",
+   "specialization": 4,
+   "cabinet": 5,
+   "experienceYears": 7,
+   "phone": "+7 495 100-20-05",
+   "userEmail": "doctor5@clinic.test"
+  },
+  {
+   "fullName": "Орлова Екатерина Андреевна",
+   "specialization": 5,
+   "cabinet": 2,
+   "experienceYears": 5,
+   "phone": "+7 495 100-20-06",
+   "userEmail": "doctor6@clinic.test"
+  }
+ ],
+ "patients": [
+  {
+   "fullName": "Николаев Михаил Андреевич",
+   "birthDate": "1983-02-22",
+   "phone": "+7 996 434-68-92",
+   "email": "",
+   "address": ""
+  },
+  {
+   "fullName": "Волкова Екатерина Михайловна",
+   "birthDate": "1989-02-24",
+   "phone": "+7 991 210-87-10",
+   "email": "volkov2@mail.test",
+   "address": ""
+  },
+  {
+   "fullName": "Васильев Никита Александрович",
+   "birthDate": "2009-03-02",
+   "phone": "+7 926 713-81-96",
+   "email": "vasilev3@mail.test",
+   "address": ""
+  },
+  {
+   "fullName": "Козлов Матвей Александрович",
+   "birthDate": "2016-10-25",
+   "phone": "+7 942 440-23-78",
+   "email": "kozlov4@mail.test",
+   "address": "г. Москва, ул. Парковая, д. 51, кв. 27"
+  },
+  {
+   "fullName": "Васильева Ольга Алексеевна",
+   "birthDate": "1970-03-13",
+   "phone": "+7 969 675-86-91",
+   "email": "vasilev5@mail.test",
+   "address": "г. Москва, ул. Школьная, д. 56, кв. 1"
+  },
+  {
+   "fullName": "Васильева Татьяна Игоревна",
+   "birthDate": "1981-12-26",
+   "phone": "+7 962 572-95-50",
+   "email": "vasilev6@mail.test",
+   "address": ""
+  },
+  {
+   "fullName": "Козлов Максим Дмитриевич",
+   "birthDate": "1958-03-21",
+   "phone": "+7 938 674-88-95",
+   "email": "kozlov7@mail.test",
+   "address": ""
+  },
+  {
+   "fullName": "Васильев Дмитрий Михайлович",
+   "birthDate": "1953-02-28",
+   "phone": "+7 999 674-20-37",
+   "email": "vasilev8@mail.test",
+   "address": "г. Москва, ул. Садовая, д. 57, кв. 44"
+  },
+  {
+   "fullName": "Андреев Александр Андреевич",
+   "birthDate": "1957-09-25",
+   "phone": "+7 913 642-21-42",
+   "email": "andreev9@mail.test",
+   "address": "г. Москва, ул. Садовая, д. 33, кв. 23"
+  },
+  {
+   "fullName": "Андреев Артём Алексеевич",
+   "birthDate": "1987-08-14",
+   "phone": "+7 953 866-21-43",
+   "email": "andreev10@mail.test",
+   "address": ""
+  },
+  {
+   "fullName": "Андреева Анна Сергеевна",
+   "birthDate": "2017-04-24",
+   "phone": "+7 999 431-27-44",
+   "email": "andreev11@mail.test",
+   "address": "г. Москва, ул. Парковая, д. 7, кв. 72"
+  },
+  {
+   "fullName": "Орлова Екатерина Михайловна",
+   "birthDate": "1992-12-01",
+   "phone": "+7 971 165-22-86",
+   "email": "orlov12@mail.test",
+   "address": ""
+  },
+  {
+   "fullName": "Волков Кирилл Дмитриевич",
+   "birthDate": "2006-12-24",
+   "phone": "+7 946 845-78-46",
+   "email": "volkov13@mail.test",
+   "address": "г. Москва, ул. Школьная, д. 27, кв. 92"
+  },
+  {
+   "fullName": "Петрова Екатерина Алексеевна",
+   "birthDate": "1959-09-27",
+   "phone": "+7 953 774-24-54",
+   "email": "petrov14@mail.test",
+   "address": "г. Москва, ул. Школьная, д. 25, кв. 33"
+  },
+  {
+   "fullName": "Новиков Артём Игоревич",
+   "birthDate": "1976-02-03",
+   "phone": "+7 988 273-74-14",
+   "email": "novikov15@mail.test",
+   "address": ""
+  },
+  {
+   "fullName": "Орлов Максим Александрович",
+   "birthDate": "2013-02-03",
+   "phone": "+7 916 836-62-98",
+   "email": "",
+   "address": ""
+  },
+  {
+   "fullName": "Козлов Артём Андреевич",
+   "birthDate": "2012-05-23",
+   "phone": "+7 998 147-90-65",
+   "email": "kozlov17@mail.test",
+   "address": ""
+  },
+  {
+   "fullName": "Николаев Илья Сергеевич",
+   "birthDate": "1989-02-23",
+   "phone": "+7 918 365-96-98",
+   "email": "",
+   "address": "г. Москва, ул. Лесная, д. 26, кв. 58"
+  },
+  {
+   "fullName": "Кузнецова Ольга Александровна",
+   "birthDate": "2015-05-08",
+   "phone": "+7 933 533-20-71",
+   "email": "kuznetsov19@mail.test",
+   "address": ""
+  },
+  {
+   "fullName": "Волков Матвей Алексеевич",
+   "birthDate": "1997-07-12",
+   "phone": "+7 981 273-98-35",
+   "email": "volkov20@mail.test",
+   "address": ""
+  },
+  {
+   "fullName": "Петров Дмитрий Николаевич",
+   "birthDate": "1995-09-24",
+   "phone": "+7 921 394-61-70",
+   "email": "petrov21@mail.test",
+   "address": "г. Москва, ул. Мира, д. 18, кв. 60"
+  },
+  {
+   "fullName": "Попова Ирина Андреевна",
+   "birthDate": "1960-03-13",
+   "phone": "+7 911 942-73-88",
+   "email": "popov22@mail.test",
+   "address": "г. Москва, ул. Садовая, д. 68, кв. 30"
+  },
+  {
+   "fullName": "Николаева Наталья Алексеевна",
+   "birthDate": "2015-04-05",
+   "phone": "+7 923 706-23-57",
+   "email": "",
+   "address": "г. Москва, ул. Парковая, д. 59, кв. 73"
+  },
+  {
+   "fullName": "Морозова Ирина Андреевна",
+   "birthDate": "2015-05-06",
+   "phone": "+7 935 948-38-86",
+   "email": "morozov24@mail.test",
+   "address": "г. Москва, ул. Мира, д. 48, кв. 106"
+  },
+  {
+   "fullName": "Васильев Матвей Михайлович",
+   "birthDate": "1976-07-15",
+   "phone": "+7 958 633-97-77",
+   "email": "vasilev25@mail.test",
+   "address": "г. Москва, ул. Парковая, д. 18, кв. 93"
+  },
+  {
+   "fullName": "Сидоров Сергей Сергеевич",
+   "birthDate": "1978-01-18",
+   "phone": "+7 998 424-77-57",
+   "email": "sidorov26@mail.test",
+   "address": ""
+  },
+  {
+   "fullName": "Васильева Алиса Алексеевна",
+   "birthDate": "2002-10-16",
+   "phone": "+7 927 638-93-59",
+   "email": "vasilev27@mail.test",
+   "address": ""
+  },
+  {
+   "fullName": "Орлова Елена Сергеевна",
+   "birthDate": "1988-08-20",
+   "phone": "+7 954 523-96-82",
+   "email": "orlov28@mail.test",
+   "address": "г. Москва, ул. Мира, д. 38, кв. 5"
+  },
+  {
+   "fullName": "Фёдорова Алиса Игоревна",
+   "birthDate": "1983-07-10",
+   "phone": "+7 964 834-27-49",
+   "email": "fedorov29@mail.test",
+   "address": "г. Москва, ул. Мира, д. 35, кв. 87"
+  },
+  {
+   "fullName": "Алексеева Екатерина Андреевна",
+   "birthDate": "1965-10-22",
+   "phone": "+7 911 957-17-92",
+   "email": "alekseev30@mail.test",
+   "address": "г. Москва, ул. Парковая, д. 43, кв. 74"
+  },
+  {
+   "fullName": "Петрова Ирина Игоревна",
+   "birthDate": "1973-07-09",
+   "phone": "+7 981 611-85-10",
+   "email": "petrov31@mail.test",
+   "address": "г. Москва, ул. Садовая, д. 26, кв. 92"
+  },
+  {
+   "fullName": "Попова Ольга Дмитриевна",
+   "birthDate": "1956-06-28",
+   "phone": "+7 911 714-78-53",
+   "email": "popov32@mail.test",
+   "address": "г. Москва, ул. Лесная, д. 52, кв. 110"
+  },
+  {
+   "fullName": "Сидоров Дмитрий Михайлович",
+   "birthDate": "1955-01-01",
+   "phone": "+7 947 397-68-26",
+   "email": "sidorov33@mail.test",
+   "address": "г. Москва, ул. Лесная, д. 13, кв. 56"
+  },
+  {
+   "fullName": "Лебедев Дмитрий Алексеевич",
+   "birthDate": "1994-02-19",
+   "phone": "+7 928 561-75-59",
+   "email": "lebedev34@mail.test",
+   "address": ""
+  },
+  {
+   "fullName": "Орлова Наталья Алексеевна",
+   "birthDate": "1999-09-10",
+   "phone": "+7 945 490-27-24",
+   "email": "",
+   "address": "г. Москва, ул. Парковая, д. 34, кв. 5"
+  },
+  {
+   "fullName": "Николаев Артём Дмитриевич",
+   "birthDate": "2017-12-08",
+   "phone": "+7 925 254-52-35",
+   "email": "nikolaev36@mail.test",
+   "address": "г. Москва, ул. Садовая, д. 52, кв. 73"
+  },
+  {
+   "fullName": "Попов Сергей Андреевич",
+   "birthDate": "1964-10-20",
+   "phone": "+7 930 200-99-60",
+   "email": "",
+   "address": "г. Москва, ул. Школьная, д. 14, кв. 39"
+  },
+  {
+   "fullName": "Васильев Никита Сергеевич",
+   "birthDate": "2007-03-14",
+   "phone": "+7 974 790-46-35",
+   "email": "vasilev38@mail.test",
+   "address": "г. Москва, ул. Мира, д. 45, кв. 13"
+  },
+  {
+   "fullName": "Лебедева Ольга Игоревна",
+   "birthDate": "1997-12-17",
+   "phone": "+7 914 243-10-54",
+   "email": "lebedev39@mail.test",
+   "address": "г. Москва, ул. Ленина, д. 40, кв. 108"
+  },
+  {
+   "fullName": "Петров Никита Игоревич",
+   "birthDate": "1977-05-10",
+   "phone": "+7 919 841-82-24",
+   "email": "petrov40@mail.test",
+   "address": "г. Москва, ул. Ленина, д. 45, кв. 36"
+  }
+ ],
+ "patientCards": [
+  {
+   "patient": 0,
+   "number": "K-100001",
+   "allergies": "",
+   "notes": "Диабет 2 типа",
+   "openedDayOffset": -460
+  },
+  {
+   "patient": 1,
+   "number": "K-100002",
+   "allergies": "",
+   "notes": "",
+   "openedDayOffset": -774
+  },
+  {
+   "patient": 2,
+   "number": "K-100003",
+   "allergies": "",
+   "notes": "",
+   "openedDayOffset": -896
+  },
+  {
+   "patient": 3,
+   "number": "K-100004",
+   "allergies": "",
+   "notes": "",
+   "openedDayOffset": -134
+  },
+  {
+   "patient": 4,
+   "number": "K-100005",
+   "allergies": "",
+   "notes": "Гипертония, контроль давления",
+   "openedDayOffset": -390
+  },
+  {
+   "patient": 5,
+   "number": "K-100006",
+   "allergies": "",
+   "notes": "",
+   "openedDayOffset": -878
+  },
+  {
+   "patient": 6,
+   "number": "K-100007",
+   "allergies": "Артикаин",
+   "notes": "",
+   "openedDayOffset": -773
+  },
+  {
+   "patient": 7,
+   "number": "K-100008",
+   "allergies": "",
+   "notes": "",
+   "openedDayOffset": -340
+  },
+  {
+   "patient": 8,
+   "number": "K-100009",
+   "allergies": "",
+   "notes": "Диабет 2 типа",
+   "openedDayOffset": -548
+  },
+  {
+   "patient": 9,
+   "number": "K-100010",
+   "allergies": "",
+   "notes": "",
+   "openedDayOffset": -418
+  },
+  {
+   "patient": 10,
+   "number": "K-100011",
+   "allergies": "",
+   "notes": "Диабет 2 типа",
+   "openedDayOffset": -619
+  },
+  {
+   "patient": 11,
+   "number": "K-100012",
+   "allergies": "Лидокаин",
+   "notes": "",
+   "openedDayOffset": -664
+  },
+  {
+   "patient": 12,
+   "number": "K-100013",
+   "allergies": "Латекс",
+   "notes": "",
+   "openedDayOffset": -688
+  },
+  {
+   "patient": 13,
+   "number": "K-100014",
+   "allergies": "",
+   "notes": "",
+   "openedDayOffset": -484
+  },
+  {
+   "patient": 14,
+   "number": "K-100015",
+   "allergies": "",
+   "notes": "Диабет 2 типа",
+   "openedDayOffset": -689
+  },
+  {
+   "patient": 15,
+   "number": "K-100016",
+   "allergies": "",
+   "notes": "",
+   "openedDayOffset": -850
+  },
+  {
+   "patient": 16,
+   "number": "K-100017",
+   "allergies": "",
+   "notes": "Гипертония, контроль давления",
+   "openedDayOffset": -114
+  },
+  {
+   "patient": 17,
+   "number": "K-100018",
+   "allergies": "",
+   "notes": "Гипертония, контроль давления",
+   "openedDayOffset": -402
+  },
+  {
+   "patient": 18,
+   "number": "K-100019",
+   "allergies": "",
+   "notes": "Гипертония, контроль давления",
+   "openedDayOffset": -35
+  },
+  {
+   "patient": 19,
+   "number": "K-100020",
+   "allergies": "",
+   "notes": "",
+   "openedDayOffset": -737
+  },
+  {
+   "patient": 20,
+   "number": "K-100021",
+   "allergies": "",
+   "notes": "",
+   "openedDayOffset": -185
+  },
+  {
+   "patient": 21,
+   "number": "K-100022",
+   "allergies": "",
+   "notes": "Гипертония, контроль давления",
+   "openedDayOffset": -805
+  },
+  {
+   "patient": 22,
+   "number": "K-100023",
+   "allergies": "",
+   "notes": "",
+   "openedDayOffset": -382
+  },
+  {
+   "patient": 23,
+   "number": "K-100024",
+   "allergies": "",
+   "notes": "Диабет 2 типа",
+   "openedDayOffset": -760
+  },
+  {
+   "patient": 24,
+   "number": "K-100025",
+   "allergies": "",
+   "notes": "Гипертония, контроль давления",
+   "openedDayOffset": -94
+  },
+  {
+   "patient": 25,
+   "number": "K-100026",
+   "allergies": "",
+   "notes": "Диабет 2 типа",
+   "openedDayOffset": -194
+  },
+  {
+   "patient": 26,
+   "number": "K-100027",
+   "allergies": "",
+   "notes": "Диабет 2 типа",
+   "openedDayOffset": -54
+  },
+  {
+   "patient": 27,
+   "number": "K-100028",
+   "allergies": "",
+   "notes": "",
+   "openedDayOffset": -436
+  },
+  {
+   "patient": 28,
+   "number": "K-100029",
+   "allergies": "",
+   "notes": "Гипертония, контроль давления",
+   "openedDayOffset": -833
+  },
+  {
+   "patient": 29,
+   "number": "K-100030",
+   "allergies": "Пенициллин",
+   "notes": "",
+   "openedDayOffset": -862
+  },
+  {
+   "patient": 30,
+   "number": "K-100031",
+   "allergies": "",
+   "notes": "",
+   "openedDayOffset": -240
+  },
+  {
+   "patient": 31,
+   "number": "K-100032",
+   "allergies": "",
+   "notes": "",
+   "openedDayOffset": -236
+  },
+  {
+   "patient": 32,
+   "number": "K-100033",
+   "allergies": "Пенициллин",
+   "notes": "",
+   "openedDayOffset": -244
+  },
+  {
+   "patient": 33,
+   "number": "K-100034",
+   "allergies": "",
+   "notes": "",
+   "openedDayOffset": -126
+  },
+  {
+   "patient": 34,
+   "number": "K-100035",
+   "allergies": "",
+   "notes": "",
+   "openedDayOffset": -657
+  },
+  {
+   "patient": 35,
+   "number": "K-100036",
+   "allergies": "",
+   "notes": "",
+   "openedDayOffset": -608
+  },
+  {
+   "patient": 36,
+   "number": "K-100037",
+   "allergies": "Пенициллин",
+   "notes": "",
+   "openedDayOffset": -539
+  },
+  {
+   "patient": 37,
+   "number": "K-100038",
+   "allergies": "Пенициллин",
+   "notes": "",
+   "openedDayOffset": -313
+  },
+  {
+   "patient": 38,
+   "number": "K-100039",
+   "allergies": "Пенициллин",
+   "notes": "",
+   "openedDayOffset": -628
+  },
+  {
+   "patient": 39,
+   "number": "K-100040",
+   "allergies": "",
+   "notes": "",
+   "openedDayOffset": -708
+  }
+ ],
+ "appointments": [
+  {
+   "patient": 10,
+   "doctor": 0,
+   "services": [
+    1
+   ],
+   "dayOffset": -27,
+   "startMin": 375,
+   "durationMin": 30,
+   "status": "done",
+   "complaints": "Консультация по протезированию",
+   "diagnosis": "Консультация: составлен план лечения."
+  },
+  {
+   "patient": 27,
+   "doctor": 0,
+   "services": [
+    2
+   ],
+   "dayOffset": -27,
+   "startMin": 615,
+   "durationMin": 15,
+   "status": "cancelled",
+   "complaints": "Консультация по протезированию",
+   "diagnosis": ""
+  },
+  {
+   "patient": 16,
+   "doctor": 0,
+   "services": [
+    23
+   ],
+   "dayOffset": -27,
+   "startMin": 675,
+   "durationMin": 45,
+   "status": "done",
+   "complaints": "Чувствительность к холодному",
+   "diagnosis": "Профилактический осмотр: патологии не выявлено."
+  },
+  {
+   "patient": 7,
+   "doctor": 1,
+   "services": [
+    3,
+    2,
+    0
+   ],
+   "dayOffset": -27,
+   "startMin": 510,
+   "durationMin": 60,
+   "status": "done",
+   "complaints": "Скол пломбы",
+   "diagnosis": "Скол коронки зуба 21. Выполнена реставрация."
+  },
+  {
+   "patient": 4,
+   "doctor": 2,
+   "services": [
+    0
+   ],
+   "dayOffset": -27,
+   "startMin": 525,
+   "durationMin": 30,
+   "status": "done",
+   "complaints": "Боль при жевании",
+   "diagnosis": "Хронический пульпит, зуб 46. Каналы обработаны и запломбированы."
+  },
+  {
+   "patient": 1,
+   "doctor": 2,
+   "services": [
+    10,
+    9
+   ],
+   "dayOffset": -27,
+   "startMin": 585,
+   "durationMin": 150,
+   "status": "done",
+   "complaints": "Кровоточивость дёсен",
+   "diagnosis": "Гингивит лёгкой степени. Рекомендована гигиена и полоскание."
+  },
+  {
+   "patient": 26,
+   "doctor": 3,
+   "services": [
+    3,
+    12
+   ],
+   "dayOffset": -27,
+   "startMin": 540,
+   "durationMin": 75,
+   "status": "cancelled",
+   "complaints": "Боль при жевании",
+   "diagnosis": ""
+  },
+  {
+   "patient": 27,
+   "doctor": 3,
+   "services": [
+    3
+   ],
+   "dayOffset": -27,
+   "startMin": 660,
+   "durationMin": 15,
+   "status": "done",
+   "complaints": "Чувствительность к холодному",
+   "diagnosis": "Скол коронки зуба 21. Выполнена реставрация."
+  },
+  {
+   "patient": 38,
+   "doctor": 3,
+   "services": [
+    1,
+    15
+   ],
+   "dayOffset": -27,
+   "startMin": 735,
+   "durationMin": 45,
+   "status": "cancelled",
+   "complaints": "Чувствительность к холодному",
+   "diagnosis": ""
+  },
+  {
+   "patient": 22,
+   "doctor": 4,
+   "services": [
+    6
+   ],
+   "dayOffset": -27,
+   "startMin": 510,
+   "durationMin": 45,
+   "status": "done",
+   "complaints": "Боль при накусывании",
+   "diagnosis": "Удалён зуб 38 по показаниям. Рекомендации даны."
+  },
+  {
+   "patient": 18,
+   "doctor": 4,
+   "services": [
+    5
+   ],
+   "dayOffset": -27,
+   "startMin": 600,
+   "durationMin": 90,
+   "status": "done",
+   "complaints": "Боль при накусывании",
+   "diagnosis": "Консультация: составлен план лечения."
+  },
+  {
+   "patient": 29,
+   "doctor": 4,
+   "services": [
+    19
+   ],
+   "dayOffset": -27,
+   "startMin": 705,
+   "durationMin": 60,
+   "status": "done",
+   "complaints": "Скол пломбы",
+   "diagnosis": "Гингивит лёгкой степени. Рекомендована гигиена и полоскание."
+  },
+  {
+   "patient": 25,
+   "doctor": 5,
+   "services": [
+    19
+   ],
+   "dayOffset": -27,
+   "startMin": 375,
+   "durationMin": 60,
+   "status": "cancelled",
+   "complaints": "Профилактический осмотр",
+   "diagnosis": ""
+  },
+  {
+   "patient": 15,
+   "doctor": 5,
+   "services": [
+    21,
+    3
+   ],
+   "dayOffset": -27,
+   "startMin": 750,
+   "durationMin": 45,
+   "status": "done",
+   "complaints": "Профилактический осмотр",
+   "diagnosis": "Гингивит лёгкой степени. Рекомендована гигиена и полоскание."
+  },
+  {
+   "patient": 39,
+   "doctor": 0,
+   "services": [
+    5
+   ],
+   "dayOffset": -26,
+   "startMin": 405,
+   "durationMin": 90,
+   "status": "done",
+   "complaints": "Боль при накусывании",
+   "diagnosis": "Удалён зуб 38 по показаниям. Рекомендации даны."
+  },
+  {
+   "patient": 28,
+   "doctor": 0,
+   "services": [
+    6
+   ],
+   "dayOffset": -26,
+   "startMin": 540,
+   "durationMin": 45,
+   "status": "done",
+   "complaints": "Желание отбелить зубы",
+   "diagnosis": "Профилактический осмотр: патологии не выявлено."
+  },
+  {
+   "patient": 23,
+   "doctor": 0,
+   "services": [
+    23
+   ],
+   "dayOffset": -26,
+   "startMin": 735,
+   "durationMin": 45,
+   "status": "done",
+   "complaints": "Чувствительность к холодному",
+   "diagnosis": "Кариес дентина, зуб 36. Проведено лечение, поставлена пломба."
+  },
+  {
+   "patient": 0,
+   "doctor": 0,
+   "services": [
+    2,
+    0
+   ],
+   "dayOffset": -26,
+   "startMin": 825,
+   "durationMin": 45,
+   "status": "done",
+   "complaints": "Чувствительность к холодному",
+   "diagnosis": "Консультация: составлен план лечения."
+  },
+  {
+   "patient": 38,
+   "doctor": 1,
+   "services": [
+    2
+   ],
+   "dayOffset": -26,
+   "startMin": 540,
+   "durationMin": 15,
+   "status": "done",
+   "complaints": "Скол пломбы",
+   "diagnosis": "Кариес дентина, зуб 36. Проведено лечение, поставлена пломба."
+  },
+  {
+   "patient": 24,
+   "doctor": 1,
+   "services": [
+    0
+   ],
+   "dayOffset": -26,
+   "startMin": 615,
+   "durationMin": 30,
+   "status": "done",
+   "complaints": "Профилактический осмотр",
+   "diagnosis": "Скол коронки зуба 21. Выполнена реставрация."
+  },
+  {
+   "patient": 28,
+   "doctor": 1,
+   "services": [
+    2
+   ],
+   "dayOffset": -26,
+   "startMin": 705,
+   "durationMin": 15,
+   "status": "done",
+   "complaints": "Кровоточивость дёсен",
+   "diagnosis": "Хронический пульпит, зуб 46. Каналы обработаны и запломбированы."
+  },
+  {
+   "patient": 23,
+   "doctor": 1,
+   "services": [
+    17
+   ],
+   "dayOffset": -26,
+   "startMin": 810,
+   "durationMin": 30,
+   "status": "done",
+   "complaints": "Консультация по протезированию",
+   "diagnosis": "Консультация: составлен план лечения."
+  },
+  {
+   "patient": 7,
+   "doctor": 2,
+   "services": [
+    1
+   ],
+   "dayOffset": -26,
+   "startMin": 495,
+   "durationMin": 30,
+   "status": "done",
+   "complaints": "Боль при жевании",
+   "diagnosis": "Кариес дентина, зуб 36. Проведено лечение, поставлена пломба."
+  },
+  {
+   "patient": 34,
+   "doctor": 2,
+   "services": [
+    10
+   ],
+   "dayOffset": -26,
+   "startMin": 600,
+   "durationMin": 90,
+   "status": "done",
+   "complaints": "Профилактический осмотр",
+   "diagnosis": "Профилактический осмотр: патологии не выявлено."
+  },
+  {
+   "patient": 22,
+   "doctor": 3,
+   "services": [
+    14,
+    2
+   ],
+   "dayOffset": -26,
+   "startMin": 720,
+   "durationMin": 105,
+   "status": "cancelled",
+   "complaints": "Кровоточивость дёсен",
+   "diagnosis": ""
+  },
+  {
+   "patient": 19,
+   "doctor": 4,
+   "services": [
+    3,
+    22
+   ],
+   "dayOffset": -26,
+   "startMin": 405,
+   "durationMin": 45,
+   "status": "done",
+   "complaints": "Желание отбелить зубы",
+   "diagnosis": "Удалён зуб 38 по показаниям. Рекомендации даны."
+  },
+  {
+   "patient": 2,
+   "doctor": 4,
+   "services": [
+    6,
+    4
+   ],
+   "dayOffset": -26,
+   "startMin": 480,
+   "durationMin": 105,
+   "status": "done",
+   "complaints": "Боль при накусывании",
+   "diagnosis": "Хронический пульпит, зуб 46. Каналы обработаны и запломбированы."
+  },
+  {
+   "patient": 36,
+   "doctor": 4,
+   "services": [
+    7
+   ],
+   "dayOffset": -26,
+   "startMin": 645,
+   "durationMin": 90,
+   "status": "done",
+   "complaints": "Кровоточивость дёсен",
+   "diagnosis": "Консультация: составлен план лечения."
+  },
+  {
+   "patient": 25,
+   "doctor": 4,
+   "services": [
+    2
+   ],
+   "dayOffset": -26,
+   "startMin": 765,
+   "durationMin": 15,
+   "status": "done",
+   "complaints": "Боль при накусывании",
+   "diagnosis": "Консультация: составлен план лечения."
+  },
+  {
+   "patient": 3,
+   "doctor": 5,
+   "services": [
+    21,
+    19
+   ],
+   "dayOffset": -26,
+   "startMin": 450,
+   "durationMin": 90,
+   "status": "done",
+   "complaints": "Боль при жевании",
+   "diagnosis": "Хронический пульпит, зуб 46. Каналы обработаны и запломбированы."
+  },
+  {
+   "patient": 39,
+   "doctor": 5,
+   "services": [
+    20,
+    1,
+    3
+   ],
+   "dayOffset": -26,
+   "startMin": 600,
+   "durationMin": 135,
+   "status": "done",
+   "complaints": "Чувствительность к холодному",
+   "diagnosis": "Хронический пульпит, зуб 46. Каналы обработаны и запломбированы."
+  },
+  {
+   "patient": 18,
+   "doctor": 0,
+   "services": [
+    2,
+    5
+   ],
+   "dayOffset": -25,
+   "startMin": 585,
+   "durationMin": 105,
+   "status": "done",
+   "complaints": "Кровоточивость дёсен",
+   "diagnosis": "Гингивит лёгкой степени. Рекомендована гигиена и полоскание."
+  },
+  {
+   "patient": 1,
+   "doctor": 1,
+   "services": [
+    3,
+    0,
+    16
+   ],
+   "dayOffset": -25,
+   "startMin": 450,
+   "durationMin": 165,
+   "status": "cancelled",
+   "complaints": "Кровоточивость дёсен",
+   "diagnosis": ""
+  },
+  {
+   "patient": 38,
+   "doctor": 1,
+   "services": [
+    16
+   ],
+   "dayOffset": -25,
+   "startMin": 720,
+   "durationMin": 120,
+   "status": "done",
+   "complaints": "Кровоточивость дёсен",
+   "diagnosis": "Кариес дентина, зуб 36. Проведено лечение, поставлена пломба."
+  },
+  {
+   "patient": 10,
+   "doctor": 2,
+   "services": [
+    8
+   ],
+   "dayOffset": -25,
+   "startMin": 420,
+   "durationMin": 30,
+   "status": "done",
+   "complaints": "Профилактический осмотр",
+   "diagnosis": "Консультация: составлен план лечения."
+  },
+  {
+   "patient": 39,
+   "doctor": 2,
+   "services": [
+    0
+   ],
+   "dayOffset": -25,
+   "startMin": 495,
+   "durationMin": 30,
+   "status": "cancelled",
+   "complaints": "Боль при накусывании",
+   "diagnosis": ""
+  },
+  {
+   "patient": 9,
+   "doctor": 2,
+   "services": [
+    2,
+    10
+   ],
+   "dayOffset": -25,
+   "startMin": 690,
+   "durationMin": 105,
+   "status": "done",
+   "complaints": "Желание отбелить зубы",
+   "diagnosis": "Консультация: составлен план лечения."
+  },
+  {
+   "patient": 11,
+   "doctor": 3,
+   "services": [
+    1
+   ],
+   "dayOffset": -25,
+   "startMin": 450,
+   "durationMin": 30,
+   "status": "done",
+   "complaints": "Консультация по протезированию",
+   "diagnosis": "Консультация: составлен план лечения."
+  },
+  {
+   "patient": 24,
+   "doctor": 3,
+   "services": [
+    12
+   ],
+   "dayOffset": -25,
+   "startMin": 555,
+   "durationMin": 60,
+   "status": "done",
+   "complaints": "Скол пломбы",
+   "diagnosis": "Скол коронки зуба 21. Выполнена реставрация."
+  },
+  {
+   "patient": 3,
+   "doctor": 3,
+   "services": [
+    12
+   ],
+   "dayOffset": -25,
+   "startMin": 690,
+   "durationMin": 60,
+   "status": "done",
+   "complaints": "Скол пломбы",
+   "diagnosis": "Гингивит лёгкой степени. Рекомендована гигиена и полоскание."
+  },
+  {
+   "patient": 30,
+   "doctor": 3,
+   "services": [
+    12
+   ],
+   "dayOffset": -25,
+   "startMin": 795,
+   "durationMin": 60,
+   "status": "done",
+   "complaints": "Боль при накусывании",
+   "diagnosis": "Скол коронки зуба 21. Выполнена реставрация."
+  },
+  {
+   "patient": 39,
+   "doctor": 4,
+   "services": [
+    2
+   ],
+   "dayOffset": -25,
+   "startMin": 420,
+   "durationMin": 15,
+   "status": "done",
+   "complaints": "Кровоточивость дёсен",
+   "diagnosis": "Кариес дентина, зуб 36. Проведено лечение, поставлена пломба."
+  },
+  {
+   "patient": 34,
+   "doctor": 4,
+   "services": [
+    4
+   ],
+   "dayOffset": -25,
+   "startMin": 720,
+   "durationMin": 60,
+   "status": "done",
+   "complaints": "Профилактический осмотр",
+   "diagnosis": "Консультация: составлен план лечения."
+  },
+  {
+   "patient": 21,
+   "doctor": 5,
+   "services": [
+    22
+   ],
+   "dayOffset": -25,
+   "startMin": 570,
+   "durationMin": 30,
+   "status": "done",
+   "complaints": "Боль при жевании",
+   "diagnosis": "Консультация: составлен план лечения."
+  },
+  {
+   "patient": 26,
+   "doctor": 5,
+   "services": [
+    21
+   ],
+   "dayOffset": -25,
+   "startMin": 645,
+   "durationMin": 30,
+   "status": "done",
+   "complaints": "Боль при жевании",
+   "diagnosis": "Кариес дентина, зуб 36. Проведено лечение, поставлена пломба."
+  },
+  {
+   "patient": 1,
+   "doctor": 5,
+   "services": [
+    22
+   ],
+   "dayOffset": -25,
+   "startMin": 825,
+   "durationMin": 30,
+   "status": "cancelled",
+   "complaints": "Профилактический осмотр",
+   "diagnosis": ""
+  },
+  {
+   "patient": 2,
+   "doctor": 0,
+   "services": [
+    7
+   ],
+   "dayOffset": -24,
+   "startMin": 405,
+   "durationMin": 90,
+   "status": "done",
+   "complaints": "Чувствительность к холодному",
+   "diagnosis": "Гингивит лёгкой степени. Рекомендована гигиена и полоскание."
+  },
+  {
+   "patient": 32,
+   "doctor": 0,
+   "services": [
+    3
+   ],
+   "dayOffset": -24,
+   "startMin": 735,
+   "durationMin": 15,
+   "status": "done",
+   "complaints": "Скол пломбы",
+   "diagnosis": "Удалён зуб 38 по показаниям. Рекомендации даны."
+  },
+  {
+   "patient": 36,
+   "doctor": 0,
+   "services": [
+    3,
+    7
+   ],
+   "dayOffset": -24,
+   "startMin": 765,
+   "durationMin": 105,
+   "status": "done",
+   "complaints": "Чувствительность к холодному",
+   "diagnosis": "Скол коронки зуба 21. Выполнена реставрация."
+  },
+  {
+   "patient": 12,
+   "doctor": 1,
+   "services": [
+    16
+   ],
+   "dayOffset": -24,
+   "startMin": 390,
+   "durationMin": 120,
+   "status": "done",
+   "complaints": "Желание отбелить зубы",
+   "diagnosis": "Консультация: составлен план лечения."
+  },
+  {
+   "patient": 5,
+   "doctor": 2,
+   "services": [
+    3
+   ],
+   "dayOffset": -24,
+   "startMin": 405,
+   "durationMin": 15,
+   "status": "done",
+   "complaints": "Боль при жевании",
+   "diagnosis": "Консультация: составлен план лечения."
+  },
+  {
+   "patient": 24,
+   "doctor": 2,
+   "services": [
+    2,
+    0
+   ],
+   "dayOffset": -24,
+   "startMin": 645,
+   "durationMin": 45,
+   "status": "done",
+   "complaints": "Скол пломбы",
+   "diagnosis": "Профилактический осмотр: патологии не выявлено."
+  },
+  {
+   "patient": 6,
+   "doctor": 2,
+   "services": [
+    1,
+    3,
+    2
+   ],
+   "dayOffset": -24,
+   "startMin": 750,
+   "durationMin": 45,
+   "status": "done",
+   "complaints": "Консультация по протезированию",
+   "diagnosis": "Профилактический осмотр: патологии не выявлено."
+  },
+  {
+   "patient": 10,
+   "doctor": 3,
+   "services": [
+    3
+   ],
+   "dayOffset": -24,
+   "startMin": 405,
+   "durationMin": 15,
+   "status": "done",
+   "complaints": "Кровоточивость дёсен",
+   "diagnosis": "Скол коронки зуба 21. Выполнена реставрация."
+  },
+  {
+   "patient": 3,
+   "doctor": 3,
+   "services": [
+    13
+   ],
+   "dayOffset": -24,
+   "startMin": 630,
+   "durationMin": 60,
+   "status": "done",
+   "complaints": "Боль при жевании",
+   "diagnosis": "Удалён зуб 38 по показаниям. Рекомендации даны."
+  },
+  {
+   "patient": 16,
+   "doctor": 3,
+   "services": [
+    12
+   ],
+   "dayOffset": -24,
+   "startMin": 705,
+   "durationMin": 60,
+   "status": "done",
+   "complaints": "Консультация по протезированию",
+   "diagnosis": "Удалён зуб 38 по показаниям. Рекомендации даны."
+  },
+  {
+   "patient": 29,
+   "doctor": 4,
+   "services": [
+    20
+   ],
+   "dayOffset": -24,
+   "startMin": 450,
+   "durationMin": 90,
+   "status": "done",
+   "complaints": "Желание отбелить зубы",
+   "diagnosis": "Профилактический осмотр: патологии не выявлено."
+  },
+  {
+   "patient": 29,
+   "doctor": 4,
+   "services": [
+    6
+   ],
+   "dayOffset": -24,
+   "startMin": 705,
+   "durationMin": 45,
+   "status": "done",
+   "complaints": "Чувствительность к холодному",
+   "diagnosis": "Удалён зуб 38 по показаниям. Рекомендации даны."
+  },
+  {
+   "patient": 14,
+   "doctor": 4,
+   "services": [
+    3,
+    23
+   ],
+   "dayOffset": -24,
+   "startMin": 765,
+   "durationMin": 60,
+   "status": "done",
+   "complaints": "Консультация по протезированию",
+   "diagnosis": "Удалён зуб 38 по показаниям. Рекомендации даны."
+  },
+  {
+   "patient": 34,
+   "doctor": 5,
+   "services": [
+    0
+   ],
+   "dayOffset": -24,
+   "startMin": 510,
+   "durationMin": 30,
+   "status": "done",
+   "complaints": "Профилактический осмотр",
+   "diagnosis": "Профилактический осмотр: патологии не выявлено."
+  },
+  {
+   "patient": 4,
+   "doctor": 5,
+   "services": [
+    2
+   ],
+   "dayOffset": -24,
+   "startMin": 780,
+   "durationMin": 15,
+   "status": "done",
+   "complaints": "Чувствительность к холодному",
+   "diagnosis": "Удалён зуб 38 по показаниям. Рекомендации даны."
+  },
+  {
+   "patient": 24,
+   "doctor": 0,
+   "services": [
+    5,
+    3
+   ],
+   "dayOffset": -23,
+   "startMin": 405,
+   "durationMin": 105,
+   "status": "cancelled",
+   "complaints": "Боль при накусывании",
+   "diagnosis": ""
+  },
+  {
+   "patient": 36,
+   "doctor": 0,
+   "services": [
+    3,
+    2
+   ],
+   "dayOffset": -23,
+   "startMin": 540,
+   "durationMin": 30,
+   "status": "done",
+   "complaints": "Боль при накусывании",
+   "diagnosis": "Удалён зуб 38 по показаниям. Рекомендации даны."
+  },
+  {
+   "patient": 4,
+   "doctor": 0,
+   "services": [
+    2
+   ],
+   "dayOffset": -23,
+   "startMin": 840,
+   "durationMin": 15,
+   "status": "done",
+   "complaints": "Скол пломбы",
+   "diagnosis": "Кариес дентина, зуб 36. Проведено лечение, поставлена пломба."
+  },
+  {
+   "patient": 34,
+   "doctor": 1,
+   "services": [
+    18
+   ],
+   "dayOffset": -23,
+   "startMin": 450,
+   "durationMin": 60,
+   "status": "done",
+   "complaints": "Профилактический осмотр",
+   "diagnosis": "Профилактический осмотр: патологии не выявлено."
+  },
+  {
+   "patient": 28,
+   "doctor": 1,
+   "services": [
+    2,
+    0,
+    17
+   ],
+   "dayOffset": -23,
+   "startMin": 795,
+   "durationMin": 75,
+   "status": "done",
+   "complaints": "Кровоточивость дёсен",
+   "diagnosis": "Профилактический осмотр: патологии не выявлено."
+  },
+  {
+   "patient": 32,
+   "doctor": 2,
+   "services": [
+    0
+   ],
+   "dayOffset": -23,
+   "startMin": 585,
+   "durationMin": 30,
+   "status": "done",
+   "complaints": "Скол пломбы",
+   "diagnosis": "Скол коронки зуба 21. Выполнена реставрация."
+  },
+  {
+   "patient": 26,
+   "doctor": 2,
+   "services": [
+    11
+   ],
+   "dayOffset": -23,
+   "startMin": 750,
+   "durationMin": 90,
+   "status": "done",
+   "complaints": "Кровоточивость дёсен",
+   "diagnosis": "Удалён зуб 38 по показаниям. Рекомендации даны."
+  },
+  {
+   "patient": 1,
+   "doctor": 3,
+   "services": [
+    2
+   ],
+   "dayOffset": -23,
+   "startMin": 375,
+   "durationMin": 15,
+   "status": "done",
+   "complaints": "Профилактический осмотр",
+   "diagnosis": "Консультация: составлен план лечения."
+  },
+  {
+   "patient": 5,
+   "doctor": 3,
+   "services": [
+    13
+   ],
+   "dayOffset": -23,
+   "startMin": 495,
+   "durationMin": 60,
+   "status": "done",
+   "complaints": "Кровоточивость дёсен",
+   "diagnosis": "Хронический пульпит, зуб 46. Каналы обработаны и запломбированы."
+  },
+  {
+   "patient": 22,
+   "doctor": 4,
+   "services": [
+    5
+   ],
+   "dayOffset": -23,
+   "startMin": 525,
+   "durationMin": 90,
+   "status": "done",
+   "complaints": "Профилактический осмотр",
+   "diagnosis": "Скол коронки зуба 21. Выполнена реставрация."
+  },
+  {
+   "patient": 38,
+   "doctor": 4,
+   "services": [
+    3
+   ],
+   "dayOffset": -23,
+   "startMin": 825,
+   "durationMin": 15,
+   "status": "done",
+   "complaints": "Консультация по протезированию",
+   "diagnosis": "Кариес дентина, зуб 36. Проведено лечение, поставлена пломба."
+  },
+  {
+   "patient": 10,
+   "doctor": 5,
+   "services": [
+    22,
+    0
+   ],
+   "dayOffset": -23,
+   "startMin": 435,
+   "durationMin": 60,
+   "status": "done",
+   "complaints": "Кровоточивость дёсен",
+   "diagnosis": "Профилактический осмотр: патологии не выявлено."
+  },
+  {
+   "patient": 31,
+   "doctor": 5,
+   "services": [
+    19,
+    22
+   ],
+   "dayOffset": -23,
+   "startMin": 585,
+   "durationMin": 90,
+   "status": "done",
+   "complaints": "Консультация по протезированию",
+   "diagnosis": "Консультация: составлен план лечения."
+  },
+  {
+   "patient": 38,
+   "doctor": 0,
+   "services": [
+    1,
+    0
+   ],
+   "dayOffset": -22,
+   "startMin": 495,
+   "durationMin": 60,
+   "status": "cancelled",
+   "complaints": "Скол пломбы",
+   "diagnosis": ""
+  },
+  {
+   "patient": 2,
+   "doctor": 0,
+   "services": [
+    5
+   ],
+   "dayOffset": -22,
+   "startMin": 585,
+   "durationMin": 90,
+   "status": "done",
+   "complaints": "Чувствительность к холодному",
+   "diagnosis": "Гингивит лёгкой степени. Рекомендована гигиена и полоскание."
+  },
+  {
+   "patient": 23,
+   "doctor": 1,
+   "services": [
+    17,
+    3,
+    16
+   ],
+   "dayOffset": -22,
+   "startMin": 420,
+   "durationMin": 165,
+   "status": "done",
+   "complaints": "Кровоточивость дёсен",
+   "diagnosis": "Кариес дентина, зуб 36. Проведено лечение, поставлена пломба."
+  },
+  {
+   "patient": 14,
+   "doctor": 2,
+   "services": [
+    1
+   ],
+   "dayOffset": -22,
+   "startMin": 555,
+   "durationMin": 30,
+   "status": "done",
+   "complaints": "Желание отбелить зубы",
+   "diagnosis": "Гингивит лёгкой степени. Рекомендована гигиена и полоскание."
+  },
+  {
+   "patient": 21,
+   "doctor": 3,
+   "services": [
+    14
+   ],
+   "dayOffset": -22,
+   "startMin": 375,
+   "durationMin": 90,
+   "status": "cancelled",
+   "complaints": "Боль при накусывании",
+   "diagnosis": ""
+  },
+  {
+   "patient": 6,
+   "doctor": 3,
+   "services": [
+    0
+   ],
+   "dayOffset": -22,
+   "startMin": 495,
+   "durationMin": 30,
+   "status": "done",
+   "complaints": "Профилактический осмотр",
+   "diagnosis": "Кариес дентина, зуб 36. Проведено лечение, поставлена пломба."
+  },
+  {
+   "patient": 9,
+   "doctor": 4,
+   "services": [
+    5,
+    19
+   ],
+   "dayOffset": -22,
+   "startMin": 360,
+   "durationMin": 150,
+   "status": "done",
+   "complaints": "Боль при жевании",
+   "diagnosis": "Профилактический осмотр: патологии не выявлено."
+  },
+  {
+   "patient": 1,
+   "doctor": 4,
+   "services": [
+    0,
+    4
+   ],
+   "dayOffset": -22,
+   "startMin": 585,
+   "durationMin": 90,
+   "status": "done",
+   "complaints": "Боль при жевании",
+   "diagnosis": "Скол коронки зуба 21. Выполнена реставрация."
+  },
+  {
+   "patient": 5,
+   "doctor": 5,
+   "services": [
+    1
+   ],
+   "dayOffset": -22,
+   "startMin": 720,
+   "durationMin": 30,
+   "status": "done",
+   "complaints": "Боль при накусывании",
+   "diagnosis": "Консультация: составлен план лечения."
+  },
+  {
+   "patient": 16,
+   "doctor": 0,
+   "services": [
+    5
+   ],
+   "dayOffset": -20,
+   "startMin": 360,
+   "durationMin": 90,
+   "status": "done",
+   "complaints": "Боль при накусывании",
+   "diagnosis": "Скол коронки зуба 21. Выполнена реставрация."
+  },
+  {
+   "patient": 0,
+   "doctor": 0,
+   "services": [
+    1,
+    5
+   ],
+   "dayOffset": -20,
+   "startMin": 480,
+   "durationMin": 120,
+   "status": "done",
+   "complaints": "Профилактический осмотр",
+   "diagnosis": "Профилактический осмотр: патологии не выявлено."
+  },
+  {
+   "patient": 14,
+   "doctor": 2,
+   "services": [
+    0,
+    3,
+    9
+   ],
+   "dayOffset": -20,
+   "startMin": 450,
+   "durationMin": 105,
+   "status": "done",
+   "complaints": "Кровоточивость дёсен",
+   "diagnosis": "Удалён зуб 38 по показаниям. Рекомендации даны."
+  },
+  {
+   "patient": 12,
+   "doctor": 2,
+   "services": [
+    10
+   ],
+   "dayOffset": -20,
+   "startMin": 690,
+   "durationMin": 90,
+   "status": "done",
+   "complaints": "Боль при накусывании",
+   "diagnosis": "Гингивит лёгкой степени. Рекомендована гигиена и полоскание."
+  },
+  {
+   "patient": 17,
+   "doctor": 3,
+   "services": [
+    13,
+    0
+   ],
+   "dayOffset": -20,
+   "startMin": 465,
+   "durationMin": 90,
+   "status": "done",
+   "complaints": "Консультация по протезированию",
+   "diagnosis": "Кариес дентина, зуб 36. Проведено лечение, поставлена пломба."
+  },
+  {
+   "patient": 21,
+   "doctor": 3,
+   "services": [
+    2
+   ],
+   "dayOffset": -20,
+   "startMin": 825,
+   "durationMin": 15,
+   "status": "done",
+   "complaints": "Боль при накусывании",
+   "diagnosis": "Хронический пульпит, зуб 46. Каналы обработаны и запломбированы."
+  },
+  {
+   "patient": 16,
+   "doctor": 3,
+   "services": [
+    0
+   ],
+   "dayOffset": -20,
+   "startMin": 840,
+   "durationMin": 30,
+   "status": "done",
+   "complaints": "Желание отбелить зубы",
+   "diagnosis": "Удалён зуб 38 по показаниям. Рекомендации даны."
+  },
+  {
+   "patient": 33,
+   "doctor": 4,
+   "services": [
+    21
+   ],
+   "dayOffset": -20,
+   "startMin": 495,
+   "durationMin": 30,
+   "status": "done",
+   "complaints": "Чувствительность к холодному",
+   "diagnosis": "Хронический пульпит, зуб 46. Каналы обработаны и запломбированы."
+  },
+  {
+   "patient": 30,
+   "doctor": 4,
+   "services": [
+    6
+   ],
+   "dayOffset": -20,
+   "startMin": 540,
+   "durationMin": 45,
+   "status": "done",
+   "complaints": "Скол пломбы",
+   "diagnosis": "Удалён зуб 38 по показаниям. Рекомендации даны."
+  },
+  {
+   "patient": 9,
+   "doctor": 4,
+   "services": [
+    1
+   ],
+   "dayOffset": -20,
+   "startMin": 630,
+   "durationMin": 30,
+   "status": "done",
+   "complaints": "Желание отбелить зубы",
+   "diagnosis": "Консультация: составлен план лечения."
+  },
+  {
+   "patient": 25,
+   "doctor": 4,
+   "services": [
+    0
+   ],
+   "dayOffset": -20,
+   "startMin": 780,
+   "durationMin": 30,
+   "status": "done",
+   "complaints": "Скол пломбы",
+   "diagnosis": "Консультация: составлен план лечения."
+  },
+  {
+   "patient": 39,
+   "doctor": 1,
+   "services": [
+    1
+   ],
+   "dayOffset": -19,
+   "startMin": 525,
+   "durationMin": 30,
+   "status": "done",
+   "complaints": "Скол пломбы",
+   "diagnosis": "Удалён зуб 38 по показаниям. Рекомендации даны."
+  },
+  {
+   "patient": 23,
+   "doctor": 1,
+   "services": [
+    2
+   ],
+   "dayOffset": -19,
+   "startMin": 570,
+   "durationMin": 15,
+   "status": "done",
+   "complaints": "Чувствительность к холодному",
+   "diagnosis": "Профилактический осмотр: патологии не выявлено."
+  },
+  {
+   "patient": 10,
+   "doctor": 2,
+   "services": [
+    11
+   ],
+   "dayOffset": -19,
+   "startMin": 540,
+   "durationMin": 90,
+   "status": "done",
+   "complaints": "Консультация по протезированию",
+   "diagnosis": "Удалён зуб 38 по показаниям. Рекомендации даны."
+  },
+  {
+   "patient": 23,
+   "doctor": 2,
+   "services": [
+    1,
+    3
+   ],
+   "dayOffset": -19,
+   "startMin": 675,
+   "durationMin": 45,
+   "status": "done",
+   "complaints": "Боль при накусывании",
+   "diagnosis": "Кариес дентина, зуб 36. Проведено лечение, поставлена пломба."
+  },
+  {
+   "patient": 20,
+   "doctor": 2,
+   "services": [
+    10
+   ],
+   "dayOffset": -19,
+   "startMin": 720,
+   "durationMin": 90,
+   "status": "done",
+   "complaints": "Консультация по протезированию",
+   "diagnosis": "Удалён зуб 38 по показаниям. Рекомендации даны."
+  },
+  {
+   "patient": 21,
+   "doctor": 2,
+   "services": [
+    8
+   ],
+   "dayOffset": -19,
+   "startMin": 840,
+   "durationMin": 30,
+   "status": "done",
+   "complaints": "Желание отбелить зубы",
+   "diagnosis": "Скол коронки зуба 21. Выполнена реставрация."
+  },
+  {
+   "patient": 6,
+   "doctor": 3,
+   "services": [
+    14,
+    12
+   ],
+   "dayOffset": -19,
+   "startMin": 540,
+   "durationMin": 150,
+   "status": "done",
+   "complaints": "Боль при жевании",
+   "diagnosis": "Консультация: составлен план лечения."
+  },
+  {
+   "patient": 37,
+   "doctor": 3,
+   "services": [
+    1
+   ],
+   "dayOffset": -19,
+   "startMin": 735,
+   "durationMin": 30,
+   "status": "done",
+   "complaints": "Чувствительность к холодному",
+   "diagnosis": "Консультация: составлен план лечения."
+  },
+  {
+   "patient": 11,
+   "doctor": 4,
+   "services": [
+    21
+   ],
+   "dayOffset": -19,
+   "startMin": 405,
+   "durationMin": 30,
+   "status": "done",
+   "complaints": "Консультация по протезированию",
+   "diagnosis": "Гингивит лёгкой степени. Рекомендована гигиена и полоскание."
+  },
+  {
+   "patient": 20,
+   "doctor": 4,
+   "services": [
+    1,
+    7
+   ],
+   "dayOffset": -19,
+   "startMin": 465,
+   "durationMin": 120,
+   "status": "done",
+   "complaints": "Желание отбелить зубы",
+   "diagnosis": "Гингивит лёгкой степени. Рекомендована гигиена и полоскание."
+  },
+  {
+   "patient": 14,
+   "doctor": 4,
+   "services": [
+    22
+   ],
+   "dayOffset": -19,
+   "startMin": 690,
+   "durationMin": 30,
+   "status": "done",
+   "complaints": "Консультация по протезированию",
+   "diagnosis": "Кариес дентина, зуб 36. Проведено лечение, поставлена пломба."
+  },
+  {
+   "patient": 16,
+   "doctor": 4,
+   "services": [
+    22
+   ],
+   "dayOffset": -19,
+   "startMin": 765,
+   "durationMin": 30,
+   "status": "done",
+   "complaints": "Желание отбелить зубы",
+   "diagnosis": "Кариес дентина, зуб 36. Проведено лечение, поставлена пломба."
+  },
+  {
+   "patient": 0,
+   "doctor": 4,
+   "services": [
+    23
+   ],
+   "dayOffset": -19,
+   "startMin": 810,
+   "durationMin": 45,
+   "status": "done",
+   "complaints": "Скол пломбы",
+   "diagnosis": "Удалён зуб 38 по показаниям. Рекомендации даны."
+  },
+  {
+   "patient": 2,
+   "doctor": 5,
+   "services": [
+    3
+   ],
+   "dayOffset": -19,
+   "startMin": 435,
+   "durationMin": 15,
+   "status": "done",
+   "complaints": "Кровоточивость дёсен",
+   "diagnosis": "Скол коронки зуба 21. Выполнена реставрация."
+  },
+  {
+   "patient": 25,
+   "doctor": 5,
+   "services": [
+    19
+   ],
+   "dayOffset": -19,
+   "startMin": 510,
+   "durationMin": 60,
+   "status": "done",
+   "complaints": "Консультация по протезированию",
+   "diagnosis": "Профилактический осмотр: патологии не выявлено."
+  },
+  {
+   "patient": 26,
+   "doctor": 5,
+   "services": [
+    20
+   ],
+   "dayOffset": -19,
+   "startMin": 630,
+   "durationMin": 90,
+   "status": "done",
+   "complaints": "Желание отбелить зубы",
+   "diagnosis": "Кариес дентина, зуб 36. Проведено лечение, поставлена пломба."
+  },
+  {
+   "patient": 18,
+   "doctor": 0,
+   "services": [
+    6
+   ],
+   "dayOffset": -18,
+   "startMin": 525,
+   "durationMin": 45,
+   "status": "done",
+   "complaints": "Скол пломбы",
+   "diagnosis": "Кариес дентина, зуб 36. Проведено лечение, поставлена пломба."
+  },
+  {
+   "patient": 35,
+   "doctor": 0,
+   "services": [
+    6
+   ],
+   "dayOffset": -18,
+   "startMin": 600,
+   "durationMin": 45,
+   "status": "done",
+   "complaints": "Боль при жевании",
+   "diagnosis": "Консультация: составлен план лечения."
+  },
+  {
+   "patient": 24,
+   "doctor": 1,
+   "services": [
+    3
+   ],
+   "dayOffset": -18,
+   "startMin": 480,
+   "durationMin": 15,
+   "status": "done",
+   "complaints": "Профилактический осмотр",
+   "diagnosis": "Хронический пульпит, зуб 46. Каналы обработаны и запломбированы."
+  },
+  {
+   "patient": 20,
+   "doctor": 1,
+   "services": [
+    16,
+    17
+   ],
+   "dayOffset": -18,
+   "startMin": 615,
+   "durationMin": 150,
+   "status": "cancelled",
+   "complaints": "Скол пломбы",
+   "diagnosis": ""
+  },
+  {
+   "patient": 22,
+   "doctor": 2,
+   "services": [
+    8
+   ],
+   "dayOffset": -18,
+   "startMin": 570,
+   "durationMin": 30,
+   "status": "cancelled",
+   "complaints": "Боль при жевании",
+   "diagnosis": ""
+  },
+  {
+   "patient": 37,
+   "doctor": 2,
+   "services": [
+    8
+   ],
+   "dayOffset": -18,
+   "startMin": 690,
+   "durationMin": 30,
+   "status": "done",
+   "complaints": "Скол пломбы",
+   "diagnosis": "Гингивит лёгкой степени. Рекомендована гигиена и полоскание."
+  },
+  {
+   "patient": 28,
+   "doctor": 2,
+   "services": [
+    0,
+    9
+   ],
+   "dayOffset": -18,
+   "startMin": 765,
+   "durationMin": 90,
+   "status": "done",
+   "complaints": "Чувствительность к холодному",
+   "diagnosis": "Кариес дентина, зуб 36. Проведено лечение, поставлена пломба."
+  },
+  {
+   "patient": 33,
+   "doctor": 3,
+   "services": [
+    2
+   ],
+   "dayOffset": -18,
+   "startMin": 495,
+   "durationMin": 15,
+   "status": "done",
+   "complaints": "Чувствительность к холодному",
+   "diagnosis": "Кариес дентина, зуб 36. Проведено лечение, поставлена пломба."
+  },
+  {
+   "patient": 39,
+   "doctor": 3,
+   "services": [
+    12
+   ],
+   "dayOffset": -18,
+   "startMin": 540,
+   "durationMin": 60,
+   "status": "done",
+   "complaints": "Желание отбелить зубы",
+   "diagnosis": "Скол коронки зуба 21. Выполнена реставрация."
+  },
+  {
+   "patient": 18,
+   "doctor": 4,
+   "services": [
+    5
+   ],
+   "dayOffset": -18,
+   "startMin": 585,
+   "durationMin": 90,
+   "status": "done",
+   "complaints": "Профилактический осмотр",
+   "diagnosis": "Удалён зуб 38 по показаниям. Рекомендации даны."
+  },
+  {
+   "patient": 19,
+   "doctor": 4,
+   "services": [
+    22
+   ],
+   "dayOffset": -18,
+   "startMin": 855,
+   "durationMin": 30,
+   "status": "done",
+   "complaints": "Профилактический осмотр",
+   "diagnosis": "Профилактический осмотр: патологии не выявлено."
+  },
+  {
+   "patient": 21,
+   "doctor": 5,
+   "services": [
+    2
+   ],
+   "dayOffset": -18,
+   "startMin": 375,
+   "durationMin": 15,
+   "status": "done",
+   "complaints": "Желание отбелить зубы",
+   "diagnosis": "Удалён зуб 38 по показаниям. Рекомендации даны."
+  },
+  {
+   "patient": 28,
+   "doctor": 5,
+   "services": [
+    20,
+    1
+   ],
+   "dayOffset": -18,
+   "startMin": 495,
+   "durationMin": 120,
+   "status": "done",
+   "complaints": "Профилактический осмотр",
+   "diagnosis": "Кариес дентина, зуб 36. Проведено лечение, поставлена пломба."
+  },
+  {
+   "patient": 15,
+   "doctor": 5,
+   "services": [
+    2
+   ],
+   "dayOffset": -18,
+   "startMin": 735,
+   "durationMin": 15,
+   "status": "done",
+   "complaints": "Боль при жевании",
+   "diagnosis": "Скол коронки зуба 21. Выполнена реставрация."
+  },
+  {
+   "patient": 33,
+   "doctor": 5,
+   "services": [
+    1
+   ],
+   "dayOffset": -18,
+   "startMin": 810,
+   "durationMin": 30,
+   "status": "done",
+   "complaints": "Кровоточивость дёсен",
+   "diagnosis": "Консультация: составлен план лечения."
+  },
+  {
+   "patient": 7,
+   "doctor": 0,
+   "services": [
+    5
+   ],
+   "dayOffset": -17,
+   "startMin": 360,
+   "durationMin": 90,
+   "status": "done",
+   "complaints": "Боль при жевании",
+   "diagnosis": "Гингивит лёгкой степени. Рекомендована гигиена и полоскание."
+  },
+  {
+   "patient": 38,
+   "doctor": 0,
+   "services": [
+    7,
+    5
+   ],
+   "dayOffset": -17,
+   "startMin": 570,
+   "durationMin": 180,
+   "status": "done",
+   "complaints": "Скол пломбы",
+   "diagnosis": "Кариес дентина, зуб 36. Проведено лечение, поставлена пломба."
+  },
+  {
+   "patient": 14,
+   "doctor": 0,
+   "services": [
+    0
+   ],
+   "dayOffset": -17,
+   "startMin": 765,
+   "durationMin": 30,
+   "status": "done",
+   "complaints": "Желание отбелить зубы",
+   "diagnosis": "Хронический пульпит, зуб 46. Каналы обработаны и запломбированы."
+  },
+  {
+   "patient": 3,
+   "doctor": 0,
+   "services": [
+    3
+   ],
+   "dayOffset": -17,
+   "startMin": 795,
+   "durationMin": 15,
+   "status": "done",
+   "complaints": "Кровоточивость дёсен",
+   "diagnosis": "Хронический пульпит, зуб 46. Каналы обработаны и запломбированы."
+  },
+  {
+   "patient": 28,
+   "doctor": 0,
+   "services": [
+    4,
+    0
+   ],
+   "dayOffset": -17,
+   "startMin": 810,
+   "durationMin": 90,
+   "status": "done",
+   "complaints": "Желание отбелить зубы",
+   "diagnosis": "Профилактический осмотр: патологии не выявлено."
+  },
+  {
+   "patient": 19,
+   "doctor": 1,
+   "services": [
+    3
+   ],
+   "dayOffset": -17,
+   "startMin": 840,
+   "durationMin": 15,
+   "status": "done",
+   "complaints": "Боль при накусывании",
+   "diagnosis": "Скол коронки зуба 21. Выполнена реставрация."
+  },
+  {
+   "patient": 26,
+   "doctor": 2,
+   "services": [
+    1,
+    2
+   ],
+   "dayOffset": -17,
+   "startMin": 390,
+   "durationMin": 30,
+   "status": "done",
+   "complaints": "Профилактический осмотр",
+   "diagnosis": "Консультация: составлен план лечения."
+  },
+  {
+   "patient": 18,
+   "doctor": 2,
+   "services": [
+    10
+   ],
+   "dayOffset": -17,
+   "startMin": 420,
+   "durationMin": 90,
+   "status": "done",
+   "complaints": "Профилактический осмотр",
+   "diagnosis": "Удалён зуб 38 по показаниям. Рекомендации даны."
+  },
+  {
+   "patient": 37,
+   "doctor": 2,
+   "services": [
+    9
+   ],
+   "dayOffset": -17,
+   "startMin": 510,
+   "durationMin": 60,
+   "status": "done",
+   "complaints": "Чувствительность к холодному",
+   "diagnosis": "Удалён зуб 38 по показаниям. Рекомендации даны."
+  },
+  {
+   "patient": 17,
+   "doctor": 2,
+   "services": [
+    9
+   ],
+   "dayOffset": -17,
+   "startMin": 645,
+   "durationMin": 60,
+   "status": "done",
+   "complaints": "Чувствительность к холодному",
+   "diagnosis": "Гингивит лёгкой степени. Рекомендована гигиена и полоскание."
+  },
+  {
+   "patient": 30,
+   "doctor": 3,
+   "services": [
+    12,
+    0
+   ],
+   "dayOffset": -17,
+   "startMin": 405,
+   "durationMin": 90,
+   "status": "done",
+   "complaints": "Профилактический осмотр",
+   "diagnosis": "Удалён зуб 38 по показаниям. Рекомендации даны."
+  },
+  {
+   "patient": 32,
+   "doctor": 3,
+   "services": [
+    15
+   ],
+   "dayOffset": -17,
+   "startMin": 720,
+   "durationMin": 30,
+   "status": "cancelled",
+   "complaints": "Кровоточивость дёсен",
+   "diagnosis": ""
+  },
+  {
+   "patient": 26,
+   "doctor": 4,
+   "services": [
+    3
+   ],
+   "dayOffset": -17,
+   "startMin": 810,
+   "durationMin": 15,
+   "status": "done",
+   "complaints": "Консультация по протезированию",
+   "diagnosis": "Хронический пульпит, зуб 46. Каналы обработаны и запломбированы."
+  },
+  {
+   "patient": 39,
+   "doctor": 5,
+   "services": [
+    3,
+    2
+   ],
+   "dayOffset": -17,
+   "startMin": 450,
+   "durationMin": 30,
+   "status": "cancelled",
+   "complaints": "Чувствительность к холодному",
+   "diagnosis": ""
+  },
+  {
+   "patient": 5,
+   "doctor": 5,
+   "services": [
+    2,
+    19
+   ],
+   "dayOffset": -17,
+   "startMin": 720,
+   "durationMin": 75,
+   "status": "done",
+   "complaints": "Боль при жевании",
+   "diagnosis": "Профилактический осмотр: патологии не выявлено."
+  },
+  {
+   "patient": 26,
+   "doctor": 0,
+   "services": [
+    5
+   ],
+   "dayOffset": -16,
+   "startMin": 765,
+   "durationMin": 90,
+   "status": "done",
+   "complaints": "Кровоточивость дёсен",
+   "diagnosis": "Кариес дентина, зуб 36. Проведено лечение, поставлена пломба."
+  },
+  {
+   "patient": 22,
+   "doctor": 1,
+   "services": [
+    16,
+    17
+   ],
+   "dayOffset": -16,
+   "startMin": 405,
+   "durationMin": 150,
+   "status": "done",
+   "complaints": "Скол пломбы",
+   "diagnosis": "Гингивит лёгкой степени. Рекомендована гигиена и полоскание."
+  },
+  {
+   "patient": 33,
+   "doctor": 2,
+   "services": [
+    11
+   ],
+   "dayOffset": -16,
+   "startMin": 375,
+   "durationMin": 90,
+   "status": "done",
+   "complaints": "Кровоточивость дёсен",
+   "diagnosis": "Профилактический осмотр: патологии не выявлено."
+  },
+  {
+   "patient": 15,
+   "doctor": 2,
+   "services": [
+    2
+   ],
+   "dayOffset": -16,
+   "startMin": 525,
+   "durationMin": 15,
+   "status": "done",
+   "complaints": "Боль при жевании",
+   "diagnosis": "Удалён зуб 38 по показаниям. Рекомендации даны."
+  },
+  {
+   "patient": 28,
+   "doctor": 2,
+   "services": [
+    2
+   ],
+   "dayOffset": -16,
+   "startMin": 570,
+   "durationMin": 15,
+   "status": "cancelled",
+   "complaints": "Профилактический осмотр",
+   "diagnosis": ""
+  },
+  {
+   "patient": 20,
+   "doctor": 2,
+   "services": [
+    11,
+    0
+   ],
+   "dayOffset": -16,
+   "startMin": 630,
+   "durationMin": 120,
+   "status": "done",
+   "complaints": "Профилактический осмотр",
+   "diagnosis": "Консультация: составлен план лечения."
+  },
+  {
+   "patient": 32,
+   "doctor": 3,
+   "services": [
+    2
+   ],
+   "dayOffset": -16,
+   "startMin": 405,
+   "durationMin": 15,
+   "status": "done",
+   "complaints": "Консультация по протезированию",
+   "diagnosis": "Удалён зуб 38 по показаниям. Рекомендации даны."
+  },
+  {
+   "patient": 25,
+   "doctor": 3,
+   "services": [
+    3,
+    15
+   ],
+   "dayOffset": -16,
+   "startMin": 630,
+   "durationMin": 45,
+   "status": "done",
+   "complaints": "Кровоточивость дёсен",
+   "diagnosis": "Профилактический осмотр: патологии не выявлено."
+  },
+  {
+   "patient": 37,
+   "doctor": 4,
+   "services": [
+    4,
+    1
+   ],
+   "dayOffset": -16,
+   "startMin": 570,
+   "durationMin": 90,
+   "status": "done",
+   "complaints": "Чувствительность к холодному",
+   "diagnosis": "Консультация: составлен план лечения."
+  },
+  {
+   "patient": 13,
+   "doctor": 5,
+   "services": [
+    2
+   ],
+   "dayOffset": -16,
+   "startMin": 600,
+   "durationMin": 15,
+   "status": "done",
+   "complaints": "Профилактический осмотр",
+   "diagnosis": "Профилактический осмотр: патологии не выявлено."
+  },
+  {
+   "patient": 37,
+   "doctor": 1,
+   "services": [
+    18,
+    17
+   ],
+   "dayOffset": -15,
+   "startMin": 600,
+   "durationMin": 90,
+   "status": "done",
+   "complaints": "Боль при накусывании",
+   "diagnosis": "Консультация: составлен план лечения."
+  },
+  {
+   "patient": 21,
+   "doctor": 2,
+   "services": [
+    11
+   ],
+   "dayOffset": -15,
+   "startMin": 360,
+   "durationMin": 90,
+   "status": "done",
+   "complaints": "Кровоточивость дёсен",
+   "diagnosis": "Кариес дентина, зуб 36. Проведено лечение, поставлена пломба."
+  },
+  {
+   "patient": 2,
+   "doctor": 2,
+   "services": [
+    0,
+    3,
+    8
+   ],
+   "dayOffset": -15,
+   "startMin": 645,
+   "durationMin": 75,
+   "status": "done",
+   "complaints": "Скол пломбы",
+   "diagnosis": "Консультация: составлен план лечения."
+  },
+  {
+   "patient": 0,
+   "doctor": 3,
+   "services": [
+    12,
+    0
+   ],
+   "dayOffset": -15,
+   "startMin": 495,
+   "durationMin": 90,
+   "status": "done",
+   "complaints": "Боль при накусывании",
+   "diagnosis": "Гингивит лёгкой степени. Рекомендована гигиена и полоскание."
+  },
+  {
+   "patient": 24,
+   "doctor": 3,
+   "services": [
+    0,
+    3
+   ],
+   "dayOffset": -15,
+   "startMin": 690,
+   "durationMin": 45,
+   "status": "done",
+   "complaints": "Чувствительность к холодному",
+   "diagnosis": "Кариес дентина, зуб 36. Проведено лечение, поставлена пломба."
+  },
+  {
+   "patient": 21,
+   "doctor": 4,
+   "services": [
+    20
+   ],
+   "dayOffset": -15,
+   "startMin": 570,
+   "durationMin": 90,
+   "status": "done",
+   "complaints": "Кровоточивость дёсен",
+   "diagnosis": "Скол коронки зуба 21. Выполнена реставрация."
+  },
+  {
+   "patient": 22,
+   "doctor": 5,
+   "services": [
+    22
+   ],
+   "dayOffset": -15,
+   "startMin": 495,
+   "durationMin": 30,
+   "status": "done",
+   "complaints": "Чувствительность к холодному",
+   "diagnosis": "Удалён зуб 38 по показаниям. Рекомендации даны."
+  },
+  {
+   "patient": 13,
+   "doctor": 5,
+   "services": [
+    2
+   ],
+   "dayOffset": -15,
+   "startMin": 660,
+   "durationMin": 15,
+   "status": "done",
+   "complaints": "Скол пломбы",
+   "diagnosis": "Консультация: составлен план лечения."
+  },
+  {
+   "patient": 16,
+   "doctor": 5,
+   "services": [
+    1
+   ],
+   "dayOffset": -15,
+   "startMin": 675,
+   "durationMin": 30,
+   "status": "done",
+   "complaints": "Боль при накусывании",
+   "diagnosis": "Профилактический осмотр: патологии не выявлено."
+  },
+  {
+   "patient": 4,
+   "doctor": 5,
+   "services": [
+    21
+   ],
+   "dayOffset": -15,
+   "startMin": 720,
+   "durationMin": 30,
+   "status": "done",
+   "complaints": "Чувствительность к холодному",
+   "diagnosis": "Консультация: составлен план лечения."
+  },
+  {
+   "patient": 13,
+   "doctor": 0,
+   "services": [
+    2
+   ],
+   "dayOffset": -13,
+   "startMin": 480,
+   "durationMin": 15,
+   "status": "done",
+   "complaints": "Чувствительность к холодному",
+   "diagnosis": "Гингивит лёгкой степени. Рекомендована гигиена и полоскание."
+  },
+  {
+   "patient": 0,
+   "doctor": 0,
+   "services": [
+    3
+   ],
+   "dayOffset": -13,
+   "startMin": 735,
+   "durationMin": 15,
+   "status": "done",
+   "complaints": "Чувствительность к холодному",
+   "diagnosis": "Профилактический осмотр: патологии не выявлено."
+  },
+  {
+   "patient": 18,
+   "doctor": 1,
+   "services": [
+    1,
+    17
+   ],
+   "dayOffset": -13,
+   "startMin": 435,
+   "durationMin": 60,
+   "status": "done",
+   "complaints": "Скол пломбы",
+   "diagnosis": "Гингивит лёгкой степени. Рекомендована гигиена и полоскание."
+  },
+  {
+   "patient": 23,
+   "doctor": 2,
+   "services": [
+    3
+   ],
+   "dayOffset": -13,
+   "startMin": 405,
+   "durationMin": 15,
+   "status": "done",
+   "complaints": "Профилактический осмотр",
+   "diagnosis": "Профилактический осмотр: патологии не выявлено."
+  },
+  {
+   "patient": 0,
+   "doctor": 2,
+   "services": [
+    2
+   ],
+   "dayOffset": -13,
+   "startMin": 435,
+   "durationMin": 15,
+   "status": "cancelled",
+   "complaints": "Кровоточивость дёсен",
+   "diagnosis": ""
+  },
+  {
+   "patient": 3,
+   "doctor": 2,
+   "services": [
+    1
+   ],
+   "dayOffset": -13,
+   "startMin": 510,
+   "durationMin": 30,
+   "status": "done",
+   "complaints": "Боль при накусывании",
+   "diagnosis": "Консультация: составлен план лечения."
+  },
+  {
+   "patient": 23,
+   "doctor": 2,
+   "services": [
+    8,
+    3
+   ],
+   "dayOffset": -13,
+   "startMin": 840,
+   "durationMin": 45,
+   "status": "done",
+   "complaints": "Кровоточивость дёсен",
+   "diagnosis": "Кариес дентина, зуб 36. Проведено лечение, поставлена пломба."
+  },
+  {
+   "patient": 17,
+   "doctor": 3,
+   "services": [
+    1,
+    3
+   ],
+   "dayOffset": -13,
+   "startMin": 510,
+   "durationMin": 45,
+   "status": "cancelled",
+   "complaints": "Профилактический осмотр",
+   "diagnosis": ""
+  },
+  {
+   "patient": 3,
+   "doctor": 3,
+   "services": [
+    0
+   ],
+   "dayOffset": -13,
+   "startMin": 570,
+   "durationMin": 30,
+   "status": "done",
+   "complaints": "Скол пломбы",
+   "diagnosis": "Скол коронки зуба 21. Выполнена реставрация."
+  },
+  {
+   "patient": 12,
+   "doctor": 3,
+   "services": [
+    2
+   ],
+   "dayOffset": -13,
+   "startMin": 735,
+   "durationMin": 15,
+   "status": "done",
+   "complaints": "Кровоточивость дёсен",
+   "diagnosis": "Скол коронки зуба 21. Выполнена реставрация."
+  },
+  {
+   "patient": 2,
+   "doctor": 4,
+   "services": [
+    20
+   ],
+   "dayOffset": -13,
+   "startMin": 465,
+   "durationMin": 90,
+   "status": "done",
+   "complaints": "Кровоточивость дёсен",
+   "diagnosis": "Удалён зуб 38 по показаниям. Рекомендации даны."
+  },
+  {
+   "patient": 3,
+   "doctor": 4,
+   "services": [
+    22
+   ],
+   "dayOffset": -13,
+   "startMin": 630,
+   "durationMin": 30,
+   "status": "done",
+   "complaints": "Боль при жевании",
+   "diagnosis": "Гингивит лёгкой степени. Рекомендована гигиена и полоскание."
+  },
+  {
+   "patient": 34,
+   "doctor": 5,
+   "services": [
+    19
+   ],
+   "dayOffset": -13,
+   "startMin": 375,
+   "durationMin": 60,
+   "status": "cancelled",
+   "complaints": "Скол пломбы",
+   "diagnosis": ""
+  },
+  {
+   "patient": 2,
+   "doctor": 5,
+   "services": [
+    0,
+    22
+   ],
+   "dayOffset": -13,
+   "startMin": 675,
+   "durationMin": 60,
+   "status": "done",
+   "complaints": "Боль при накусывании",
+   "diagnosis": "Профилактический осмотр: патологии не выявлено."
+  },
+  {
+   "patient": 32,
+   "doctor": 5,
+   "services": [
+    1
+   ],
+   "dayOffset": -13,
+   "startMin": 855,
+   "durationMin": 30,
+   "status": "done",
+   "complaints": "Чувствительность к холодному",
+   "diagnosis": "Гингивит лёгкой степени. Рекомендована гигиена и полоскание."
+  },
+  {
+   "patient": 7,
+   "doctor": 0,
+   "services": [
+    1,
+    7
+   ],
+   "dayOffset": -12,
+   "startMin": 375,
+   "durationMin": 120,
+   "status": "done",
+   "complaints": "Чувствительность к холодному",
+   "diagnosis": "Кариес дентина, зуб 36. Проведено лечение, поставлена пломба."
+  },
+  {
+   "patient": 30,
+   "doctor": 0,
+   "services": [
+    1,
+    0,
+    23
+   ],
+   "dayOffset": -12,
+   "startMin": 600,
+   "durationMin": 105,
+   "status": "done",
+   "complaints": "Скол пломбы",
+   "diagnosis": "Консультация: составлен план лечения."
+  },
+  {
+   "patient": 14,
+   "doctor": 1,
+   "services": [
+    17,
+    16,
+    1
+   ],
+   "dayOffset": -12,
+   "startMin": 510,
+   "durationMin": 180,
+   "status": "done",
+   "complaints": "Желание отбелить зубы",
+   "diagnosis": "Гингивит лёгкой степени. Рекомендована гигиена и полоскание."
+  },
+  {
+   "patient": 5,
+   "doctor": 1,
+   "services": [
+    2
+   ],
+   "dayOffset": -12,
+   "startMin": 840,
+   "durationMin": 15,
+   "status": "done",
+   "complaints": "Кровоточивость дёсен",
+   "diagnosis": "Кариес дентина, зуб 36. Проведено лечение, поставлена пломба."
+  },
+  {
+   "patient": 8,
+   "doctor": 2,
+   "services": [
+    2,
+    11
+   ],
+   "dayOffset": -12,
+   "startMin": 360,
+   "durationMin": 105,
+   "status": "done",
+   "complaints": "Желание отбелить зубы",
+   "diagnosis": "Консультация: составлен план лечения."
+  },
+  {
+   "patient": 23,
+   "doctor": 2,
+   "services": [
+    10
+   ],
+   "dayOffset": -12,
+   "startMin": 795,
+   "durationMin": 90,
+   "status": "done",
+   "complaints": "Чувствительность к холодному",
+   "diagnosis": "Профилактический осмотр: патологии не выявлено."
+  },
+  {
+   "patient": 18,
+   "doctor": 3,
+   "services": [
+    2,
+    0
+   ],
+   "dayOffset": -12,
+   "startMin": 510,
+   "durationMin": 45,
+   "status": "done",
+   "complaints": "Боль при жевании",
+   "diagnosis": "Консультация: составлен план лечения."
+  },
+  {
+   "patient": 38,
+   "doctor": 3,
+   "services": [
+    2
+   ],
+   "dayOffset": -12,
+   "startMin": 585,
+   "durationMin": 15,
+   "status": "done",
+   "complaints": "Желание отбелить зубы",
+   "diagnosis": "Кариес дентина, зуб 36. Проведено лечение, поставлена пломба."
+  },
+  {
+   "patient": 25,
+   "doctor": 3,
+   "services": [
+    12,
+    14,
+    3
+   ],
+   "dayOffset": -12,
+   "startMin": 660,
+   "durationMin": 165,
+   "status": "done",
+   "complaints": "Боль при жевании",
+   "diagnosis": "Гингивит лёгкой степени. Рекомендована гигиена и полоскание."
+  },
+  {
+   "patient": 15,
+   "doctor": 4,
+   "services": [
+    0
+   ],
+   "dayOffset": -12,
+   "startMin": 480,
+   "durationMin": 30,
+   "status": "done",
+   "complaints": "Желание отбелить зубы",
+   "diagnosis": "Хронический пульпит, зуб 46. Каналы обработаны и запломбированы."
+  },
+  {
+   "patient": 15,
+   "doctor": 5,
+   "services": [
+    21,
+    19
+   ],
+   "dayOffset": -12,
+   "startMin": 690,
+   "durationMin": 90,
+   "status": "done",
+   "complaints": "Консультация по протезированию",
+   "diagnosis": "Скол коронки зуба 21. Выполнена реставрация."
+  },
+  {
+   "patient": 7,
+   "doctor": 0,
+   "services": [
+    7
+   ],
+   "dayOffset": -11,
+   "startMin": 465,
+   "durationMin": 90,
+   "status": "done",
+   "complaints": "Чувствительность к холодному",
+   "diagnosis": "Гингивит лёгкой степени. Рекомендована гигиена и полоскание."
+  },
+  {
+   "patient": 5,
+   "doctor": 0,
+   "services": [
+    2
+   ],
+   "dayOffset": -11,
+   "startMin": 615,
+   "durationMin": 15,
+   "status": "done",
+   "complaints": "Боль при жевании",
+   "diagnosis": "Профилактический осмотр: патологии не выявлено."
+  },
+  {
+   "patient": 16,
+   "doctor": 1,
+   "services": [
+    17
+   ],
+   "dayOffset": -11,
+   "startMin": 375,
+   "durationMin": 30,
+   "status": "done",
+   "complaints": "Кровоточивость дёсен",
+   "diagnosis": "Удалён зуб 38 по показаниям. Рекомендации даны."
+  },
+  {
+   "patient": 17,
+   "doctor": 1,
+   "services": [
+    3
+   ],
+   "dayOffset": -11,
+   "startMin": 465,
+   "durationMin": 15,
+   "status": "done",
+   "complaints": "Боль при жевании",
+   "diagnosis": "Профилактический осмотр: патологии не выявлено."
+  },
+  {
+   "patient": 32,
+   "doctor": 1,
+   "services": [
+    3
+   ],
+   "dayOffset": -11,
+   "startMin": 525,
+   "durationMin": 15,
+   "status": "cancelled",
+   "complaints": "Боль при накусывании",
+   "diagnosis": ""
+  },
+  {
+   "patient": 29,
+   "doctor": 1,
+   "services": [
+    2
+   ],
+   "dayOffset": -11,
+   "startMin": 690,
+   "durationMin": 15,
+   "status": "done",
+   "complaints": "Чувствительность к холодному",
+   "diagnosis": "Консультация: составлен план лечения."
+  },
+  {
+   "patient": 9,
+   "doctor": 2,
+   "services": [
+    0,
+    9
+   ],
+   "dayOffset": -11,
+   "startMin": 810,
+   "durationMin": 90,
+   "status": "done",
+   "complaints": "Консультация по протезированию",
+   "diagnosis": "Консультация: составлен план лечения."
+  },
+  {
+   "patient": 29,
+   "doctor": 3,
+   "services": [
+    14
+   ],
+   "dayOffset": -11,
+   "startMin": 405,
+   "durationMin": 90,
+   "status": "done",
+   "complaints": "Желание отбелить зубы",
+   "diagnosis": "Профилактический осмотр: патологии не выявлено."
+  },
+  {
+   "patient": 2,
+   "doctor": 3,
+   "services": [
+    2
+   ],
+   "dayOffset": -11,
+   "startMin": 780,
+   "durationMin": 15,
+   "status": "done",
+   "complaints": "Желание отбелить зубы",
+   "diagnosis": "Гингивит лёгкой степени. Рекомендована гигиена и полоскание."
+  },
+  {
+   "patient": 30,
+   "doctor": 3,
+   "services": [
+    13
+   ],
+   "dayOffset": -11,
+   "startMin": 825,
+   "durationMin": 60,
+   "status": "done",
+   "complaints": "Боль при накусывании",
+   "diagnosis": "Скол коронки зуба 21. Выполнена реставрация."
+  },
+  {
+   "patient": 38,
+   "doctor": 4,
+   "services": [
+    23
+   ],
+   "dayOffset": -11,
+   "startMin": 360,
+   "durationMin": 45,
+   "status": "done",
+   "complaints": "Консультация по протезированию",
+   "diagnosis": "Профилактический осмотр: патологии не выявлено."
+  },
+  {
+   "patient": 21,
+   "doctor": 4,
+   "services": [
+    21,
+    3
+   ],
+   "dayOffset": -11,
+   "startMin": 495,
+   "durationMin": 45,
+   "status": "cancelled",
+   "complaints": "Чувствительность к холодному",
+   "diagnosis": ""
+  },
+  {
+   "patient": 34,
+   "doctor": 4,
+   "services": [
+    4
+   ],
+   "dayOffset": -11,
+   "startMin": 660,
+   "durationMin": 60,
+   "status": "done",
+   "complaints": "Чувствительность к холодному",
+   "diagnosis": "Кариес дентина, зуб 36. Проведено лечение, поставлена пломба."
+  },
+  {
+   "patient": 22,
+   "doctor": 5,
+   "services": [
+    20,
+    3
+   ],
+   "dayOffset": -11,
+   "startMin": 645,
+   "durationMin": 105,
+   "status": "done",
+   "complaints": "Желание отбелить зубы",
+   "diagnosis": "Профилактический осмотр: патологии не выявлено."
+  },
+  {
+   "patient": 25,
+   "doctor": 5,
+   "services": [
+    19
+   ],
+   "dayOffset": -11,
+   "startMin": 765,
+   "durationMin": 60,
+   "status": "done",
+   "complaints": "Чувствительность к холодному",
+   "diagnosis": "Кариес дентина, зуб 36. Проведено лечение, поставлена пломба."
+  },
+  {
+   "patient": 12,
+   "doctor": 0,
+   "services": [
+    5
+   ],
+   "dayOffset": -10,
+   "startMin": 435,
+   "durationMin": 90,
+   "status": "cancelled",
+   "complaints": "Профилактический осмотр",
+   "diagnosis": ""
+  },
+  {
+   "patient": 11,
+   "doctor": 0,
+   "services": [
+    3
+   ],
+   "dayOffset": -10,
+   "startMin": 585,
+   "durationMin": 15,
+   "status": "done",
+   "complaints": "Чувствительность к холодному",
+   "diagnosis": "Хронический пульпит, зуб 46. Каналы обработаны и запломбированы."
+  },
+  {
+   "patient": 3,
+   "doctor": 0,
+   "services": [
+    4,
+    23
+   ],
+   "dayOffset": -10,
+   "startMin": 705,
+   "durationMin": 105,
+   "status": "cancelled",
+   "complaints": "Желание отбелить зубы",
+   "diagnosis": ""
+  },
+  {
+   "patient": 6,
+   "doctor": 1,
+   "services": [
+    1
+   ],
+   "dayOffset": -10,
+   "startMin": 375,
+   "durationMin": 30,
+   "status": "done",
+   "complaints": "Боль при жевании",
+   "diagnosis": "Гингивит лёгкой степени. Рекомендована гигиена и полоскание."
+  },
+  {
+   "patient": 11,
+   "doctor": 2,
+   "services": [
+    0
+   ],
+   "dayOffset": -10,
+   "startMin": 420,
+   "durationMin": 30,
+   "status": "cancelled",
+   "complaints": "Консультация по протезированию",
+   "diagnosis": ""
+  },
+  {
+   "patient": 0,
+   "doctor": 2,
+   "services": [
+    10
+   ],
+   "dayOffset": -10,
+   "startMin": 465,
+   "durationMin": 90,
+   "status": "done",
+   "complaints": "Боль при накусывании",
+   "diagnosis": "Скол коронки зуба 21. Выполнена реставрация."
+  },
+  {
+   "patient": 4,
+   "doctor": 2,
+   "services": [
+    1
+   ],
+   "dayOffset": -10,
+   "startMin": 645,
+   "durationMin": 30,
+   "status": "cancelled",
+   "complaints": "Чувствительность к холодному",
+   "diagnosis": ""
+  },
+  {
+   "patient": 21,
+   "doctor": 3,
+   "services": [
+    2
+   ],
+   "dayOffset": -10,
+   "startMin": 375,
+   "durationMin": 15,
+   "status": "done",
+   "complaints": "Боль при жевании",
+   "diagnosis": "Кариес дентина, зуб 36. Проведено лечение, поставлена пломба."
+  },
+  {
+   "patient": 5,
+   "doctor": 3,
+   "services": [
+    12
+   ],
+   "dayOffset": -10,
+   "startMin": 615,
+   "durationMin": 60,
+   "status": "cancelled",
+   "complaints": "Боль при жевании",
+   "diagnosis": ""
+  },
+  {
+   "patient": 8,
+   "doctor": 4,
+   "services": [
+    23
+   ],
+   "dayOffset": -10,
+   "startMin": 450,
+   "durationMin": 45,
+   "status": "done",
+   "complaints": "Скол пломбы",
+   "diagnosis": "Консультация: составлен план лечения."
+  },
+  {
+   "patient": 24,
+   "doctor": 4,
+   "services": [
+    6
+   ],
+   "dayOffset": -10,
+   "startMin": 525,
+   "durationMin": 45,
+   "status": "done",
+   "complaints": "Кровоточивость дёсен",
+   "diagnosis": "Профилактический осмотр: патологии не выявлено."
+  },
+  {
+   "patient": 31,
+   "doctor": 4,
+   "services": [
+    4,
+    6
+   ],
+   "dayOffset": -10,
+   "startMin": 600,
+   "durationMin": 105,
+   "status": "done",
+   "complaints": "Кровоточивость дёсен",
+   "diagnosis": "Гингивит лёгкой степени. Рекомендована гигиена и полоскание."
+  },
+  {
+   "patient": 17,
+   "doctor": 5,
+   "services": [
+    1
+   ],
+   "dayOffset": -10,
+   "startMin": 420,
+   "durationMin": 30,
+   "status": "done",
+   "complaints": "Желание отбелить зубы",
+   "diagnosis": "Гингивит лёгкой степени. Рекомендована гигиена и полоскание."
+  },
+  {
+   "patient": 31,
+   "doctor": 5,
+   "services": [
+    2,
+    22
+   ],
+   "dayOffset": -10,
+   "startMin": 555,
+   "durationMin": 45,
+   "status": "done",
+   "complaints": "Желание отбелить зубы",
+   "diagnosis": "Кариес дентина, зуб 36. Проведено лечение, поставлена пломба."
+  },
+  {
+   "patient": 24,
+   "doctor": 5,
+   "services": [
+    21,
+    19
+   ],
+   "dayOffset": -10,
+   "startMin": 630,
+   "durationMin": 90,
+   "status": "done",
+   "complaints": "Профилактический осмотр",
+   "diagnosis": "Консультация: составлен план лечения."
+  },
+  {
+   "patient": 38,
+   "doctor": 0,
+   "services": [
+    3
+   ],
+   "dayOffset": -9,
+   "startMin": 540,
+   "durationMin": 15,
+   "status": "done",
+   "complaints": "Боль при накусывании",
+   "diagnosis": "Гингивит лёгкой степени. Рекомендована гигиена и полоскание."
+  },
+  {
+   "patient": 18,
+   "doctor": 0,
+   "services": [
+    1
+   ],
+   "dayOffset": -9,
+   "startMin": 615,
+   "durationMin": 30,
+   "status": "done",
+   "complaints": "Скол пломбы",
+   "diagnosis": "Профилактический осмотр: патологии не выявлено."
+  },
+  {
+   "patient": 25,
+   "doctor": 0,
+   "services": [
+    0,
+    6
+   ],
+   "dayOffset": -9,
+   "startMin": 690,
+   "durationMin": 75,
+   "status": "done",
+   "complaints": "Кровоточивость дёсен",
+   "diagnosis": "Удалён зуб 38 по показаниям. Рекомендации даны."
+  },
+  {
+   "patient": 9,
+   "doctor": 1,
+   "services": [
+    2
+   ],
+   "dayOffset": -9,
+   "startMin": 375,
+   "durationMin": 15,
+   "status": "done",
+   "complaints": "Желание отбелить зубы",
+   "diagnosis": "Гингивит лёгкой степени. Рекомендована гигиена и полоскание."
+  },
+  {
+   "patient": 24,
+   "doctor": 1,
+   "services": [
+    3
+   ],
+   "dayOffset": -9,
+   "startMin": 420,
+   "durationMin": 15,
+   "status": "done",
+   "complaints": "Консультация по протезированию",
+   "diagnosis": "Удалён зуб 38 по показаниям. Рекомендации даны."
+  },
+  {
+   "patient": 30,
+   "doctor": 1,
+   "services": [
+    1,
+    2
+   ],
+   "dayOffset": -9,
+   "startMin": 555,
+   "durationMin": 30,
+   "status": "done",
+   "complaints": "Боль при накусывании",
+   "diagnosis": "Скол коронки зуба 21. Выполнена реставрация."
+  },
+  {
+   "patient": 35,
+   "doctor": 1,
+   "services": [
+    1
+   ],
+   "dayOffset": -9,
+   "startMin": 690,
+   "durationMin": 30,
+   "status": "done",
+   "complaints": "Скол пломбы",
+   "diagnosis": "Консультация: составлен план лечения."
+  },
+  {
+   "patient": 37,
+   "doctor": 2,
+   "services": [
+    11
+   ],
+   "dayOffset": -9,
+   "startMin": 480,
+   "durationMin": 90,
+   "status": "done",
+   "complaints": "Чувствительность к холодному",
+   "diagnosis": "Удалён зуб 38 по показаниям. Рекомендации даны."
+  },
+  {
+   "patient": 12,
+   "doctor": 2,
+   "services": [
+    9
+   ],
+   "dayOffset": -9,
+   "startMin": 585,
+   "durationMin": 60,
+   "status": "done",
+   "complaints": "Боль при жевании",
+   "diagnosis": "Удалён зуб 38 по показаниям. Рекомендации даны."
+  },
+  {
+   "patient": 8,
+   "doctor": 3,
+   "services": [
+    0
+   ],
+   "dayOffset": -9,
+   "startMin": 420,
+   "durationMin": 30,
+   "status": "done",
+   "complaints": "Боль при жевании",
+   "diagnosis": "Консультация: составлен план лечения."
+  },
+  {
+   "patient": 32,
+   "doctor": 3,
+   "services": [
+    13,
+    12
+   ],
+   "dayOffset": -9,
+   "startMin": 495,
+   "durationMin": 120,
+   "status": "cancelled",
+   "complaints": "Желание отбелить зубы",
+   "diagnosis": ""
+  },
+  {
+   "patient": 18,
+   "doctor": 3,
+   "services": [
+    15,
+    2
+   ],
+   "dayOffset": -9,
+   "startMin": 645,
+   "durationMin": 30,
+   "status": "done",
+   "complaints": "Консультация по протезированию",
+   "diagnosis": "Профилактический осмотр: патологии не выявлено."
+  },
+  {
+   "patient": 4,
+   "doctor": 3,
+   "services": [
+    0,
+    15
+   ],
+   "dayOffset": -9,
+   "startMin": 705,
+   "durationMin": 60,
+   "status": "done",
+   "complaints": "Консультация по протезированию",
+   "diagnosis": "Хронический пульпит, зуб 46. Каналы обработаны и запломбированы."
+  },
+  {
+   "patient": 27,
+   "doctor": 4,
+   "services": [
+    6
+   ],
+   "dayOffset": -9,
+   "startMin": 510,
+   "durationMin": 45,
+   "status": "done",
+   "complaints": "Чувствительность к холодному",
+   "diagnosis": "Консультация: составлен план лечения."
+  },
+  {
+   "patient": 9,
+   "doctor": 4,
+   "services": [
+    7
+   ],
+   "dayOffset": -9,
+   "startMin": 555,
+   "durationMin": 90,
+   "status": "done",
+   "complaints": "Желание отбелить зубы",
+   "diagnosis": "Консультация: составлен план лечения."
+  },
+  {
+   "patient": 5,
+   "doctor": 4,
+   "services": [
+    7
+   ],
+   "dayOffset": -9,
+   "startMin": 645,
+   "durationMin": 90,
+   "status": "done",
+   "complaints": "Кровоточивость дёсен",
+   "diagnosis": "Удалён зуб 38 по показаниям. Рекомендации даны."
+  },
+  {
+   "patient": 18,
+   "doctor": 5,
+   "services": [
+    3
+   ],
+   "dayOffset": -9,
+   "startMin": 525,
+   "durationMin": 15,
+   "status": "done",
+   "complaints": "Профилактический осмотр",
+   "diagnosis": "Скол коронки зуба 21. Выполнена реставрация."
+  },
+  {
+   "patient": 20,
+   "doctor": 5,
+   "services": [
+    2,
+    22
+   ],
+   "dayOffset": -9,
+   "startMin": 570,
+   "durationMin": 45,
+   "status": "cancelled",
+   "complaints": "Скол пломбы",
+   "diagnosis": ""
+  },
+  {
+   "patient": 2,
+   "doctor": 5,
+   "services": [
+    22
+   ],
+   "dayOffset": -9,
+   "startMin": 795,
+   "durationMin": 30,
+   "status": "cancelled",
+   "complaints": "Кровоточивость дёсен",
+   "diagnosis": ""
+  },
+  {
+   "patient": 15,
+   "doctor": 0,
+   "services": [
+    6,
+    2
+   ],
+   "dayOffset": -8,
+   "startMin": 360,
+   "durationMin": 60,
+   "status": "done",
+   "complaints": "Боль при жевании",
+   "diagnosis": "Профилактический осмотр: патологии не выявлено."
+  },
+  {
+   "patient": 14,
+   "doctor": 0,
+   "services": [
+    3,
+    2
+   ],
+   "dayOffset": -8,
+   "startMin": 585,
+   "durationMin": 30,
+   "status": "cancelled",
+   "complaints": "Скол пломбы",
+   "diagnosis": ""
+  },
+  {
+   "patient": 8,
+   "doctor": 1,
+   "services": [
+    18
+   ],
+   "dayOffset": -8,
+   "startMin": 375,
+   "durationMin": 60,
+   "status": "done",
+   "complaints": "Желание отбелить зубы",
+   "diagnosis": "Хронический пульпит, зуб 46. Каналы обработаны и запломбированы."
+  },
+  {
+   "patient": 6,
+   "doctor": 1,
+   "services": [
+    0,
+    17
+   ],
+   "dayOffset": -8,
+   "startMin": 585,
+   "durationMin": 60,
+   "status": "done",
+   "complaints": "Консультация по протезированию",
+   "diagnosis": "Скол коронки зуба 21. Выполнена реставрация."
+  },
+  {
+   "patient": 28,
+   "doctor": 2,
+   "services": [
+    11
+   ],
+   "dayOffset": -8,
+   "startMin": 570,
+   "durationMin": 90,
+   "status": "done",
+   "complaints": "Боль при жевании",
+   "diagnosis": "Удалён зуб 38 по показаниям. Рекомендации даны."
+  },
+  {
+   "patient": 7,
+   "doctor": 4,
+   "services": [
+    7
+   ],
+   "dayOffset": -8,
+   "startMin": 405,
+   "durationMin": 90,
+   "status": "done",
+   "complaints": "Профилактический осмотр",
+   "diagnosis": "Консультация: составлен план лечения."
+  },
+  {
+   "patient": 26,
+   "doctor": 4,
+   "services": [
+    23
+   ],
+   "dayOffset": -8,
+   "startMin": 600,
+   "durationMin": 45,
+   "status": "done",
+   "complaints": "Боль при накусывании",
+   "diagnosis": "Хронический пульпит, зуб 46. Каналы обработаны и запломбированы."
+  },
+  {
+   "patient": 24,
+   "doctor": 4,
+   "services": [
+    2
+   ],
+   "dayOffset": -8,
+   "startMin": 735,
+   "durationMin": 15,
+   "status": "done",
+   "complaints": "Боль при жевании",
+   "diagnosis": "Удалён зуб 38 по показаниям. Рекомендации даны."
+  },
+  {
+   "patient": 18,
+   "doctor": 5,
+   "services": [
+    0,
+    1
+   ],
+   "dayOffset": -8,
+   "startMin": 540,
+   "durationMin": 60,
+   "status": "done",
+   "complaints": "Профилактический осмотр",
+   "diagnosis": "Консультация: составлен план лечения."
+  },
+  {
+   "patient": 25,
+   "doctor": 5,
+   "services": [
+    21
+   ],
+   "dayOffset": -8,
+   "startMin": 690,
+   "durationMin": 30,
+   "status": "done",
+   "complaints": "Профилактический осмотр",
+   "diagnosis": "Хронический пульпит, зуб 46. Каналы обработаны и запломбированы."
+  },
+  {
+   "patient": 21,
+   "doctor": 0,
+   "services": [
+    7,
+    4,
+    2
+   ],
+   "dayOffset": -6,
+   "startMin": 360,
+   "durationMin": 165,
+   "status": "cancelled",
+   "complaints": "Профилактический осмотр",
+   "diagnosis": ""
+  },
+  {
+   "patient": 5,
+   "doctor": 1,
+   "services": [
+    2
+   ],
+   "dayOffset": -6,
+   "startMin": 450,
+   "durationMin": 15,
+   "status": "done",
+   "complaints": "Боль при жевании",
+   "diagnosis": "Хронический пульпит, зуб 46. Каналы обработаны и запломбированы."
+  },
+  {
+   "patient": 38,
+   "doctor": 1,
+   "services": [
+    17
+   ],
+   "dayOffset": -6,
+   "startMin": 525,
+   "durationMin": 30,
+   "status": "done",
+   "complaints": "Консультация по протезированию",
+   "diagnosis": "Удалён зуб 38 по показаниям. Рекомендации даны."
+  },
+  {
+   "patient": 9,
+   "doctor": 1,
+   "services": [
+    1
+   ],
+   "dayOffset": -6,
+   "startMin": 555,
+   "durationMin": 30,
+   "status": "done",
+   "complaints": "Профилактический осмотр",
+   "diagnosis": "Хронический пульпит, зуб 46. Каналы обработаны и запломбированы."
+  },
+  {
+   "patient": 29,
+   "doctor": 1,
+   "services": [
+    0
+   ],
+   "dayOffset": -6,
+   "startMin": 600,
+   "durationMin": 30,
+   "status": "done",
+   "complaints": "Консультация по протезированию",
+   "diagnosis": "Профилактический осмотр: патологии не выявлено."
+  },
+  {
+   "patient": 17,
+   "doctor": 1,
+   "services": [
+    0,
+    18
+   ],
+   "dayOffset": -6,
+   "startMin": 630,
+   "durationMin": 90,
+   "status": "cancelled",
+   "complaints": "Желание отбелить зубы",
+   "diagnosis": ""
+  },
+  {
+   "patient": 29,
+   "doctor": 1,
+   "services": [
+    18
+   ],
+   "dayOffset": -6,
+   "startMin": 720,
+   "durationMin": 60,
+   "status": "cancelled",
+   "complaints": "Боль при накусывании",
+   "diagnosis": ""
+  },
+  {
+   "patient": 29,
+   "doctor": 2,
+   "services": [
+    1,
+    2
+   ],
+   "dayOffset": -6,
+   "startMin": 360,
+   "durationMin": 30,
+   "status": "done",
+   "complaints": "Боль при накусывании",
+   "diagnosis": "Кариес дентина, зуб 36. Проведено лечение, поставлена пломба."
+  },
+  {
+   "patient": 8,
+   "doctor": 2,
+   "services": [
+    1
+   ],
+   "dayOffset": -6,
+   "startMin": 585,
+   "durationMin": 30,
+   "status": "done",
+   "complaints": "Кровоточивость дёсен",
+   "diagnosis": "Кариес дентина, зуб 36. Проведено лечение, поставлена пломба."
+  },
+  {
+   "patient": 1,
+   "doctor": 2,
+   "services": [
+    10
+   ],
+   "dayOffset": -6,
+   "startMin": 765,
+   "durationMin": 90,
+   "status": "done",
+   "complaints": "Желание отбелить зубы",
+   "diagnosis": "Хронический пульпит, зуб 46. Каналы обработаны и запломбированы."
+  },
+  {
+   "patient": 13,
+   "doctor": 3,
+   "services": [
+    0
+   ],
+   "dayOffset": -6,
+   "startMin": 615,
+   "durationMin": 30,
+   "status": "done",
+   "complaints": "Консультация по протезированию",
+   "diagnosis": "Удалён зуб 38 по показаниям. Рекомендации даны."
+  },
+  {
+   "patient": 2,
+   "doctor": 3,
+   "services": [
+    3,
+    14,
+    15
+   ],
+   "dayOffset": -6,
+   "startMin": 660,
+   "durationMin": 135,
+   "status": "done",
+   "complaints": "Скол пломбы",
+   "diagnosis": "Гингивит лёгкой степени. Рекомендована гигиена и полоскание."
+  },
+  {
+   "patient": 19,
+   "doctor": 3,
+   "services": [
+    0
+   ],
+   "dayOffset": -6,
+   "startMin": 840,
+   "durationMin": 30,
+   "status": "done",
+   "complaints": "Желание отбелить зубы",
+   "diagnosis": "Профилактический осмотр: патологии не выявлено."
+  },
+  {
+   "patient": 33,
+   "doctor": 4,
+   "services": [
+    21,
+    19
+   ],
+   "dayOffset": -6,
+   "startMin": 645,
+   "durationMin": 90,
+   "status": "done",
+   "complaints": "Консультация по протезированию",
+   "diagnosis": "Профилактический осмотр: патологии не выявлено."
+  },
+  {
+   "patient": 10,
+   "doctor": 5,
+   "services": [
+    19
+   ],
+   "dayOffset": -6,
+   "startMin": 375,
+   "durationMin": 60,
+   "status": "done",
+   "complaints": "Чувствительность к холодному",
+   "diagnosis": "Гингивит лёгкой степени. Рекомендована гигиена и полоскание."
+  },
+  {
+   "patient": 7,
+   "doctor": 5,
+   "services": [
+    20
+   ],
+   "dayOffset": -6,
+   "startMin": 465,
+   "durationMin": 90,
+   "status": "done",
+   "complaints": "Скол пломбы",
+   "diagnosis": "Хронический пульпит, зуб 46. Каналы обработаны и запломбированы."
+  },
+  {
+   "patient": 31,
+   "doctor": 5,
+   "services": [
+    3,
+    21
+   ],
+   "dayOffset": -6,
+   "startMin": 735,
+   "durationMin": 45,
+   "status": "done",
+   "complaints": "Желание отбелить зубы",
+   "diagnosis": "Хронический пульпит, зуб 46. Каналы обработаны и запломбированы."
+  },
+  {
+   "patient": 2,
+   "doctor": 0,
+   "services": [
+    3
+   ],
+   "dayOffset": -5,
+   "startMin": 360,
+   "durationMin": 15,
+   "status": "done",
+   "complaints": "Консультация по протезированию",
+   "diagnosis": "Удалён зуб 38 по показаниям. Рекомендации даны."
+  },
+  {
+   "patient": 38,
+   "doctor": 0,
+   "services": [
+    6
+   ],
+   "dayOffset": -5,
+   "startMin": 570,
+   "durationMin": 45,
+   "status": "cancelled",
+   "complaints": "Боль при жевании",
+   "diagnosis": ""
+  },
+  {
+   "patient": 28,
+   "doctor": 0,
+   "services": [
+    4
+   ],
+   "dayOffset": -5,
+   "startMin": 750,
+   "durationMin": 60,
+   "status": "done",
+   "complaints": "Кровоточивость дёсен",
+   "diagnosis": "Гингивит лёгкой степени. Рекомендована гигиена и полоскание."
+  },
+  {
+   "patient": 5,
+   "doctor": 1,
+   "services": [
+    17
+   ],
+   "dayOffset": -5,
+   "startMin": 375,
+   "durationMin": 30,
+   "status": "done",
+   "complaints": "Профилактический осмотр",
+   "diagnosis": "Удалён зуб 38 по показаниям. Рекомендации даны."
+  },
+  {
+   "patient": 24,
+   "doctor": 1,
+   "services": [
+    2
+   ],
+   "dayOffset": -5,
+   "startMin": 480,
+   "durationMin": 15,
+   "status": "done",
+   "complaints": "Скол пломбы",
+   "diagnosis": "Консультация: составлен план лечения."
+  },
+  {
+   "patient": 22,
+   "doctor": 1,
+   "services": [
+    18
+   ],
+   "dayOffset": -5,
+   "startMin": 555,
+   "durationMin": 60,
+   "status": "done",
+   "complaints": "Боль при жевании",
+   "diagnosis": "Удалён зуб 38 по показаниям. Рекомендации даны."
+  },
+  {
+   "patient": 4,
+   "doctor": 2,
+   "services": [
+    9,
+    3
+   ],
+   "dayOffset": -5,
+   "startMin": 375,
+   "durationMin": 75,
+   "status": "done",
+   "complaints": "Кровоточивость дёсен",
+   "diagnosis": "Удалён зуб 38 по показаниям. Рекомендации даны."
+  },
+  {
+   "patient": 16,
+   "doctor": 2,
+   "services": [
+    8,
+    1
+   ],
+   "dayOffset": -5,
+   "startMin": 645,
+   "durationMin": 60,
+   "status": "done",
+   "complaints": "Боль при накусывании",
+   "diagnosis": "Кариес дентина, зуб 36. Проведено лечение, поставлена пломба."
+  },
+  {
+   "patient": 8,
+   "doctor": 2,
+   "services": [
+    10
+   ],
+   "dayOffset": -5,
+   "startMin": 720,
+   "durationMin": 90,
+   "status": "done",
+   "complaints": "Профилактический осмотр",
+   "diagnosis": "Консультация: составлен план лечения."
+  },
+  {
+   "patient": 36,
+   "doctor": 2,
+   "services": [
+    3,
+    2
+   ],
+   "dayOffset": -5,
+   "startMin": 810,
+   "durationMin": 30,
+   "status": "done",
+   "complaints": "Консультация по протезированию",
+   "diagnosis": "Гингивит лёгкой степени. Рекомендована гигиена и полоскание."
+  },
+  {
+   "patient": 17,
+   "doctor": 3,
+   "services": [
+    15,
+    0,
+    1
+   ],
+   "dayOffset": -5,
+   "startMin": 375,
+   "durationMin": 75,
+   "status": "cancelled",
+   "complaints": "Кровоточивость дёсен",
+   "diagnosis": ""
+  },
+  {
+   "patient": 7,
+   "doctor": 3,
+   "services": [
+    12,
+    15
+   ],
+   "dayOffset": -5,
+   "startMin": 450,
+   "durationMin": 90,
+   "status": "done",
+   "complaints": "Боль при накусывании",
+   "diagnosis": "Кариес дентина, зуб 36. Проведено лечение, поставлена пломба."
+  },
+  {
+   "patient": 0,
+   "doctor": 3,
+   "services": [
+    13,
+    15
+   ],
+   "dayOffset": -5,
+   "startMin": 690,
+   "durationMin": 90,
+   "status": "done",
+   "complaints": "Боль при жевании",
+   "diagnosis": "Кариес дентина, зуб 36. Проведено лечение, поставлена пломба."
+  },
+  {
+   "patient": 6,
+   "doctor": 3,
+   "services": [
+    15,
+    13
+   ],
+   "dayOffset": -5,
+   "startMin": 780,
+   "durationMin": 90,
+   "status": "done",
+   "complaints": "Профилактический осмотр",
+   "diagnosis": "Профилактический осмотр: патологии не выявлено."
+  },
+  {
+   "patient": 34,
+   "doctor": 4,
+   "services": [
+    2,
+    22
+   ],
+   "dayOffset": -5,
+   "startMin": 480,
+   "durationMin": 45,
+   "status": "done",
+   "complaints": "Боль при накусывании",
+   "diagnosis": "Хронический пульпит, зуб 46. Каналы обработаны и запломбированы."
+  },
+  {
+   "patient": 34,
+   "doctor": 4,
+   "services": [
+    7,
+    21
+   ],
+   "dayOffset": -5,
+   "startMin": 660,
+   "durationMin": 120,
+   "status": "done",
+   "complaints": "Боль при жевании",
+   "diagnosis": "Скол коронки зуба 21. Выполнена реставрация."
+  },
+  {
+   "patient": 18,
+   "doctor": 4,
+   "services": [
+    23
+   ],
+   "dayOffset": -5,
+   "startMin": 840,
+   "durationMin": 45,
+   "status": "done",
+   "complaints": "Боль при жевании",
+   "diagnosis": "Хронический пульпит, зуб 46. Каналы обработаны и запломбированы."
+  },
+  {
+   "patient": 11,
+   "doctor": 5,
+   "services": [
+    1
+   ],
+   "dayOffset": -5,
+   "startMin": 390,
+   "durationMin": 30,
+   "status": "done",
+   "complaints": "Боль при жевании",
+   "diagnosis": "Хронический пульпит, зуб 46. Каналы обработаны и запломбированы."
+  },
+  {
+   "patient": 0,
+   "doctor": 0,
+   "services": [
+    5
+   ],
+   "dayOffset": -4,
+   "startMin": 540,
+   "durationMin": 90,
+   "status": "done",
+   "complaints": "Кровоточивость дёсен",
+   "diagnosis": "Хронический пульпит, зуб 46. Каналы обработаны и запломбированы."
+  },
+  {
+   "patient": 39,
+   "doctor": 0,
+   "services": [
+    7,
+    1
+   ],
+   "dayOffset": -4,
+   "startMin": 660,
+   "durationMin": 120,
+   "status": "done",
+   "complaints": "Скол пломбы",
+   "diagnosis": "Гингивит лёгкой степени. Рекомендована гигиена и полоскание."
+  },
+  {
+   "patient": 6,
+   "doctor": 1,
+   "services": [
+    2
+   ],
+   "dayOffset": -4,
+   "startMin": 390,
+   "durationMin": 15,
+   "status": "done",
+   "complaints": "Боль при жевании",
+   "diagnosis": "Кариес дентина, зуб 36. Проведено лечение, поставлена пломба."
+  },
+  {
+   "patient": 26,
+   "doctor": 1,
+   "services": [
+    1
+   ],
+   "dayOffset": -4,
+   "startMin": 405,
+   "durationMin": 30,
+   "status": "done",
+   "complaints": "Кровоточивость дёсен",
+   "diagnosis": "Хронический пульпит, зуб 46. Каналы обработаны и запломбированы."
+  },
+  {
+   "patient": 23,
+   "doctor": 1,
+   "services": [
+    17
+   ],
+   "dayOffset": -4,
+   "startMin": 585,
+   "durationMin": 30,
+   "status": "done",
+   "complaints": "Боль при жевании",
+   "diagnosis": "Кариес дентина, зуб 36. Проведено лечение, поставлена пломба."
+  },
+  {
+   "patient": 34,
+   "doctor": 1,
+   "services": [
+    18,
+    16,
+    2
+   ],
+   "dayOffset": -4,
+   "startMin": 675,
+   "durationMin": 195,
+   "status": "done",
+   "complaints": "Боль при жевании",
+   "diagnosis": "Удалён зуб 38 по показаниям. Рекомендации даны."
+  },
+  {
+   "patient": 31,
+   "doctor": 2,
+   "services": [
+    0
+   ],
+   "dayOffset": -4,
+   "startMin": 390,
+   "durationMin": 30,
+   "status": "done",
+   "complaints": "Боль при накусывании",
+   "diagnosis": "Кариес дентина, зуб 36. Проведено лечение, поставлена пломба."
+  },
+  {
+   "patient": 18,
+   "doctor": 2,
+   "services": [
+    0
+   ],
+   "dayOffset": -4,
+   "startMin": 645,
+   "durationMin": 30,
+   "status": "done",
+   "complaints": "Скол пломбы",
+   "diagnosis": "Скол коронки зуба 21. Выполнена реставрация."
+  },
+  {
+   "patient": 14,
+   "doctor": 2,
+   "services": [
+    2
+   ],
+   "dayOffset": -4,
+   "startMin": 705,
+   "durationMin": 15,
+   "status": "done",
+   "complaints": "Желание отбелить зубы",
+   "diagnosis": "Профилактический осмотр: патологии не выявлено."
+  },
+  {
+   "patient": 22,
+   "doctor": 3,
+   "services": [
+    12
+   ],
+   "dayOffset": -4,
+   "startMin": 540,
+   "durationMin": 60,
+   "status": "done",
+   "complaints": "Профилактический осмотр",
+   "diagnosis": "Консультация: составлен план лечения."
+  },
+  {
+   "patient": 29,
+   "doctor": 3,
+   "services": [
+    0
+   ],
+   "dayOffset": -4,
+   "startMin": 840,
+   "durationMin": 30,
+   "status": "done",
+   "complaints": "Консультация по протезированию",
+   "diagnosis": "Кариес дентина, зуб 36. Проведено лечение, поставлена пломба."
+  },
+  {
+   "patient": 10,
+   "doctor": 4,
+   "services": [
+    23,
+    19,
+    6
+   ],
+   "dayOffset": -4,
+   "startMin": 555,
+   "durationMin": 150,
+   "status": "done",
+   "complaints": "Желание отбелить зубы",
+   "diagnosis": "Консультация: составлен план лечения."
+  },
+  {
+   "patient": 5,
+   "doctor": 4,
+   "services": [
+    0
+   ],
+   "dayOffset": -4,
+   "startMin": 750,
+   "durationMin": 30,
+   "status": "done",
+   "complaints": "Профилактический осмотр",
+   "diagnosis": "Гингивит лёгкой степени. Рекомендована гигиена и полоскание."
+  },
+  {
+   "patient": 2,
+   "doctor": 0,
+   "services": [
+    1
+   ],
+   "dayOffset": -3,
+   "startMin": 390,
+   "durationMin": 30,
+   "status": "done",
+   "complaints": "Кровоточивость дёсен",
+   "diagnosis": "Хронический пульпит, зуб 46. Каналы обработаны и запломбированы."
+  },
+  {
+   "patient": 3,
+   "doctor": 0,
+   "services": [
+    1
+   ],
+   "dayOffset": -3,
+   "startMin": 495,
+   "durationMin": 30,
+   "status": "done",
+   "complaints": "Кровоточивость дёсен",
+   "diagnosis": "Кариес дентина, зуб 36. Проведено лечение, поставлена пломба."
+  },
+  {
+   "patient": 5,
+   "doctor": 0,
+   "services": [
+    3
+   ],
+   "dayOffset": -3,
+   "startMin": 780,
+   "durationMin": 15,
+   "status": "cancelled",
+   "complaints": "Боль при жевании",
+   "diagnosis": ""
+  },
+  {
+   "patient": 10,
+   "doctor": 1,
+   "services": [
+    17
+   ],
+   "dayOffset": -3,
+   "startMin": 510,
+   "durationMin": 30,
+   "status": "done",
+   "complaints": "Боль при накусывании",
+   "diagnosis": "Кариес дентина, зуб 36. Проведено лечение, поставлена пломба."
+  },
+  {
+   "patient": 9,
+   "doctor": 1,
+   "services": [
+    3
+   ],
+   "dayOffset": -3,
+   "startMin": 615,
+   "durationMin": 15,
+   "status": "done",
+   "complaints": "Профилактический осмотр",
+   "diagnosis": "Хронический пульпит, зуб 46. Каналы обработаны и запломбированы."
+  },
+  {
+   "patient": 13,
+   "doctor": 1,
+   "services": [
+    0
+   ],
+   "dayOffset": -3,
+   "startMin": 645,
+   "durationMin": 30,
+   "status": "done",
+   "complaints": "Скол пломбы",
+   "diagnosis": "Удалён зуб 38 по показаниям. Рекомендации даны."
+  },
+  {
+   "patient": 31,
+   "doctor": 2,
+   "services": [
+    11
+   ],
+   "dayOffset": -3,
+   "startMin": 420,
+   "durationMin": 90,
+   "status": "done",
+   "complaints": "Боль при жевании",
+   "diagnosis": "Профилактический осмотр: патологии не выявлено."
+  },
+  {
+   "patient": 25,
+   "doctor": 2,
+   "services": [
+    0
+   ],
+   "dayOffset": -3,
+   "startMin": 630,
+   "durationMin": 30,
+   "status": "cancelled",
+   "complaints": "Консультация по протезированию",
+   "diagnosis": ""
+  },
+  {
+   "patient": 30,
+   "doctor": 3,
+   "services": [
+    2
+   ],
+   "dayOffset": -3,
+   "startMin": 435,
+   "durationMin": 15,
+   "status": "done",
+   "complaints": "Чувствительность к холодному",
+   "diagnosis": "Удалён зуб 38 по показаниям. Рекомендации даны."
+  },
+  {
+   "patient": 25,
+   "doctor": 3,
+   "services": [
+    12
+   ],
+   "dayOffset": -3,
+   "startMin": 495,
+   "durationMin": 60,
+   "status": "done",
+   "complaints": "Желание отбелить зубы",
+   "diagnosis": "Кариес дентина, зуб 36. Проведено лечение, поставлена пломба."
+  },
+  {
+   "patient": 1,
+   "doctor": 3,
+   "services": [
+    0
+   ],
+   "dayOffset": -3,
+   "startMin": 840,
+   "durationMin": 30,
+   "status": "done",
+   "complaints": "Чувствительность к холодному",
+   "diagnosis": "Удалён зуб 38 по показаниям. Рекомендации даны."
+  },
+  {
+   "patient": 5,
+   "doctor": 4,
+   "services": [
+    20
+   ],
+   "dayOffset": -3,
+   "startMin": 495,
+   "durationMin": 90,
+   "status": "done",
+   "complaints": "Боль при накусывании",
+   "diagnosis": "Профилактический осмотр: патологии не выявлено."
+  },
+  {
+   "patient": 35,
+   "doctor": 4,
+   "services": [
+    2
+   ],
+   "dayOffset": -3,
+   "startMin": 810,
+   "durationMin": 15,
+   "status": "cancelled",
+   "complaints": "Боль при жевании",
+   "diagnosis": ""
+  },
+  {
+   "patient": 4,
+   "doctor": 5,
+   "services": [
+    2,
+    20
+   ],
+   "dayOffset": -3,
+   "startMin": 510,
+   "durationMin": 105,
+   "status": "done",
+   "complaints": "Желание отбелить зубы",
+   "diagnosis": "Профилактический осмотр: патологии не выявлено."
+  },
+  {
+   "patient": 31,
+   "doctor": 0,
+   "services": [
+    6
+   ],
+   "dayOffset": -2,
+   "startMin": 435,
+   "durationMin": 45,
+   "status": "done",
+   "complaints": "Боль при накусывании",
+   "diagnosis": "Хронический пульпит, зуб 46. Каналы обработаны и запломбированы."
+  },
+  {
+   "patient": 6,
+   "doctor": 0,
+   "services": [
+    23
+   ],
+   "dayOffset": -2,
+   "startMin": 735,
+   "durationMin": 45,
+   "status": "done",
+   "complaints": "Чувствительность к холодному",
+   "diagnosis": "Хронический пульпит, зуб 46. Каналы обработаны и запломбированы."
+  },
+  {
+   "patient": 36,
+   "doctor": 2,
+   "services": [
+    10
+   ],
+   "dayOffset": -2,
+   "startMin": 540,
+   "durationMin": 90,
+   "status": "done",
+   "complaints": "Консультация по протезированию",
+   "diagnosis": "Скол коронки зуба 21. Выполнена реставрация."
+  },
+  {
+   "patient": 15,
+   "doctor": 2,
+   "services": [
+    9
+   ],
+   "dayOffset": -2,
+   "startMin": 645,
+   "durationMin": 60,
+   "status": "done",
+   "complaints": "Желание отбелить зубы",
+   "diagnosis": "Удалён зуб 38 по показаниям. Рекомендации даны."
+  },
+  {
+   "patient": 36,
+   "doctor": 3,
+   "services": [
+    12
+   ],
+   "dayOffset": -2,
+   "startMin": 375,
+   "durationMin": 60,
+   "status": "done",
+   "complaints": "Боль при жевании",
+   "diagnosis": "Кариес дентина, зуб 36. Проведено лечение, поставлена пломба."
+  },
+  {
+   "patient": 1,
+   "doctor": 3,
+   "services": [
+    3,
+    15,
+    2
+   ],
+   "dayOffset": -2,
+   "startMin": 465,
+   "durationMin": 45,
+   "status": "done",
+   "complaints": "Боль при жевании",
+   "diagnosis": "Хронический пульпит, зуб 46. Каналы обработаны и запломбированы."
+  },
+  {
+   "patient": 34,
+   "doctor": 3,
+   "services": [
+    15
+   ],
+   "dayOffset": -2,
+   "startMin": 645,
+   "durationMin": 30,
+   "status": "done",
+   "complaints": "Скол пломбы",
+   "diagnosis": "Консультация: составлен план лечения."
+  },
+  {
+   "patient": 25,
+   "doctor": 3,
+   "services": [
+    2,
+    3
+   ],
+   "dayOffset": -2,
+   "startMin": 750,
+   "durationMin": 30,
+   "status": "done",
+   "complaints": "Чувствительность к холодному",
+   "diagnosis": "Хронический пульпит, зуб 46. Каналы обработаны и запломбированы."
+  },
+  {
+   "patient": 8,
+   "doctor": 4,
+   "services": [
+    22
+   ],
+   "dayOffset": -2,
+   "startMin": 645,
+   "durationMin": 30,
+   "status": "done",
+   "complaints": "Чувствительность к холодному",
+   "diagnosis": "Кариес дентина, зуб 36. Проведено лечение, поставлена пломба."
+  },
+  {
+   "patient": 2,
+   "doctor": 4,
+   "services": [
+    7
+   ],
+   "dayOffset": -2,
+   "startMin": 720,
+   "durationMin": 90,
+   "status": "done",
+   "complaints": "Боль при накусывании",
+   "diagnosis": "Удалён зуб 38 по показаниям. Рекомендации даны."
+  },
+  {
+   "patient": 29,
+   "doctor": 5,
+   "services": [
+    3
+   ],
+   "dayOffset": -2,
+   "startMin": 555,
+   "durationMin": 15,
+   "status": "done",
+   "complaints": "Профилактический осмотр",
+   "diagnosis": "Консультация: составлен план лечения."
+  },
+  {
+   "patient": 1,
+   "doctor": 5,
+   "services": [
+    22
+   ],
+   "dayOffset": -2,
+   "startMin": 750,
+   "durationMin": 30,
+   "status": "done",
+   "complaints": "Боль при накусывании",
+   "diagnosis": "Скол коронки зуба 21. Выполнена реставрация."
+  },
+  {
+   "patient": 21,
+   "doctor": 5,
+   "services": [
+    21
+   ],
+   "dayOffset": -2,
+   "startMin": 810,
+   "durationMin": 30,
+   "status": "done",
+   "complaints": "Консультация по протезированию",
+   "diagnosis": "Консультация: составлен план лечения."
+  },
+  {
+   "patient": 5,
+   "doctor": 0,
+   "services": [
+    4
+   ],
+   "dayOffset": -1,
+   "startMin": 360,
+   "durationMin": 60,
+   "status": "done",
+   "complaints": "Кровоточивость дёсен",
+   "diagnosis": "Профилактический осмотр: патологии не выявлено."
+  },
+  {
+   "patient": 28,
+   "doctor": 1,
+   "services": [
+    0
+   ],
+   "dayOffset": -1,
+   "startMin": 375,
+   "durationMin": 30,
+   "status": "done",
+   "complaints": "Чувствительность к холодному",
+   "diagnosis": "Консультация: составлен план лечения."
+  },
+  {
+   "patient": 27,
+   "doctor": 1,
+   "services": [
+    3,
+    18
+   ],
+   "dayOffset": -1,
+   "startMin": 555,
+   "durationMin": 75,
+   "status": "cancelled",
+   "complaints": "Боль при жевании",
+   "diagnosis": ""
+  },
+  {
+   "patient": 35,
+   "doctor": 1,
+   "services": [
+    0,
+    18
+   ],
+   "dayOffset": -1,
+   "startMin": 660,
+   "durationMin": 90,
+   "status": "done",
+   "complaints": "Консультация по протезированию",
+   "diagnosis": "Удалён зуб 38 по показаниям. Рекомендации даны."
+  },
+  {
+   "patient": 25,
+   "doctor": 2,
+   "services": [
+    0,
+    11
+   ],
+   "dayOffset": -1,
+   "startMin": 435,
+   "durationMin": 120,
+   "status": "done",
+   "complaints": "Боль при накусывании",
+   "diagnosis": "Гингивит лёгкой степени. Рекомендована гигиена и полоскание."
+  },
+  {
+   "patient": 19,
+   "doctor": 2,
+   "services": [
+    8
+   ],
+   "dayOffset": -1,
+   "startMin": 705,
+   "durationMin": 30,
+   "status": "done",
+   "complaints": "Боль при накусывании",
+   "diagnosis": "Профилактический осмотр: патологии не выявлено."
+  },
+  {
+   "patient": 7,
+   "doctor": 3,
+   "services": [
+    12
+   ],
+   "dayOffset": -1,
+   "startMin": 720,
+   "durationMin": 60,
+   "status": "cancelled",
+   "complaints": "Боль при накусывании",
+   "diagnosis": ""
+  },
+  {
+   "patient": 8,
+   "doctor": 5,
+   "services": [
+    19
+   ],
+   "dayOffset": -1,
+   "startMin": 510,
+   "durationMin": 60,
+   "status": "done",
+   "complaints": "Чувствительность к холодному",
+   "diagnosis": "Скол коронки зуба 21. Выполнена реставрация."
+  },
+  {
+   "patient": 38,
+   "doctor": 5,
+   "services": [
+    3
+   ],
+   "dayOffset": -1,
+   "startMin": 615,
+   "durationMin": 15,
+   "status": "done",
+   "complaints": "Скол пломбы",
+   "diagnosis": "Скол коронки зуба 21. Выполнена реставрация."
+  },
+  {
+   "patient": 28,
+   "doctor": 5,
+   "services": [
+    19
+   ],
+   "dayOffset": -1,
+   "startMin": 645,
+   "durationMin": 60,
+   "status": "done",
+   "complaints": "Желание отбелить зубы",
+   "diagnosis": "Скол коронки зуба 21. Выполнена реставрация."
+  },
+  {
+   "patient": 18,
+   "doctor": 0,
+   "services": [
+    4
+   ],
+   "dayOffset": 1,
+   "startMin": 390,
+   "durationMin": 60,
+   "status": "planned",
+   "complaints": "Кровоточивость дёсен",
+   "diagnosis": ""
+  },
+  {
+   "patient": 24,
+   "doctor": 0,
+   "services": [
+    23,
+    4,
+    3
+   ],
+   "dayOffset": 1,
+   "startMin": 690,
+   "durationMin": 120,
+   "status": "planned",
+   "complaints": "Чувствительность к холодному",
+   "diagnosis": ""
+  },
+  {
+   "patient": 19,
+   "doctor": 1,
+   "services": [
+    1
+   ],
+   "dayOffset": 1,
+   "startMin": 375,
+   "durationMin": 30,
+   "status": "planned",
+   "complaints": "Консультация по протезированию",
+   "diagnosis": ""
+  },
+  {
+   "patient": 36,
+   "doctor": 1,
+   "services": [
+    16
+   ],
+   "dayOffset": 1,
+   "startMin": 705,
+   "durationMin": 120,
+   "status": "planned",
+   "complaints": "Скол пломбы",
+   "diagnosis": ""
+  },
+  {
+   "patient": 20,
+   "doctor": 1,
+   "services": [
+    2
+   ],
+   "dayOffset": 1,
+   "startMin": 855,
+   "durationMin": 15,
+   "status": "planned",
+   "complaints": "Профилактический осмотр",
+   "diagnosis": ""
+  },
+  {
+   "patient": 2,
+   "doctor": 2,
+   "services": [
+    8
+   ],
+   "dayOffset": 1,
+   "startMin": 405,
+   "durationMin": 30,
+   "status": "planned",
+   "complaints": "Желание отбелить зубы",
+   "diagnosis": ""
+  },
+  {
+   "patient": 20,
+   "doctor": 2,
+   "services": [
+    3,
+    9
+   ],
+   "dayOffset": 1,
+   "startMin": 510,
+   "durationMin": 75,
+   "status": "planned",
+   "complaints": "Скол пломбы",
+   "diagnosis": ""
+  },
+  {
+   "patient": 22,
+   "doctor": 2,
+   "services": [
+    11
+   ],
+   "dayOffset": 1,
+   "startMin": 645,
+   "durationMin": 90,
+   "status": "planned",
+   "complaints": "Боль при жевании",
+   "diagnosis": ""
+  },
+  {
+   "patient": 0,
+   "doctor": 3,
+   "services": [
+    13
+   ],
+   "dayOffset": 1,
+   "startMin": 555,
+   "durationMin": 60,
+   "status": "planned",
+   "complaints": "Скол пломбы",
+   "diagnosis": ""
+  },
+  {
+   "patient": 6,
+   "doctor": 3,
+   "services": [
+    15
+   ],
+   "dayOffset": 1,
+   "startMin": 630,
+   "durationMin": 30,
+   "status": "planned",
+   "complaints": "Боль при накусывании",
+   "diagnosis": ""
+  },
+  {
+   "patient": 25,
+   "doctor": 4,
+   "services": [
+    22
+   ],
+   "dayOffset": 1,
+   "startMin": 360,
+   "durationMin": 30,
+   "status": "planned",
+   "complaints": "Консультация по протезированию",
+   "diagnosis": ""
+  },
+  {
+   "patient": 20,
+   "doctor": 4,
+   "services": [
+    5
+   ],
+   "dayOffset": 1,
+   "startMin": 405,
+   "durationMin": 90,
+   "status": "planned",
+   "complaints": "Профилактический осмотр",
+   "diagnosis": ""
+  },
+  {
+   "patient": 32,
+   "doctor": 4,
+   "services": [
+    1
+   ],
+   "dayOffset": 1,
+   "startMin": 555,
+   "durationMin": 30,
+   "status": "planned",
+   "complaints": "Чувствительность к холодному",
+   "diagnosis": ""
+  },
+  {
+   "patient": 35,
+   "doctor": 4,
+   "services": [
+    4
+   ],
+   "dayOffset": 1,
+   "startMin": 660,
+   "durationMin": 60,
+   "status": "planned",
+   "complaints": "Чувствительность к холодному",
+   "diagnosis": ""
+  },
+  {
+   "patient": 37,
+   "doctor": 4,
+   "services": [
+    2
+   ],
+   "dayOffset": 1,
+   "startMin": 780,
+   "durationMin": 15,
+   "status": "planned",
+   "complaints": "Боль при накусывании",
+   "diagnosis": ""
+  },
+  {
+   "patient": 27,
+   "doctor": 5,
+   "services": [
+    20,
+    0
+   ],
+   "dayOffset": 1,
+   "startMin": 375,
+   "durationMin": 120,
+   "status": "planned",
+   "complaints": "Желание отбелить зубы",
+   "diagnosis": ""
+  },
+  {
+   "patient": 25,
+   "doctor": 5,
+   "services": [
+    19,
+    22
+   ],
+   "dayOffset": 1,
+   "startMin": 555,
+   "durationMin": 90,
+   "status": "planned",
+   "complaints": "Боль при накусывании",
+   "diagnosis": ""
+  },
+  {
+   "patient": 27,
+   "doctor": 0,
+   "services": [
+    0,
+    5,
+    3
+   ],
+   "dayOffset": 2,
+   "startMin": 465,
+   "durationMin": 135,
+   "status": "cancelled",
+   "complaints": "Консультация по протезированию",
+   "diagnosis": ""
+  },
+  {
+   "patient": 35,
+   "doctor": 0,
+   "services": [
+    6
+   ],
+   "dayOffset": 2,
+   "startMin": 630,
+   "durationMin": 45,
+   "status": "planned",
+   "complaints": "Боль при жевании",
+   "diagnosis": ""
+  },
+  {
+   "patient": 0,
+   "doctor": 0,
+   "services": [
+    5
+   ],
+   "dayOffset": 2,
+   "startMin": 690,
+   "durationMin": 90,
+   "status": "planned",
+   "complaints": "Желание отбелить зубы",
+   "diagnosis": ""
+  },
+  {
+   "patient": 21,
+   "doctor": 1,
+   "services": [
+    16
+   ],
+   "dayOffset": 2,
+   "startMin": 465,
+   "durationMin": 120,
+   "status": "planned",
+   "complaints": "Кровоточивость дёсен",
+   "diagnosis": ""
+  },
+  {
+   "patient": 30,
+   "doctor": 1,
+   "services": [
+    1
+   ],
+   "dayOffset": 2,
+   "startMin": 615,
+   "durationMin": 30,
+   "status": "planned",
+   "complaints": "Кровоточивость дёсен",
+   "diagnosis": ""
+  },
+  {
+   "patient": 18,
+   "doctor": 1,
+   "services": [
+    16
+   ],
+   "dayOffset": 2,
+   "startMin": 705,
+   "durationMin": 120,
+   "status": "planned",
+   "complaints": "Желание отбелить зубы",
+   "diagnosis": ""
+  },
+  {
+   "patient": 1,
+   "doctor": 2,
+   "services": [
+    2
+   ],
+   "dayOffset": 2,
+   "startMin": 405,
+   "durationMin": 15,
+   "status": "planned",
+   "complaints": "Консультация по протезированию",
+   "diagnosis": ""
+  },
+  {
+   "patient": 22,
+   "doctor": 2,
+   "services": [
+    2
+   ],
+   "dayOffset": 2,
+   "startMin": 540,
+   "durationMin": 15,
+   "status": "planned",
+   "complaints": "Профилактический осмотр",
+   "diagnosis": ""
+  },
+  {
+   "patient": 9,
+   "doctor": 2,
+   "services": [
+    1
+   ],
+   "dayOffset": 2,
+   "startMin": 600,
+   "durationMin": 30,
+   "status": "planned",
+   "complaints": "Скол пломбы",
+   "diagnosis": ""
+  },
+  {
+   "patient": 38,
+   "doctor": 2,
+   "services": [
+    8
+   ],
+   "dayOffset": 2,
+   "startMin": 810,
+   "durationMin": 30,
+   "status": "planned",
+   "complaints": "Боль при накусывании",
+   "diagnosis": ""
+  },
+  {
+   "patient": 14,
+   "doctor": 3,
+   "services": [
+    13
+   ],
+   "dayOffset": 2,
+   "startMin": 405,
+   "durationMin": 60,
+   "status": "planned",
+   "complaints": "Профилактический осмотр",
+   "diagnosis": ""
+  },
+  {
+   "patient": 16,
+   "doctor": 3,
+   "services": [
+    2
+   ],
+   "dayOffset": 2,
+   "startMin": 615,
+   "durationMin": 15,
+   "status": "planned",
+   "complaints": "Чувствительность к холодному",
+   "diagnosis": ""
+  },
+  {
+   "patient": 27,
+   "doctor": 3,
+   "services": [
+    14
+   ],
+   "dayOffset": 2,
+   "startMin": 660,
+   "durationMin": 90,
+   "status": "planned",
+   "complaints": "Чувствительность к холодному",
+   "diagnosis": ""
+  },
+  {
+   "patient": 25,
+   "doctor": 4,
+   "services": [
+    3
+   ],
+   "dayOffset": 2,
+   "startMin": 615,
+   "durationMin": 15,
+   "status": "cancelled",
+   "complaints": "Боль при жевании",
+   "diagnosis": ""
+  },
+  {
+   "patient": 28,
+   "doctor": 4,
+   "services": [
+    20
+   ],
+   "dayOffset": 2,
+   "startMin": 630,
+   "durationMin": 90,
+   "status": "planned",
+   "complaints": "Консультация по протезированию",
+   "diagnosis": ""
+  },
+  {
+   "patient": 27,
+   "doctor": 4,
+   "services": [
+    1
+   ],
+   "dayOffset": 2,
+   "startMin": 810,
+   "durationMin": 30,
+   "status": "planned",
+   "complaints": "Чувствительность к холодному",
+   "diagnosis": ""
+  },
+  {
+   "patient": 4,
+   "doctor": 5,
+   "services": [
+    2
+   ],
+   "dayOffset": 2,
+   "startMin": 630,
+   "durationMin": 15,
+   "status": "planned",
+   "complaints": "Профилактический осмотр",
+   "diagnosis": ""
+  },
+  {
+   "patient": 35,
+   "doctor": 5,
+   "services": [
+    22
+   ],
+   "dayOffset": 2,
+   "startMin": 690,
+   "durationMin": 30,
+   "status": "planned",
+   "complaints": "Профилактический осмотр",
+   "diagnosis": ""
+  },
+  {
+   "patient": 17,
+   "doctor": 0,
+   "services": [
+    6,
+    4,
+    2
+   ],
+   "dayOffset": 3,
+   "startMin": 390,
+   "durationMin": 120,
+   "status": "cancelled",
+   "complaints": "Кровоточивость дёсен",
+   "diagnosis": ""
+  },
+  {
+   "patient": 31,
+   "doctor": 0,
+   "services": [
+    0
+   ],
+   "dayOffset": 3,
+   "startMin": 765,
+   "durationMin": 30,
+   "status": "planned",
+   "complaints": "Боль при накусывании",
+   "diagnosis": ""
+  },
+  {
+   "patient": 10,
+   "doctor": 1,
+   "services": [
+    16
+   ],
+   "dayOffset": 3,
+   "startMin": 585,
+   "durationMin": 120,
+   "status": "planned",
+   "complaints": "Желание отбелить зубы",
+   "diagnosis": ""
+  },
+  {
+   "patient": 25,
+   "doctor": 1,
+   "services": [
+    16
+   ],
+   "dayOffset": 3,
+   "startMin": 750,
+   "durationMin": 120,
+   "status": "planned",
+   "complaints": "Профилактический осмотр",
+   "diagnosis": ""
+  },
+  {
+   "patient": 35,
+   "doctor": 2,
+   "services": [
+    3
+   ],
+   "dayOffset": 3,
+   "startMin": 525,
+   "durationMin": 15,
+   "status": "planned",
+   "complaints": "Консультация по протезированию",
+   "diagnosis": ""
+  },
+  {
+   "patient": 10,
+   "doctor": 2,
+   "services": [
+    10
+   ],
+   "dayOffset": 3,
+   "startMin": 720,
+   "durationMin": 90,
+   "status": "planned",
+   "complaints": "Скол пломбы",
+   "diagnosis": ""
+  },
+  {
+   "patient": 22,
+   "doctor": 3,
+   "services": [
+    13
+   ],
+   "dayOffset": 3,
+   "startMin": 600,
+   "durationMin": 60,
+   "status": "cancelled",
+   "complaints": "Консультация по протезированию",
+   "diagnosis": ""
+  },
+  {
+   "patient": 19,
+   "doctor": 3,
+   "services": [
+    0
+   ],
+   "dayOffset": 3,
+   "startMin": 660,
+   "durationMin": 30,
+   "status": "planned",
+   "complaints": "Скол пломбы",
+   "diagnosis": ""
+  },
+  {
+   "patient": 27,
+   "doctor": 3,
+   "services": [
+    2
+   ],
+   "dayOffset": 3,
+   "startMin": 720,
+   "durationMin": 15,
+   "status": "planned",
+   "complaints": "Скол пломбы",
+   "diagnosis": ""
+  },
+  {
+   "patient": 9,
+   "doctor": 4,
+   "services": [
+    1
+   ],
+   "dayOffset": 3,
+   "startMin": 480,
+   "durationMin": 30,
+   "status": "planned",
+   "complaints": "Боль при жевании",
+   "diagnosis": ""
+  },
+  {
+   "patient": 5,
+   "doctor": 5,
+   "services": [
+    1
+   ],
+   "dayOffset": 3,
+   "startMin": 480,
+   "durationMin": 30,
+   "status": "planned",
+   "complaints": "Консультация по протезированию",
+   "diagnosis": ""
+  },
+  {
+   "patient": 26,
+   "doctor": 5,
+   "services": [
+    2
+   ],
+   "dayOffset": 3,
+   "startMin": 540,
+   "durationMin": 15,
+   "status": "planned",
+   "complaints": "Консультация по протезированию",
+   "diagnosis": ""
+  },
+  {
+   "patient": 1,
+   "doctor": 5,
+   "services": [
+    22
+   ],
+   "dayOffset": 3,
+   "startMin": 585,
+   "durationMin": 30,
+   "status": "planned",
+   "complaints": "Желание отбелить зубы",
+   "diagnosis": ""
+  },
+  {
+   "patient": 15,
+   "doctor": 5,
+   "services": [
+    2,
+    0
+   ],
+   "dayOffset": 3,
+   "startMin": 705,
+   "durationMin": 45,
+   "status": "planned",
+   "complaints": "Желание отбелить зубы",
+   "diagnosis": ""
+  },
+  {
+   "patient": 2,
+   "doctor": 5,
+   "services": [
+    2
+   ],
+   "dayOffset": 3,
+   "startMin": 810,
+   "durationMin": 15,
+   "status": "planned",
+   "complaints": "Скол пломбы",
+   "diagnosis": ""
+  },
+  {
+   "patient": 30,
+   "doctor": 0,
+   "services": [
+    4
+   ],
+   "dayOffset": 4,
+   "startMin": 465,
+   "durationMin": 60,
+   "status": "planned",
+   "complaints": "Консультация по протезированию",
+   "diagnosis": ""
+  },
+  {
+   "patient": 38,
+   "doctor": 0,
+   "services": [
+    0,
+    23
+   ],
+   "dayOffset": 4,
+   "startMin": 570,
+   "durationMin": 75,
+   "status": "planned",
+   "complaints": "Кровоточивость дёсен",
+   "diagnosis": ""
+  },
+  {
+   "patient": 27,
+   "doctor": 1,
+   "services": [
+    18,
+    2
+   ],
+   "dayOffset": 4,
+   "startMin": 645,
+   "durationMin": 75,
+   "status": "planned",
+   "complaints": "Кровоточивость дёсен",
+   "diagnosis": ""
+  },
+  {
+   "patient": 23,
+   "doctor": 1,
+   "services": [
+    3
+   ],
+   "dayOffset": 4,
+   "startMin": 765,
+   "durationMin": 15,
+   "status": "planned",
+   "complaints": "Боль при жевании",
+   "diagnosis": ""
+  },
+  {
+   "patient": 22,
+   "doctor": 1,
+   "services": [
+    17,
+    3
+   ],
+   "dayOffset": 4,
+   "startMin": 810,
+   "durationMin": 45,
+   "status": "planned",
+   "complaints": "Консультация по протезированию",
+   "diagnosis": ""
+  },
+  {
+   "patient": 1,
+   "doctor": 2,
+   "services": [
+    2
+   ],
+   "dayOffset": 4,
+   "startMin": 660,
+   "durationMin": 15,
+   "status": "planned",
+   "complaints": "Консультация по протезированию",
+   "diagnosis": ""
+  },
+  {
+   "patient": 39,
+   "doctor": 2,
+   "services": [
+    9,
+    10
+   ],
+   "dayOffset": 4,
+   "startMin": 705,
+   "durationMin": 150,
+   "status": "planned",
+   "complaints": "Скол пломбы",
+   "diagnosis": ""
+  },
+  {
+   "patient": 17,
+   "doctor": 3,
+   "services": [
+    3,
+    0
+   ],
+   "dayOffset": 4,
+   "startMin": 540,
+   "durationMin": 45,
+   "status": "planned",
+   "complaints": "Боль при жевании",
+   "diagnosis": ""
+  },
+  {
+   "patient": 20,
+   "doctor": 3,
+   "services": [
+    15,
+    2
+   ],
+   "dayOffset": 4,
+   "startMin": 720,
+   "durationMin": 30,
+   "status": "planned",
+   "complaints": "Кровоточивость дёсен",
+   "diagnosis": ""
+  },
+  {
+   "patient": 36,
+   "doctor": 4,
+   "services": [
+    5,
+    2
+   ],
+   "dayOffset": 4,
+   "startMin": 405,
+   "durationMin": 105,
+   "status": "planned",
+   "complaints": "Скол пломбы",
+   "diagnosis": ""
+  },
+  {
+   "patient": 37,
+   "doctor": 4,
+   "services": [
+    4,
+    3,
+    2
+   ],
+   "dayOffset": 4,
+   "startMin": 615,
+   "durationMin": 90,
+   "status": "planned",
+   "complaints": "Кровоточивость дёсен",
+   "diagnosis": ""
+  },
+  {
+   "patient": 23,
+   "doctor": 4,
+   "services": [
+    19
+   ],
+   "dayOffset": 4,
+   "startMin": 795,
+   "durationMin": 60,
+   "status": "planned",
+   "complaints": "Кровоточивость дёсен",
+   "diagnosis": ""
+  },
+  {
+   "patient": 14,
+   "doctor": 5,
+   "services": [
+    21
+   ],
+   "dayOffset": 4,
+   "startMin": 555,
+   "durationMin": 30,
+   "status": "planned",
+   "complaints": "Консультация по протезированию",
+   "diagnosis": ""
+  },
+  {
+   "patient": 11,
+   "doctor": 5,
+   "services": [
+    22
+   ],
+   "dayOffset": 4,
+   "startMin": 675,
+   "durationMin": 30,
+   "status": "planned",
+   "complaints": "Желание отбелить зубы",
+   "diagnosis": ""
+  },
+  {
+   "patient": 2,
+   "doctor": 0,
+   "services": [
+    4
+   ],
+   "dayOffset": 5,
+   "startMin": 435,
+   "durationMin": 60,
+   "status": "planned",
+   "complaints": "Скол пломбы",
+   "diagnosis": ""
+  },
+  {
+   "patient": 0,
+   "doctor": 0,
+   "services": [
+    3
+   ],
+   "dayOffset": 5,
+   "startMin": 585,
+   "durationMin": 15,
+   "status": "planned",
+   "complaints": "Боль при жевании",
+   "diagnosis": ""
+  },
+  {
+   "patient": 38,
+   "doctor": 0,
+   "services": [
+    5
+   ],
+   "dayOffset": 5,
+   "startMin": 630,
+   "durationMin": 90,
+   "status": "planned",
+   "complaints": "Желание отбелить зубы",
+   "diagnosis": ""
+  },
+  {
+   "patient": 4,
+   "doctor": 1,
+   "services": [
+    3
+   ],
+   "dayOffset": 5,
+   "startMin": 405,
+   "durationMin": 15,
+   "status": "planned",
+   "complaints": "Кровоточивость дёсен",
+   "diagnosis": ""
+  },
+  {
+   "patient": 36,
+   "doctor": 1,
+   "services": [
+    3
+   ],
+   "dayOffset": 5,
+   "startMin": 435,
+   "durationMin": 15,
+   "status": "planned",
+   "complaints": "Консультация по протезированию",
+   "diagnosis": ""
+  },
+  {
+   "patient": 1,
+   "doctor": 1,
+   "services": [
+    1
+   ],
+   "dayOffset": 5,
+   "startMin": 840,
+   "durationMin": 30,
+   "status": "planned",
+   "complaints": "Скол пломбы",
+   "diagnosis": ""
+  },
+  {
+   "patient": 14,
+   "doctor": 2,
+   "services": [
+    9,
+    3,
+    11
+   ],
+   "dayOffset": 5,
+   "startMin": 585,
+   "durationMin": 165,
+   "status": "planned",
+   "complaints": "Боль при накусывании",
+   "diagnosis": ""
+  },
+  {
+   "patient": 9,
+   "doctor": 3,
+   "services": [
+    15
+   ],
+   "dayOffset": 5,
+   "startMin": 585,
+   "durationMin": 30,
+   "status": "planned",
+   "complaints": "Профилактический осмотр",
+   "diagnosis": ""
+  },
+  {
+   "patient": 8,
+   "doctor": 3,
+   "services": [
+    15
+   ],
+   "dayOffset": 5,
+   "startMin": 675,
+   "durationMin": 30,
+   "status": "cancelled",
+   "complaints": "Боль при накусывании",
+   "diagnosis": ""
+  },
+  {
+   "patient": 31,
+   "doctor": 3,
+   "services": [
+    0
+   ],
+   "dayOffset": 5,
+   "startMin": 720,
+   "durationMin": 30,
+   "status": "planned",
+   "complaints": "Чувствительность к холодному",
+   "diagnosis": ""
+  },
+  {
+   "patient": 5,
+   "doctor": 3,
+   "services": [
+    3
+   ],
+   "dayOffset": 5,
+   "startMin": 825,
+   "durationMin": 15,
+   "status": "planned",
+   "complaints": "Боль при накусывании",
+   "diagnosis": ""
+  },
+  {
+   "patient": 19,
+   "doctor": 4,
+   "services": [
+    5
+   ],
+   "dayOffset": 5,
+   "startMin": 525,
+   "durationMin": 90,
+   "status": "planned",
+   "complaints": "Чувствительность к холодному",
+   "diagnosis": ""
+  },
+  {
+   "patient": 34,
+   "doctor": 4,
+   "services": [
+    5,
+    4
+   ],
+   "dayOffset": 5,
+   "startMin": 645,
+   "durationMin": 150,
+   "status": "planned",
+   "complaints": "Чувствительность к холодному",
+   "diagnosis": ""
+  },
+  {
+   "patient": 1,
+   "doctor": 5,
+   "services": [
+    22,
+    21
+   ],
+   "dayOffset": 5,
+   "startMin": 690,
+   "durationMin": 60,
+   "status": "planned",
+   "complaints": "Профилактический осмотр",
+   "diagnosis": ""
+  },
+  {
+   "patient": 2,
+   "doctor": 5,
+   "services": [
+    19
+   ],
+   "dayOffset": 5,
+   "startMin": 765,
+   "durationMin": 60,
+   "status": "planned",
+   "complaints": "Консультация по протезированию",
+   "diagnosis": ""
+  },
+  {
+   "patient": 29,
+   "doctor": 0,
+   "services": [
+    6,
+    1
+   ],
+   "dayOffset": 6,
+   "startMin": 405,
+   "durationMin": 75,
+   "status": "planned",
+   "complaints": "Желание отбелить зубы",
+   "diagnosis": ""
+  },
+  {
+   "patient": 39,
+   "doctor": 1,
+   "services": [
+    1,
+    2
+   ],
+   "dayOffset": 6,
+   "startMin": 450,
+   "durationMin": 30,
+   "status": "planned",
+   "complaints": "Консультация по протезированию",
+   "diagnosis": ""
+  },
+  {
+   "patient": 19,
+   "doctor": 1,
+   "services": [
+    18,
+    2
+   ],
+   "dayOffset": 6,
+   "startMin": 540,
+   "durationMin": 75,
+   "status": "planned",
+   "complaints": "Кровоточивость дёсен",
+   "diagnosis": ""
+  },
+  {
+   "patient": 32,
+   "doctor": 2,
+   "services": [
+    2
+   ],
+   "dayOffset": 6,
+   "startMin": 390,
+   "durationMin": 15,
+   "status": "planned",
+   "complaints": "Желание отбелить зубы",
+   "diagnosis": ""
+  },
+  {
+   "patient": 14,
+   "doctor": 2,
+   "services": [
+    9
+   ],
+   "dayOffset": 6,
+   "startMin": 525,
+   "durationMin": 60,
+   "status": "cancelled",
+   "complaints": "Консультация по протезированию",
+   "diagnosis": ""
+  },
+  {
+   "patient": 32,
+   "doctor": 2,
+   "services": [
+    1
+   ],
+   "dayOffset": 6,
+   "startMin": 615,
+   "durationMin": 30,
+   "status": "planned",
+   "complaints": "Желание отбелить зубы",
+   "diagnosis": ""
+  },
+  {
+   "patient": 12,
+   "doctor": 3,
+   "services": [
+    2,
+    14,
+    13
+   ],
+   "dayOffset": 6,
+   "startMin": 420,
+   "durationMin": 165,
+   "status": "planned",
+   "complaints": "Желание отбелить зубы",
+   "diagnosis": ""
+  },
+  {
+   "patient": 5,
+   "doctor": 4,
+   "services": [
+    3,
+    7,
+    21
+   ],
+   "dayOffset": 6,
+   "startMin": 390,
+   "durationMin": 135,
+   "status": "planned",
+   "complaints": "Профилактический осмотр",
+   "diagnosis": ""
+  },
+  {
+   "patient": 18,
+   "doctor": 5,
+   "services": [
+    0
+   ],
+   "dayOffset": 6,
+   "startMin": 495,
+   "durationMin": 30,
+   "status": "planned",
+   "complaints": "Боль при жевании",
+   "diagnosis": ""
+  },
+  {
+   "patient": 33,
+   "doctor": 5,
+   "services": [
+    2,
+    3,
+    20
+   ],
+   "dayOffset": 6,
+   "startMin": 585,
+   "durationMin": 120,
+   "status": "cancelled",
+   "complaints": "Скол пломбы",
+   "diagnosis": ""
+  },
+  {
+   "patient": 25,
+   "doctor": 0,
+   "services": [
+    2
+   ],
+   "dayOffset": 8,
+   "startMin": 570,
+   "durationMin": 15,
+   "status": "planned",
+   "complaints": "Боль при накусывании",
+   "diagnosis": ""
+  },
+  {
+   "patient": 15,
+   "doctor": 0,
+   "services": [
+    0
+   ],
+   "dayOffset": 8,
+   "startMin": 615,
+   "durationMin": 30,
+   "status": "planned",
+   "complaints": "Чувствительность к холодному",
+   "diagnosis": ""
+  },
+  {
+   "patient": 5,
+   "doctor": 0,
+   "services": [
+    3
+   ],
+   "dayOffset": 8,
+   "startMin": 765,
+   "durationMin": 15,
+   "status": "planned",
+   "complaints": "Консультация по протезированию",
+   "diagnosis": ""
+  },
+  {
+   "patient": 27,
+   "doctor": 1,
+   "services": [
+    2,
+    3,
+    16
+   ],
+   "dayOffset": 8,
+   "startMin": 375,
+   "durationMin": 150,
+   "status": "planned",
+   "complaints": "Кровоточивость дёсен",
+   "diagnosis": ""
+  },
+  {
+   "patient": 38,
+   "doctor": 3,
+   "services": [
+    15
+   ],
+   "dayOffset": 8,
+   "startMin": 555,
+   "durationMin": 30,
+   "status": "cancelled",
+   "complaints": "Скол пломбы",
+   "diagnosis": ""
+  },
+  {
+   "patient": 36,
+   "doctor": 5,
+   "services": [
+    22
+   ],
+   "dayOffset": 8,
+   "startMin": 645,
+   "durationMin": 30,
+   "status": "planned",
+   "complaints": "Боль при накусывании",
+   "diagnosis": ""
+  },
+  {
+   "patient": 10,
+   "doctor": 5,
+   "services": [
+    3,
+    1
+   ],
+   "dayOffset": 8,
+   "startMin": 720,
+   "durationMin": 45,
+   "status": "planned",
+   "complaints": "Боль при накусывании",
+   "diagnosis": ""
+  },
+  {
+   "patient": 25,
+   "doctor": 5,
+   "services": [
+    21,
+    1
+   ],
+   "dayOffset": 8,
+   "startMin": 825,
+   "durationMin": 45,
+   "status": "planned",
+   "complaints": "Кровоточивость дёсен",
+   "diagnosis": ""
+  },
+  {
+   "patient": 5,
+   "doctor": 0,
+   "services": [
+    4
+   ],
+   "dayOffset": 9,
+   "startMin": 510,
+   "durationMin": 60,
+   "status": "planned",
+   "complaints": "Боль при жевании",
+   "diagnosis": ""
+  },
+  {
+   "patient": 29,
+   "doctor": 0,
+   "services": [
+    3
+   ],
+   "dayOffset": 9,
+   "startMin": 675,
+   "durationMin": 15,
+   "status": "planned",
+   "complaints": "Боль при жевании",
+   "diagnosis": ""
+  },
+  {
+   "patient": 14,
+   "doctor": 0,
+   "services": [
+    3
+   ],
+   "dayOffset": 9,
+   "startMin": 735,
+   "durationMin": 15,
+   "status": "planned",
+   "complaints": "Чувствительность к холодному",
+   "diagnosis": ""
+  },
+  {
+   "patient": 23,
+   "doctor": 0,
+   "services": [
+    2
+   ],
+   "dayOffset": 9,
+   "startMin": 810,
+   "durationMin": 15,
+   "status": "planned",
+   "complaints": "Кровоточивость дёсен",
+   "diagnosis": ""
+  },
+  {
+   "patient": 17,
+   "doctor": 1,
+   "services": [
+    0
+   ],
+   "dayOffset": 9,
+   "startMin": 435,
+   "durationMin": 30,
+   "status": "planned",
+   "complaints": "Консультация по протезированию",
+   "diagnosis": ""
+  },
+  {
+   "patient": 20,
+   "doctor": 1,
+   "services": [
+    16,
+    0
+   ],
+   "dayOffset": 9,
+   "startMin": 720,
+   "durationMin": 150,
+   "status": "planned",
+   "complaints": "Кровоточивость дёсен",
+   "diagnosis": ""
+  },
+  {
+   "patient": 22,
+   "doctor": 2,
+   "services": [
+    8
+   ],
+   "dayOffset": 9,
+   "startMin": 585,
+   "durationMin": 30,
+   "status": "cancelled",
+   "complaints": "Боль при накусывании",
+   "diagnosis": ""
+  },
+  {
+   "patient": 0,
+   "doctor": 2,
+   "services": [
+    8,
+    0
+   ],
+   "dayOffset": 9,
+   "startMin": 780,
+   "durationMin": 60,
+   "status": "planned",
+   "complaints": "Желание отбелить зубы",
+   "diagnosis": ""
+  },
+  {
+   "patient": 14,
+   "doctor": 3,
+   "services": [
+    15,
+    2
+   ],
+   "dayOffset": 9,
+   "startMin": 450,
+   "durationMin": 30,
+   "status": "planned",
+   "complaints": "Консультация по протезированию",
+   "diagnosis": ""
+  },
+  {
+   "patient": 21,
+   "doctor": 3,
+   "services": [
+    1,
+    0,
+    14
+   ],
+   "dayOffset": 9,
+   "startMin": 495,
+   "durationMin": 150,
+   "status": "planned",
+   "complaints": "Чувствительность к холодному",
+   "diagnosis": ""
+  },
+  {
+   "patient": 2,
+   "doctor": 3,
+   "services": [
+    13
+   ],
+   "dayOffset": 9,
+   "startMin": 690,
+   "durationMin": 60,
+   "status": "planned",
+   "complaints": "Желание отбелить зубы",
+   "diagnosis": ""
+  },
+  {
+   "patient": 13,
+   "doctor": 4,
+   "services": [
+    23
+   ],
+   "dayOffset": 9,
+   "startMin": 435,
+   "durationMin": 45,
+   "status": "planned",
+   "complaints": "Боль при жевании",
+   "diagnosis": ""
+  },
+  {
+   "patient": 4,
+   "doctor": 4,
+   "services": [
+    23
+   ],
+   "dayOffset": 9,
+   "startMin": 615,
+   "durationMin": 45,
+   "status": "planned",
+   "complaints": "Скол пломбы",
+   "diagnosis": ""
+  },
+  {
+   "patient": 18,
+   "doctor": 4,
+   "services": [
+    19
+   ],
+   "dayOffset": 9,
+   "startMin": 840,
+   "durationMin": 60,
+   "status": "planned",
+   "complaints": "Скол пломбы",
+   "diagnosis": ""
+  },
+  {
+   "patient": 6,
+   "doctor": 5,
+   "services": [
+    0
+   ],
+   "dayOffset": 9,
+   "startMin": 420,
+   "durationMin": 30,
+   "status": "planned",
+   "complaints": "Кровоточивость дёсен",
+   "diagnosis": ""
+  },
+  {
+   "patient": 17,
+   "doctor": 5,
+   "services": [
+    21
+   ],
+   "dayOffset": 9,
+   "startMin": 540,
+   "durationMin": 30,
+   "status": "planned",
+   "complaints": "Консультация по протезированию",
+   "diagnosis": ""
+  },
+  {
+   "patient": 12,
+   "doctor": 5,
+   "services": [
+    21
+   ],
+   "dayOffset": 9,
+   "startMin": 600,
+   "durationMin": 30,
+   "status": "planned",
+   "complaints": "Боль при накусывании",
+   "diagnosis": ""
+  },
+  {
+   "patient": 6,
+   "doctor": 5,
+   "services": [
+    20
+   ],
+   "dayOffset": 9,
+   "startMin": 675,
+   "durationMin": 90,
+   "status": "planned",
+   "complaints": "Профилактический осмотр",
+   "diagnosis": ""
+  },
+  {
+   "patient": 20,
+   "doctor": 0,
+   "services": [
+    4,
+    2
+   ],
+   "dayOffset": 10,
+   "startMin": 420,
+   "durationMin": 75,
+   "status": "planned",
+   "complaints": "Боль при накусывании",
+   "diagnosis": ""
+  },
+  {
+   "patient": 6,
+   "doctor": 0,
+   "services": [
+    0
+   ],
+   "dayOffset": 10,
+   "startMin": 690,
+   "durationMin": 30,
+   "status": "cancelled",
+   "complaints": "Желание отбелить зубы",
+   "diagnosis": ""
+  },
+  {
+   "patient": 1,
+   "doctor": 1,
+   "services": [
+    0
+   ],
+   "dayOffset": 10,
+   "startMin": 435,
+   "durationMin": 30,
+   "status": "planned",
+   "complaints": "Кровоточивость дёсен",
+   "diagnosis": ""
+  },
+  {
+   "patient": 13,
+   "doctor": 1,
+   "services": [
+    0
+   ],
+   "dayOffset": 10,
+   "startMin": 555,
+   "durationMin": 30,
+   "status": "planned",
+   "complaints": "Профилактический осмотр",
+   "diagnosis": ""
+  },
+  {
+   "patient": 22,
+   "doctor": 1,
+   "services": [
+    0
+   ],
+   "dayOffset": 10,
+   "startMin": 585,
+   "durationMin": 30,
+   "status": "planned",
+   "complaints": "Желание отбелить зубы",
+   "diagnosis": ""
+  },
+  {
+   "patient": 4,
+   "doctor": 1,
+   "services": [
+    17
+   ],
+   "dayOffset": 10,
+   "startMin": 720,
+   "durationMin": 30,
+   "status": "planned",
+   "complaints": "Желание отбелить зубы",
+   "diagnosis": ""
+  },
+  {
+   "patient": 39,
+   "doctor": 2,
+   "services": [
+    8,
+    1
+   ],
+   "dayOffset": 10,
+   "startMin": 405,
+   "durationMin": 60,
+   "status": "cancelled",
+   "complaints": "Консультация по протезированию",
+   "diagnosis": ""
+  },
+  {
+   "patient": 33,
+   "doctor": 2,
+   "services": [
+    3
+   ],
+   "dayOffset": 10,
+   "startMin": 570,
+   "durationMin": 15,
+   "status": "planned",
+   "complaints": "Боль при жевании",
+   "diagnosis": ""
+  },
+  {
+   "patient": 10,
+   "doctor": 2,
+   "services": [
+    9,
+    10
+   ],
+   "dayOffset": 10,
+   "startMin": 645,
+   "durationMin": 150,
+   "status": "cancelled",
+   "complaints": "Желание отбелить зубы",
+   "diagnosis": ""
+  },
+  {
+   "patient": 6,
+   "doctor": 3,
+   "services": [
+    14
+   ],
+   "dayOffset": 10,
+   "startMin": 480,
+   "durationMin": 90,
+   "status": "planned",
+   "complaints": "Боль при жевании",
+   "diagnosis": ""
+  },
+  {
+   "patient": 30,
+   "doctor": 3,
+   "services": [
+    15,
+    12,
+    0
+   ],
+   "dayOffset": 10,
+   "startMin": 750,
+   "durationMin": 120,
+   "status": "planned",
+   "complaints": "Чувствительность к холодному",
+   "diagnosis": ""
+  },
+  {
+   "patient": 27,
+   "doctor": 4,
+   "services": [
+    1
+   ],
+   "dayOffset": 10,
+   "startMin": 615,
+   "durationMin": 30,
+   "status": "planned",
+   "complaints": "Консультация по протезированию",
+   "diagnosis": ""
+  },
+  {
+   "patient": 2,
+   "doctor": 4,
+   "services": [
+    3
+   ],
+   "dayOffset": 10,
+   "startMin": 645,
+   "durationMin": 15,
+   "status": "planned",
+   "complaints": "Скол пломбы",
+   "diagnosis": ""
+  },
+  {
+   "patient": 20,
+   "doctor": 5,
+   "services": [
+    22
+   ],
+   "dayOffset": 10,
+   "startMin": 525,
+   "durationMin": 30,
+   "status": "planned",
+   "complaints": "Чувствительность к холодному",
+   "diagnosis": ""
+  },
+  {
+   "patient": 0,
+   "doctor": 5,
+   "services": [
+    2,
+    1
+   ],
+   "dayOffset": 10,
+   "startMin": 600,
+   "durationMin": 30,
+   "status": "planned",
+   "complaints": "Боль при жевании",
+   "diagnosis": ""
+  },
+  {
+   "patient": 0,
+   "doctor": 5,
+   "services": [
+    21
+   ],
+   "dayOffset": 10,
+   "startMin": 645,
+   "durationMin": 30,
+   "status": "planned",
+   "complaints": "Чувствительность к холодному",
+   "diagnosis": ""
+  },
+  {
+   "patient": 22,
+   "doctor": 5,
+   "services": [
+    19,
+    1
+   ],
+   "dayOffset": 10,
+   "startMin": 705,
+   "durationMin": 90,
+   "status": "planned",
+   "complaints": "Боль при накусывании",
+   "diagnosis": ""
+  },
+  {
+   "patient": 39,
+   "doctor": 5,
+   "services": [
+    19,
+    3
+   ],
+   "dayOffset": 10,
+   "startMin": 825,
+   "durationMin": 75,
+   "status": "planned",
+   "complaints": "Чувствительность к холодному",
+   "diagnosis": ""
+  }
+ ],
+ "payments": [
+  {
+   "appointment": 0,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 3,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 4,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 5,
+   "share": 0.5,
+   "method": "cash"
+  },
+  {
+   "appointment": 7,
+   "share": 1,
+   "method": "cash"
+  },
+  {
+   "appointment": 9,
+   "share": 1,
+   "method": "cash"
+  },
+  {
+   "appointment": 10,
+   "share": 1,
+   "method": "cash"
+  },
+  {
+   "appointment": 13,
+   "share": 1,
+   "method": "cash"
+  },
+  {
+   "appointment": 15,
+   "share": 1,
+   "method": "transfer"
+  },
+  {
+   "appointment": 16,
+   "share": 1,
+   "method": "cash"
+  },
+  {
+   "appointment": 17,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 18,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 19,
+   "share": 1,
+   "method": "cash"
+  },
+  {
+   "appointment": 20,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 22,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 23,
+   "share": 0.5,
+   "method": "transfer"
+  },
+  {
+   "appointment": 25,
+   "share": 1,
+   "method": "cash"
+  },
+  {
+   "appointment": 26,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 27,
+   "share": 1,
+   "method": "cash"
+  },
+  {
+   "appointment": 28,
+   "share": 1,
+   "method": "transfer"
+  },
+  {
+   "appointment": 30,
+   "share": 0.5,
+   "method": "card"
+  },
+  {
+   "appointment": 31,
+   "share": 1,
+   "method": "transfer"
+  },
+  {
+   "appointment": 33,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 34,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 36,
+   "share": 1,
+   "method": "transfer"
+  },
+  {
+   "appointment": 37,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 38,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 39,
+   "share": 0.5,
+   "method": "cash"
+  },
+  {
+   "appointment": 40,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 42,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 43,
+   "share": 1,
+   "method": "cash"
+  },
+  {
+   "appointment": 44,
+   "share": 1,
+   "method": "transfer"
+  },
+  {
+   "appointment": 46,
+   "share": 1,
+   "method": "cash"
+  },
+  {
+   "appointment": 47,
+   "share": 1,
+   "method": "cash"
+  },
+  {
+   "appointment": 48,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 49,
+   "share": 0.5,
+   "method": "cash"
+  },
+  {
+   "appointment": 51,
+   "share": 1,
+   "method": "transfer"
+  },
+  {
+   "appointment": 53,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 54,
+   "share": 1,
+   "method": "transfer"
+  },
+  {
+   "appointment": 55,
+   "share": 0.5,
+   "method": "cash"
+  },
+  {
+   "appointment": 56,
+   "share": 1,
+   "method": "cash"
+  },
+  {
+   "appointment": 57,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 58,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 59,
+   "share": 1,
+   "method": "transfer"
+  },
+  {
+   "appointment": 62,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 63,
+   "share": 1,
+   "method": "cash"
+  },
+  {
+   "appointment": 66,
+   "share": 0.5,
+   "method": "cash"
+  },
+  {
+   "appointment": 67,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 68,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 69,
+   "share": 1,
+   "method": "transfer"
+  },
+  {
+   "appointment": 70,
+   "share": 1,
+   "method": "transfer"
+  },
+  {
+   "appointment": 71,
+   "share": 1,
+   "method": "cash"
+  },
+  {
+   "appointment": 72,
+   "share": 1,
+   "method": "transfer"
+  },
+  {
+   "appointment": 73,
+   "share": 1,
+   "method": "transfer"
+  },
+  {
+   "appointment": 75,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 76,
+   "share": 1,
+   "method": "cash"
+  },
+  {
+   "appointment": 79,
+   "share": 1,
+   "method": "cash"
+  },
+  {
+   "appointment": 80,
+   "share": 1,
+   "method": "cash"
+  },
+  {
+   "appointment": 81,
+   "share": 1,
+   "method": "cash"
+  },
+  {
+   "appointment": 83,
+   "share": 1,
+   "method": "cash"
+  },
+  {
+   "appointment": 85,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 86,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 87,
+   "share": 0.5,
+   "method": "cash"
+  },
+  {
+   "appointment": 88,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 89,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 90,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 91,
+   "share": 1,
+   "method": "transfer"
+  },
+  {
+   "appointment": 92,
+   "share": 1,
+   "method": "cash"
+  },
+  {
+   "appointment": 93,
+   "share": 0.5,
+   "method": "cash"
+  },
+  {
+   "appointment": 94,
+   "share": 1,
+   "method": "transfer"
+  },
+  {
+   "appointment": 95,
+   "share": 1,
+   "method": "transfer"
+  },
+  {
+   "appointment": 96,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 97,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 98,
+   "share": 0.5,
+   "method": "transfer"
+  },
+  {
+   "appointment": 100,
+   "share": 1,
+   "method": "cash"
+  },
+  {
+   "appointment": 101,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 102,
+   "share": 0.5,
+   "method": "transfer"
+  },
+  {
+   "appointment": 103,
+   "share": 1,
+   "method": "cash"
+  },
+  {
+   "appointment": 104,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 105,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 106,
+   "share": 1,
+   "method": "cash"
+  },
+  {
+   "appointment": 107,
+   "share": 1,
+   "method": "transfer"
+  },
+  {
+   "appointment": 108,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 109,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 111,
+   "share": 1,
+   "method": "cash"
+  },
+  {
+   "appointment": 112,
+   "share": 0.5,
+   "method": "card"
+  },
+  {
+   "appointment": 115,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 116,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 117,
+   "share": 0.5,
+   "method": "cash"
+  },
+  {
+   "appointment": 118,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 119,
+   "share": 1,
+   "method": "cash"
+  },
+  {
+   "appointment": 120,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 121,
+   "share": 1,
+   "method": "cash"
+  },
+  {
+   "appointment": 122,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 123,
+   "share": 1,
+   "method": "transfer"
+  },
+  {
+   "appointment": 124,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 125,
+   "share": 1,
+   "method": "transfer"
+  },
+  {
+   "appointment": 126,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 127,
+   "share": 1,
+   "method": "transfer"
+  },
+  {
+   "appointment": 128,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 129,
+   "share": 1,
+   "method": "cash"
+  },
+  {
+   "appointment": 130,
+   "share": 1,
+   "method": "cash"
+  },
+  {
+   "appointment": 131,
+   "share": 1,
+   "method": "transfer"
+  },
+  {
+   "appointment": 132,
+   "share": 1,
+   "method": "transfer"
+  },
+  {
+   "appointment": 133,
+   "share": 1,
+   "method": "transfer"
+  },
+  {
+   "appointment": 134,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 135,
+   "share": 1,
+   "method": "transfer"
+  },
+  {
+   "appointment": 137,
+   "share": 1,
+   "method": "cash"
+  },
+  {
+   "appointment": 139,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 140,
+   "share": 0.5,
+   "method": "cash"
+  },
+  {
+   "appointment": 141,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 142,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 145,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 146,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 147,
+   "share": 1,
+   "method": "cash"
+  },
+  {
+   "appointment": 148,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 149,
+   "share": 1,
+   "method": "cash"
+  },
+  {
+   "appointment": 150,
+   "share": 1,
+   "method": "transfer"
+  },
+  {
+   "appointment": 151,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 152,
+   "share": 1,
+   "method": "transfer"
+  },
+  {
+   "appointment": 153,
+   "share": 0.5,
+   "method": "transfer"
+  },
+  {
+   "appointment": 154,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 155,
+   "share": 1,
+   "method": "transfer"
+  },
+  {
+   "appointment": 156,
+   "share": 1,
+   "method": "transfer"
+  },
+  {
+   "appointment": 157,
+   "share": 1,
+   "method": "cash"
+  },
+  {
+   "appointment": 159,
+   "share": 1,
+   "method": "transfer"
+  },
+  {
+   "appointment": 160,
+   "share": 1,
+   "method": "transfer"
+  },
+  {
+   "appointment": 161,
+   "share": 0.5,
+   "method": "card"
+  },
+  {
+   "appointment": 162,
+   "share": 1,
+   "method": "cash"
+  },
+  {
+   "appointment": 163,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 165,
+   "share": 1,
+   "method": "transfer"
+  },
+  {
+   "appointment": 166,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 168,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 169,
+   "share": 1,
+   "method": "transfer"
+  },
+  {
+   "appointment": 170,
+   "share": 0.5,
+   "method": "transfer"
+  },
+  {
+   "appointment": 171,
+   "share": 1,
+   "method": "transfer"
+  },
+  {
+   "appointment": 173,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 174,
+   "share": 0.5,
+   "method": "card"
+  },
+  {
+   "appointment": 175,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 176,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 177,
+   "share": 0.5,
+   "method": "card"
+  },
+  {
+   "appointment": 178,
+   "share": 1,
+   "method": "transfer"
+  },
+  {
+   "appointment": 179,
+   "share": 1,
+   "method": "transfer"
+  },
+  {
+   "appointment": 180,
+   "share": 1,
+   "method": "transfer"
+  },
+  {
+   "appointment": 181,
+   "share": 1,
+   "method": "cash"
+  },
+  {
+   "appointment": 182,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 183,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 185,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 186,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 187,
+   "share": 1,
+   "method": "cash"
+  },
+  {
+   "appointment": 188,
+   "share": 1,
+   "method": "transfer"
+  },
+  {
+   "appointment": 189,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 191,
+   "share": 0.5,
+   "method": "cash"
+  },
+  {
+   "appointment": 193,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 194,
+   "share": 1,
+   "method": "cash"
+  },
+  {
+   "appointment": 196,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 198,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 199,
+   "share": 1,
+   "method": "cash"
+  },
+  {
+   "appointment": 200,
+   "share": 1,
+   "method": "cash"
+  },
+  {
+   "appointment": 202,
+   "share": 1,
+   "method": "transfer"
+  },
+  {
+   "appointment": 204,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 208,
+   "share": 1,
+   "method": "transfer"
+  },
+  {
+   "appointment": 210,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 211,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 212,
+   "share": 1,
+   "method": "cash"
+  },
+  {
+   "appointment": 213,
+   "share": 1,
+   "method": "cash"
+  },
+  {
+   "appointment": 214,
+   "share": 0.5,
+   "method": "transfer"
+  },
+  {
+   "appointment": 215,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 216,
+   "share": 1,
+   "method": "transfer"
+  },
+  {
+   "appointment": 217,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 218,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 219,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 220,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 221,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 222,
+   "share": 1,
+   "method": "transfer"
+  },
+  {
+   "appointment": 223,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 224,
+   "share": 1,
+   "method": "cash"
+  },
+  {
+   "appointment": 227,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 228,
+   "share": 1,
+   "method": "cash"
+  },
+  {
+   "appointment": 229,
+   "share": 1,
+   "method": "cash"
+  },
+  {
+   "appointment": 230,
+   "share": 1,
+   "method": "transfer"
+  },
+  {
+   "appointment": 231,
+   "share": 1,
+   "method": "transfer"
+  },
+  {
+   "appointment": 232,
+   "share": 1,
+   "method": "transfer"
+  },
+  {
+   "appointment": 235,
+   "share": 1,
+   "method": "cash"
+  },
+  {
+   "appointment": 237,
+   "share": 1,
+   "method": "cash"
+  },
+  {
+   "appointment": 238,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 239,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 240,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 241,
+   "share": 1,
+   "method": "cash"
+  },
+  {
+   "appointment": 242,
+   "share": 0.5,
+   "method": "transfer"
+  },
+  {
+   "appointment": 243,
+   "share": 1,
+   "method": "cash"
+  },
+  {
+   "appointment": 244,
+   "share": 0.5,
+   "method": "card"
+  },
+  {
+   "appointment": 246,
+   "share": 1,
+   "method": "transfer"
+  },
+  {
+   "appointment": 247,
+   "share": 1,
+   "method": "cash"
+  },
+  {
+   "appointment": 248,
+   "share": 0.5,
+   "method": "transfer"
+  },
+  {
+   "appointment": 249,
+   "share": 1,
+   "method": "cash"
+  },
+  {
+   "appointment": 252,
+   "share": 0.5,
+   "method": "card"
+  },
+  {
+   "appointment": 253,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 254,
+   "share": 1,
+   "method": "cash"
+  },
+  {
+   "appointment": 255,
+   "share": 1,
+   "method": "cash"
+  },
+  {
+   "appointment": 256,
+   "share": 0.5,
+   "method": "transfer"
+  },
+  {
+   "appointment": 257,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 258,
+   "share": 0.5,
+   "method": "card"
+  },
+  {
+   "appointment": 259,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 260,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 261,
+   "share": 0.5,
+   "method": "card"
+  },
+  {
+   "appointment": 262,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 264,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 265,
+   "share": 1,
+   "method": "transfer"
+  },
+  {
+   "appointment": 266,
+   "share": 1,
+   "method": "cash"
+  },
+  {
+   "appointment": 267,
+   "share": 0.5,
+   "method": "card"
+  },
+  {
+   "appointment": 268,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 269,
+   "share": 1,
+   "method": "cash"
+  },
+  {
+   "appointment": 270,
+   "share": 0.5,
+   "method": "card"
+  },
+  {
+   "appointment": 273,
+   "share": 1,
+   "method": "cash"
+  },
+  {
+   "appointment": 274,
+   "share": 1,
+   "method": "transfer"
+  },
+  {
+   "appointment": 275,
+   "share": 1,
+   "method": "cash"
+  },
+  {
+   "appointment": 276,
+   "share": 1,
+   "method": "cash"
+  },
+  {
+   "appointment": 277,
+   "share": 1,
+   "method": "transfer"
+  },
+  {
+   "appointment": 278,
+   "share": 0.5,
+   "method": "card"
+  },
+  {
+   "appointment": 280,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 281,
+   "share": 1,
+   "method": "cash"
+  },
+  {
+   "appointment": 282,
+   "share": 1,
+   "method": "cash"
+  },
+  {
+   "appointment": 283,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 284,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 285,
+   "share": 1,
+   "method": "cash"
+  },
+  {
+   "appointment": 286,
+   "share": 1,
+   "method": "cash"
+  },
+  {
+   "appointment": 287,
+   "share": 1,
+   "method": "transfer"
+  },
+  {
+   "appointment": 288,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 289,
+   "share": 1,
+   "method": "cash"
+  },
+  {
+   "appointment": 290,
+   "share": 0.5,
+   "method": "card"
+  },
+  {
+   "appointment": 291,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 292,
+   "share": 1,
+   "method": "transfer"
+  },
+  {
+   "appointment": 293,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 294,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 296,
+   "share": 1,
+   "method": "transfer"
+  },
+  {
+   "appointment": 298,
+   "share": 1,
+   "method": "cash"
+  },
+  {
+   "appointment": 299,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 301,
+   "share": 1,
+   "method": "transfer"
+  },
+  {
+   "appointment": 302,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 303,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 304,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 306,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 307,
+   "share": 1,
+   "method": "transfer"
+  },
+  {
+   "appointment": 308,
+   "share": 1,
+   "method": "transfer"
+  },
+  {
+   "appointment": 309,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 310,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 311,
+   "share": 1,
+   "method": "cash"
+  },
+  {
+   "appointment": 312,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 313,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 314,
+   "share": 1,
+   "method": "cash"
+  },
+  {
+   "appointment": 315,
+   "share": 0.5,
+   "method": "card"
+  },
+  {
+   "appointment": 316,
+   "share": 0.5,
+   "method": "transfer"
+  },
+  {
+   "appointment": 317,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 318,
+   "share": 1,
+   "method": "cash"
+  },
+  {
+   "appointment": 319,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 320,
+   "share": 1,
+   "method": "cash"
+  },
+  {
+   "appointment": 321,
+   "share": 1,
+   "method": "transfer"
+  },
+  {
+   "appointment": 323,
+   "share": 1,
+   "method": "cash"
+  },
+  {
+   "appointment": 324,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 325,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 327,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 328,
+   "share": 1,
+   "method": "card"
+  },
+  {
+   "appointment": 329,
+   "share": 1,
+   "method": "transfer"
+  }
+ ]
+}

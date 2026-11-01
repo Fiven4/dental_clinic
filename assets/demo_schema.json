@@ -1,0 +1,1140 @@
+{
+ "appointments": {
+  "fields": [
+   {
+    "name": "id",
+    "type": "text",
+    "required": true,
+    "min": 15,
+    "max": 15,
+    "pattern": "^[a-z0-9]+$",
+    "values": null,
+    "multiple": false,
+    "collection": null,
+    "onlyInt": false
+   },
+   {
+    "name": "patient",
+    "type": "relation",
+    "required": true,
+    "min": null,
+    "max": null,
+    "pattern": null,
+    "values": null,
+    "multiple": false,
+    "collection": "patients",
+    "onlyInt": false
+   },
+   {
+    "name": "doctor",
+    "type": "relation",
+    "required": true,
+    "min": null,
+    "max": null,
+    "pattern": null,
+    "values": null,
+    "multiple": false,
+    "collection": "doctors",
+    "onlyInt": false
+   },
+   {
+    "name": "services",
+    "type": "relation",
+    "required": true,
+    "min": null,
+    "max": null,
+    "pattern": null,
+    "values": null,
+    "multiple": true,
+    "collection": "services",
+    "onlyInt": false
+   },
+   {
+    "name": "startAt",
+    "type": "date",
+    "required": true,
+    "min": "",
+    "max": "",
+    "pattern": null,
+    "values": null,
+    "multiple": false,
+    "collection": null,
+    "onlyInt": false
+   },
+   {
+    "name": "endAt",
+    "type": "date",
+    "required": true,
+    "min": "",
+    "max": "",
+    "pattern": null,
+    "values": null,
+    "multiple": false,
+    "collection": null,
+    "onlyInt": false
+   },
+   {
+    "name": "status",
+    "type": "select",
+    "required": true,
+    "min": null,
+    "max": null,
+    "pattern": null,
+    "values": [
+     "planned",
+     "done",
+     "cancelled"
+    ],
+    "multiple": false,
+    "collection": null,
+    "onlyInt": false
+   },
+   {
+    "name": "discountPercent",
+    "type": "number",
+    "required": false,
+    "min": 0,
+    "max": 100,
+    "pattern": null,
+    "values": null,
+    "multiple": false,
+    "collection": null,
+    "onlyInt": false
+   },
+   {
+    "name": "total",
+    "type": "number",
+    "required": false,
+    "min": 0,
+    "max": null,
+    "pattern": null,
+    "values": null,
+    "multiple": false,
+    "collection": null,
+    "onlyInt": false
+   },
+   {
+    "name": "complaints",
+    "type": "text",
+    "required": false,
+    "min": 0,
+    "max": 1000,
+    "pattern": null,
+    "values": null,
+    "multiple": false,
+    "collection": null,
+    "onlyInt": false
+   },
+   {
+    "name": "diagnosis",
+    "type": "text",
+    "required": false,
+    "min": 0,
+    "max": 2000,
+    "pattern": null,
+    "values": null,
+    "multiple": false,
+    "collection": null,
+    "onlyInt": false
+   },
+   {
+    "name": "deletedAt",
+    "type": "date",
+    "required": false,
+    "min": "",
+    "max": "",
+    "pattern": null,
+    "values": null,
+    "multiple": false,
+    "collection": null,
+    "onlyInt": false
+   },
+   {
+    "name": "created",
+    "type": "autodate",
+    "required": false,
+    "min": null,
+    "max": null,
+    "pattern": null,
+    "values": null,
+    "multiple": false,
+    "collection": null,
+    "onlyInt": false
+   },
+   {
+    "name": "updated",
+    "type": "autodate",
+    "required": false,
+    "min": null,
+    "max": null,
+    "pattern": null,
+    "values": null,
+    "multiple": false,
+    "collection": null,
+    "onlyInt": false
+   }
+  ],
+  "unique": []
+ },
+ "cabinets": {
+  "fields": [
+   {
+    "name": "id",
+    "type": "text",
+    "required": true,
+    "min": 15,
+    "max": 15,
+    "pattern": "^[a-z0-9]+$",
+    "values": null,
+    "multiple": false,
+    "collection": null,
+    "onlyInt": false
+   },
+   {
+    "name": "number",
+    "type": "text",
+    "required": true,
+    "min": 1,
+    "max": 10,
+    "pattern": null,
+    "values": null,
+    "multiple": false,
+    "collection": null,
+    "onlyInt": false
+   },
+   {
+    "name": "floor",
+    "type": "number",
+    "required": true,
+    "min": 1,
+    "max": 10,
+    "pattern": null,
+    "values": null,
+    "multiple": false,
+    "collection": null,
+    "onlyInt": true
+   },
+   {
+    "name": "equipment",
+    "type": "text",
+    "required": false,
+    "min": 0,
+    "max": 255,
+    "pattern": null,
+    "values": null,
+    "multiple": false,
+    "collection": null,
+    "onlyInt": false
+   },
+   {
+    "name": "deletedAt",
+    "type": "date",
+    "required": false,
+    "min": "",
+    "max": "",
+    "pattern": null,
+    "values": null,
+    "multiple": false,
+    "collection": null,
+    "onlyInt": false
+   },
+   {
+    "name": "created",
+    "type": "autodate",
+    "required": false,
+    "min": null,
+    "max": null,
+    "pattern": null,
+    "values": null,
+    "multiple": false,
+    "collection": null,
+    "onlyInt": false
+   },
+   {
+    "name": "updated",
+    "type": "autodate",
+    "required": false,
+    "min": null,
+    "max": null,
+    "pattern": null,
+    "values": null,
+    "multiple": false,
+    "collection": null,
+    "onlyInt": false
+   }
+  ],
+  "unique": [
+   {
+    "columns": [
+     "number COLLATE NOCASE"
+    ],
+    "nonEmpty": false
+   }
+  ]
+ },
+ "doctors": {
+  "fields": [
+   {
+    "name": "id",
+    "type": "text",
+    "required": true,
+    "min": 15,
+    "max": 15,
+    "pattern": "^[a-z0-9]+$",
+    "values": null,
+    "multiple": false,
+    "collection": null,
+    "onlyInt": false
+   },
+   {
+    "name": "fullName",
+    "type": "text",
+    "required": true,
+    "min": 2,
+    "max": 100,
+    "pattern": null,
+    "values": null,
+    "multiple": false,
+    "collection": null,
+    "onlyInt": false
+   },
+   {
+    "name": "specialization",
+    "type": "relation",
+    "required": true,
+    "min": null,
+    "max": null,
+    "pattern": null,
+    "values": null,
+    "multiple": false,
+    "collection": "specializations",
+    "onlyInt": false
+   },
+   {
+    "name": "cabinet",
+    "type": "relation",
+    "required": false,
+    "min": null,
+    "max": null,
+    "pattern": null,
+    "values": null,
+    "multiple": false,
+    "collection": "cabinets",
+    "onlyInt": false
+   },
+   {
+    "name": "user",
+    "type": "relation",
+    "required": false,
+    "min": null,
+    "max": null,
+    "pattern": null,
+    "values": null,
+    "multiple": false,
+    "collection": "users",
+    "onlyInt": false
+   },
+   {
+    "name": "experienceYears",
+    "type": "number",
+    "required": true,
+    "min": 0,
+    "max": 60,
+    "pattern": null,
+    "values": null,
+    "multiple": false,
+    "collection": null,
+    "onlyInt": true
+   },
+   {
+    "name": "phone",
+    "type": "text",
+    "required": false,
+    "min": 0,
+    "max": 20,
+    "pattern": null,
+    "values": null,
+    "multiple": false,
+    "collection": null,
+    "onlyInt": false
+   },
+   {
+    "name": "deletedAt",
+    "type": "date",
+    "required": false,
+    "min": "",
+    "max": "",
+    "pattern": null,
+    "values": null,
+    "multiple": false,
+    "collection": null,
+    "onlyInt": false
+   },
+   {
+    "name": "created",
+    "type": "autodate",
+    "required": false,
+    "min": null,
+    "max": null,
+    "pattern": null,
+    "values": null,
+    "multiple": false,
+    "collection": null,
+    "onlyInt": false
+   },
+   {
+    "name": "updated",
+    "type": "autodate",
+    "required": false,
+    "min": null,
+    "max": null,
+    "pattern": null,
+    "values": null,
+    "multiple": false,
+    "collection": null,
+    "onlyInt": false
+   }
+  ],
+  "unique": [
+   {
+    "columns": [
+     "user"
+    ],
+    "nonEmpty": true
+   }
+  ]
+ },
+ "patient_cards": {
+  "fields": [
+   {
+    "name": "id",
+    "type": "text",
+    "required": true,
+    "min": 15,
+    "max": 15,
+    "pattern": "^[a-z0-9]+$",
+    "values": null,
+    "multiple": false,
+    "collection": null,
+    "onlyInt": false
+   },
+   {
+    "name": "patient",
+    "type": "relation",
+    "required": true,
+    "min": null,
+    "max": null,
+    "pattern": null,
+    "values": null,
+    "multiple": false,
+    "collection": "patients",
+    "onlyInt": false
+   },
+   {
+    "name": "number",
+    "type": "text",
+    "required": true,
+    "min": 0,
+    "max": 0,
+    "pattern": "^K-\\d{6}$",
+    "values": null,
+    "multiple": false,
+    "collection": null,
+    "onlyInt": false
+   },
+   {
+    "name": "allergies",
+    "type": "text",
+    "required": false,
+    "min": 0,
+    "max": 500,
+    "pattern": null,
+    "values": null,
+    "multiple": false,
+    "collection": null,
+    "onlyInt": false
+   },
+   {
+    "name": "notes",
+    "type": "text",
+    "required": false,
+    "min": 0,
+    "max": 2000,
+    "pattern": null,
+    "values": null,
+    "multiple": false,
+    "collection": null,
+    "onlyInt": false
+   },
+   {
+    "name": "openedOn",
+    "type": "date",
+    "required": true,
+    "min": "",
+    "max": "",
+    "pattern": null,
+    "values": null,
+    "multiple": false,
+    "collection": null,
+    "onlyInt": false
+   },
+   {
+    "name": "deletedAt",
+    "type": "date",
+    "required": false,
+    "min": "",
+    "max": "",
+    "pattern": null,
+    "values": null,
+    "multiple": false,
+    "collection": null,
+    "onlyInt": false
+   },
+   {
+    "name": "created",
+    "type": "autodate",
+    "required": false,
+    "min": null,
+    "max": null,
+    "pattern": null,
+    "values": null,
+    "multiple": false,
+    "collection": null,
+    "onlyInt": false
+   },
+   {
+    "name": "updated",
+    "type": "autodate",
+    "required": false,
+    "min": null,
+    "max": null,
+    "pattern": null,
+    "values": null,
+    "multiple": false,
+    "collection": null,
+    "onlyInt": false
+   }
+  ],
+  "unique": [
+   {
+    "columns": [
+     "patient"
+    ],
+    "nonEmpty": false
+   },
+   {
+    "columns": [
+     "number COLLATE NOCASE"
+    ],
+    "nonEmpty": false
+   }
+  ]
+ },
+ "patients": {
+  "fields": [
+   {
+    "name": "id",
+    "type": "text",
+    "required": true,
+    "min": 15,
+    "max": 15,
+    "pattern": "^[a-z0-9]+$",
+    "values": null,
+    "multiple": false,
+    "collection": null,
+    "onlyInt": false
+   },
+   {
+    "name": "fullName",
+    "type": "text",
+    "required": true,
+    "min": 2,
+    "max": 100,
+    "pattern": null,
+    "values": null,
+    "multiple": false,
+    "collection": null,
+    "onlyInt": false
+   },
+   {
+    "name": "birthDate",
+    "type": "date",
+    "required": true,
+    "min": "",
+    "max": "",
+    "pattern": null,
+    "values": null,
+    "multiple": false,
+    "collection": null,
+    "onlyInt": false
+   },
+   {
+    "name": "phone",
+    "type": "text",
+    "required": true,
+    "min": 7,
+    "max": 20,
+    "pattern": null,
+    "values": null,
+    "multiple": false,
+    "collection": null,
+    "onlyInt": false
+   },
+   {
+    "name": "email",
+    "type": "email",
+    "required": false,
+    "min": null,
+    "max": null,
+    "pattern": null,
+    "values": null,
+    "multiple": false,
+    "collection": null,
+    "onlyInt": false
+   },
+   {
+    "name": "address",
+    "type": "text",
+    "required": false,
+    "min": 0,
+    "max": 255,
+    "pattern": null,
+    "values": null,
+    "multiple": false,
+    "collection": null,
+    "onlyInt": false
+   },
+   {
+    "name": "deletedAt",
+    "type": "date",
+    "required": false,
+    "min": "",
+    "max": "",
+    "pattern": null,
+    "values": null,
+    "multiple": false,
+    "collection": null,
+    "onlyInt": false
+   },
+   {
+    "name": "created",
+    "type": "autodate",
+    "required": false,
+    "min": null,
+    "max": null,
+    "pattern": null,
+    "values": null,
+    "multiple": false,
+    "collection": null,
+    "onlyInt": false
+   },
+   {
+    "name": "updated",
+    "type": "autodate",
+    "required": false,
+    "min": null,
+    "max": null,
+    "pattern": null,
+    "values": null,
+    "multiple": false,
+    "collection": null,
+    "onlyInt": false
+   }
+  ],
+  "unique": [
+   {
+    "columns": [
+     "email COLLATE NOCASE"
+    ],
+    "nonEmpty": true
+   }
+  ]
+ },
+ "payments": {
+  "fields": [
+   {
+    "name": "id",
+    "type": "text",
+    "required": true,
+    "min": 15,
+    "max": 15,
+    "pattern": "^[a-z0-9]+$",
+    "values": null,
+    "multiple": false,
+    "collection": null,
+    "onlyInt": false
+   },
+   {
+    "name": "appointment",
+    "type": "relation",
+    "required": true,
+    "min": null,
+    "max": null,
+    "pattern": null,
+    "values": null,
+    "multiple": false,
+    "collection": "appointments",
+    "onlyInt": false
+   },
+   {
+    "name": "amount",
+    "type": "number",
+    "required": true,
+    "min": 1,
+    "max": 10000000,
+    "pattern": null,
+    "values": null,
+    "multiple": false,
+    "collection": null,
+    "onlyInt": false
+   },
+   {
+    "name": "method",
+    "type": "select",
+    "required": true,
+    "min": null,
+    "max": null,
+    "pattern": null,
+    "values": [
+     "cash",
+     "card",
+     "transfer"
+    ],
+    "multiple": false,
+    "collection": null,
+    "onlyInt": false
+   },
+   {
+    "name": "paidAt",
+    "type": "date",
+    "required": true,
+    "min": "",
+    "max": "",
+    "pattern": null,
+    "values": null,
+    "multiple": false,
+    "collection": null,
+    "onlyInt": false
+   },
+   {
+    "name": "deletedAt",
+    "type": "date",
+    "required": false,
+    "min": "",
+    "max": "",
+    "pattern": null,
+    "values": null,
+    "multiple": false,
+    "collection": null,
+    "onlyInt": false
+   },
+   {
+    "name": "created",
+    "type": "autodate",
+    "required": false,
+    "min": null,
+    "max": null,
+    "pattern": null,
+    "values": null,
+    "multiple": false,
+    "collection": null,
+    "onlyInt": false
+   },
+   {
+    "name": "updated",
+    "type": "autodate",
+    "required": false,
+    "min": null,
+    "max": null,
+    "pattern": null,
+    "values": null,
+    "multiple": false,
+    "collection": null,
+    "onlyInt": false
+   }
+  ],
+  "unique": []
+ },
+ "service_categories": {
+  "fields": [
+   {
+    "name": "id",
+    "type": "text",
+    "required": true,
+    "min": 15,
+    "max": 15,
+    "pattern": "^[a-z0-9]+$",
+    "values": null,
+    "multiple": false,
+    "collection": null,
+    "onlyInt": false
+   },
+   {
+    "name": "name",
+    "type": "text",
+    "required": true,
+    "min": 2,
+    "max": 60,
+    "pattern": null,
+    "values": null,
+    "multiple": false,
+    "collection": null,
+    "onlyInt": false
+   },
+   {
+    "name": "description",
+    "type": "text",
+    "required": false,
+    "min": 0,
+    "max": 255,
+    "pattern": null,
+    "values": null,
+    "multiple": false,
+    "collection": null,
+    "onlyInt": false
+   },
+   {
+    "name": "deletedAt",
+    "type": "date",
+    "required": false,
+    "min": "",
+    "max": "",
+    "pattern": null,
+    "values": null,
+    "multiple": false,
+    "collection": null,
+    "onlyInt": false
+   },
+   {
+    "name": "created",
+    "type": "autodate",
+    "required": false,
+    "min": null,
+    "max": null,
+    "pattern": null,
+    "values": null,
+    "multiple": false,
+    "collection": null,
+    "onlyInt": false
+   },
+   {
+    "name": "updated",
+    "type": "autodate",
+    "required": false,
+    "min": null,
+    "max": null,
+    "pattern": null,
+    "values": null,
+    "multiple": false,
+    "collection": null,
+    "onlyInt": false
+   }
+  ],
+  "unique": [
+   {
+    "columns": [
+     "name COLLATE NOCASE"
+    ],
+    "nonEmpty": false
+   }
+  ]
+ },
+ "services": {
+  "fields": [
+   {
+    "name": "id",
+    "type": "text",
+    "required": true,
+    "min": 15,
+    "max": 15,
+    "pattern": "^[a-z0-9]+$",
+    "values": null,
+    "multiple": false,
+    "collection": null,
+    "onlyInt": false
+   },
+   {
+    "name": "name",
+    "type": "text",
+    "required": true,
+    "min": 2,
+    "max": 120,
+    "pattern": null,
+    "values": null,
+    "multiple": false,
+    "collection": null,
+    "onlyInt": false
+   },
+   {
+    "name": "category",
+    "type": "relation",
+    "required": true,
+    "min": null,
+    "max": null,
+    "pattern": null,
+    "values": null,
+    "multiple": false,
+    "collection": "service_categories",
+    "onlyInt": false
+   },
+   {
+    "name": "price",
+    "type": "number",
+    "required": false,
+    "min": 0,
+    "max": 1000000,
+    "pattern": null,
+    "values": null,
+    "multiple": false,
+    "collection": null,
+    "onlyInt": false
+   },
+   {
+    "name": "durationMin",
+    "type": "number",
+    "required": true,
+    "min": 10,
+    "max": 480,
+    "pattern": null,
+    "values": null,
+    "multiple": false,
+    "collection": null,
+    "onlyInt": true
+   },
+   {
+    "name": "description",
+    "type": "text",
+    "required": false,
+    "min": 0,
+    "max": 500,
+    "pattern": null,
+    "values": null,
+    "multiple": false,
+    "collection": null,
+    "onlyInt": false
+   },
+   {
+    "name": "deletedAt",
+    "type": "date",
+    "required": false,
+    "min": "",
+    "max": "",
+    "pattern": null,
+    "values": null,
+    "multiple": false,
+    "collection": null,
+    "onlyInt": false
+   },
+   {
+    "name": "created",
+    "type": "autodate",
+    "required": false,
+    "min": null,
+    "max": null,
+    "pattern": null,
+    "values": null,
+    "multiple": false,
+    "collection": null,
+    "onlyInt": false
+   },
+   {
+    "name": "updated",
+    "type": "autodate",
+    "required": false,
+    "min": null,
+    "max": null,
+    "pattern": null,
+    "values": null,
+    "multiple": false,
+    "collection": null,
+    "onlyInt": false
+   }
+  ],
+  "unique": [
+   {
+    "columns": [
+     "name COLLATE NOCASE"
+    ],
+    "nonEmpty": false
+   }
+  ]
+ },
+ "specializations": {
+  "fields": [
+   {
+    "name": "id",
+    "type": "text",
+    "required": true,
+    "min": 15,
+    "max": 15,
+    "pattern": "^[a-z0-9]+$",
+    "values": null,
+    "multiple": false,
+    "collection": null,
+    "onlyInt": false
+   },
+   {
+    "name": "name",
+    "type": "text",
+    "required": true,
+    "min": 2,
+    "max": 60,
+    "pattern": null,
+    "values": null,
+    "multiple": false,
+    "collection": null,
+    "onlyInt": false
+   },
+   {
+    "name": "description",
+    "type": "text",
+    "required": false,
+    "min": 0,
+    "max": 255,
+    "pattern": null,
+    "values": null,
+    "multiple": false,
+    "collection": null,
+    "onlyInt": false
+   },
+   {
+    "name": "deletedAt",
+    "type": "date",
+    "required": false,
+    "min": "",
+    "max": "",
+    "pattern": null,
+    "values": null,
+    "multiple": false,
+    "collection": null,
+    "onlyInt": false
+   },
+   {
+    "name": "created",
+    "type": "autodate",
+    "required": false,
+    "min": null,
+    "max": null,
+    "pattern": null,
+    "values": null,
+    "multiple": false,
+    "collection": null,
+    "onlyInt": false
+   },
+   {
+    "name": "updated",
+    "type": "autodate",
+    "required": false,
+    "min": null,
+    "max": null,
+    "pattern": null,
+    "values": null,
+    "multiple": false,
+    "collection": null,
+    "onlyInt": false
+   }
+  ],
+  "unique": [
+   {
+    "columns": [
+     "name COLLATE NOCASE"
+    ],
+    "nonEmpty": false
+   }
+  ]
+ },
+ "users": {
+  "fields": [
+   {
+    "name": "id",
+    "type": "text",
+    "required": true,
+    "min": 15,
+    "max": 15,
+    "pattern": "^[a-z0-9]+$",
+    "values": null,
+    "multiple": false,
+    "collection": null,
+    "onlyInt": false
+   },
+   {
+    "name": "name",
+    "type": "text",
+    "required": true,
+    "min": 0,
+    "max": 100,
+    "pattern": null,
+    "values": null,
+    "multiple": false,
+    "collection": null,
+    "onlyInt": false
+   },
+   {
+    "name": "avatar",
+    "type": "file",
+    "required": false,
+    "min": null,
+    "max": null,
+    "pattern": null,
+    "values": null,
+    "multiple": false,
+    "collection": null,
+    "onlyInt": false
+   },
+   {
+    "name": "created",
+    "type": "autodate",
+    "required": false,
+    "min": null,
+    "max": null,
+    "pattern": null,
+    "values": null,
+    "multiple": false,
+    "collection": null,
+    "onlyInt": false
+   },
+   {
+    "name": "updated",
+    "type": "autodate",
+    "required": false,
+    "min": null,
+    "max": null,
+    "pattern": null,
+    "values": null,
+    "multiple": false,
+    "collection": null,
+    "onlyInt": false
+   },
+   {
+    "name": "role",
+    "type": "select",
+    "required": true,
+    "min": null,
+    "max": null,
+    "pattern": null,
+    "values": [
+     "admin",
+     "doctor",
+     "registrar"
+    ],
+    "multiple": false,
+    "collection": null,
+    "onlyInt": false
+   }
+  ],
+  "unique": [
+   {
+    "columns": [
+     "tokenKey"
+    ],
+    "nonEmpty": false
+   },
+   {
+    "columns": [
+     "email"
+    ],
+    "nonEmpty": true
+   }
+  ]
+ }
+}
