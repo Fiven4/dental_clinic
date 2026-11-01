@@ -83,14 +83,17 @@ class SpecializationFormScreen extends StatelessWidget {
             label: 'Название',
             required: true,
             validator: plain(
-              V.combine([V.required('Укажите название'), V.length(min: 2, max: 100)]),
+              V.combine([
+                V.required('Укажите название'),
+                V.length(min: 2, max: 60),
+              ]),
             ),
           ),
           TextSpec(
             key: 'description',
             label: 'Описание',
             maxLines: 3,
-            validator: plain(V.length(max: 500)),
+            validator: plain(V.length(max: 255)),
           ),
         ],
         build: (v, existing) => Specialization(
@@ -129,7 +132,10 @@ class CabinetFormScreen extends StatelessWidget {
             label: 'Номер',
             required: true,
             validator: plain(
-              V.combine([V.required('Укажите номер'), V.length(min: 1, max: 10)]),
+              V.combine([
+                V.required('Укажите номер'),
+                V.length(min: 1, max: 10),
+              ]),
             ),
           ),
           TextSpec(
@@ -141,7 +147,7 @@ class CabinetFormScreen extends StatelessWidget {
             validator: plain(
               V.combine([
                 V.required('Укажите этаж'),
-                V.integer(min: 0, max: 30),
+                V.integer(min: 1, max: 10),
               ]),
             ),
           ),
@@ -149,7 +155,7 @@ class CabinetFormScreen extends StatelessWidget {
             key: 'equipment',
             label: 'Оснащение',
             maxLines: 3,
-            validator: plain(V.length(max: 500)),
+            validator: plain(V.length(max: 255)),
           ),
         ],
         build: (v, existing) => Cabinet(
@@ -188,14 +194,17 @@ class CategoryFormScreen extends StatelessWidget {
             label: 'Название',
             required: true,
             validator: plain(
-              V.combine([V.required('Укажите название'), V.length(min: 2, max: 100)]),
+              V.combine([
+                V.required('Укажите название'),
+                V.length(min: 2, max: 60),
+              ]),
             ),
           ),
           TextSpec(
             key: 'description',
             label: 'Описание',
             maxLines: 3,
-            validator: plain(V.length(max: 500)),
+            validator: plain(V.length(max: 255)),
           ),
         ],
         build: (v, existing) => ServiceCategory(
@@ -241,7 +250,10 @@ class ServiceFormScreen extends StatelessWidget {
             label: 'Название',
             required: true,
             validator: plain(
-              V.combine([V.required('Укажите название'), V.length(min: 2, max: 150)]),
+              V.combine([
+                V.required('Укажите название'),
+                V.length(min: 2, max: 120),
+              ]),
             ),
           ),
           DropdownSpec(
@@ -269,7 +281,7 @@ class ServiceFormScreen extends StatelessWidget {
             validator: plain(
               V.combine([
                 V.required('Укажите длительность'),
-                V.integer(min: 5, max: 480),
+                V.integer(min: 10, max: 480),
               ]),
             ),
           ),
@@ -277,7 +289,7 @@ class ServiceFormScreen extends StatelessWidget {
             key: 'description',
             label: 'Описание',
             maxLines: 3,
-            validator: plain(V.length(max: 1000)),
+            validator: plain(V.length(max: 500)),
           ),
         ],
         build: (v, existing) => Service(
@@ -315,10 +327,12 @@ class _DoctorFormScreenState extends State<DoctorFormScreen> {
     try {
       final all = await context.read<UserRepository>().findAll();
       if (!mounted) return;
-      setState(() => _users = [
-        for (final u in all)
-          if (u.role == Role.doctor) u,
-      ]);
+      setState(
+        () => _users = [
+          for (final u in all)
+            if (u.role == Role.doctor) u,
+        ],
+      );
     } catch (_) {}
   }
 
@@ -347,7 +361,10 @@ class _DoctorFormScreenState extends State<DoctorFormScreen> {
             label: 'ФИО',
             required: true,
             validator: plain(
-              V.combine([V.required('Укажите ФИО'), V.length(min: 5, max: 150)]),
+              V.combine([
+                V.required('Укажите ФИО'),
+                V.length(min: 2, max: 100),
+              ]),
             ),
           ),
           DropdownSpec(
@@ -355,7 +372,9 @@ class _DoctorFormScreenState extends State<DoctorFormScreen> {
             label: 'Специализация',
             required: true,
             requiredMessage: 'Выберите специализацию',
-            options: (_) => [for (final s in ref.specializations) (s.id, s.name)],
+            options: (_) => [
+              for (final s in ref.specializations) (s.id, s.name),
+            ],
           ),
           DropdownSpec(
             key: 'cabinet',
@@ -363,13 +382,16 @@ class _DoctorFormScreenState extends State<DoctorFormScreen> {
             required: true,
             requiredMessage: 'Выберите кабинет',
             options: (_) => [
-              for (final c in ref.cabinets) (c.id, '${c.number} (этаж ${c.floor})'),
+              for (final c in ref.cabinets)
+                (c.id, '${c.number} (этаж ${c.floor})'),
             ],
           ),
           DropdownSpec(
             key: 'user',
             label: 'Учётная запись врача',
-            options: (_) => [for (final u in _users) (u.id, '${u.name} — ${u.email}')],
+            options: (_) => [
+              for (final u in _users) (u.id, '${u.name} — ${u.email}'),
+            ],
           ),
           TextSpec(
             key: 'experienceYears',
@@ -378,7 +400,10 @@ class _DoctorFormScreenState extends State<DoctorFormScreen> {
             keyboard: TextInputType.number,
             digitsOnly: true,
             validator: plain(
-              V.combine([V.required('Укажите стаж'), V.integer(min: 0, max: 60)]),
+              V.combine([
+                V.required('Укажите стаж'),
+                V.integer(min: 0, max: 60),
+              ]),
             ),
           ),
           TextSpec(
@@ -430,7 +455,10 @@ class PatientFormScreen extends StatelessWidget {
             label: 'ФИО',
             required: true,
             validator: plain(
-              V.combine([V.required('Укажите ФИО'), V.length(min: 5, max: 150)]),
+              V.combine([
+                V.required('Укажите ФИО'),
+                V.length(min: 2, max: 100),
+              ]),
             ),
           ),
           DateSpec(
@@ -471,7 +499,7 @@ class PatientFormScreen extends StatelessWidget {
             key: 'address',
             label: 'Адрес',
             maxLines: 2,
-            validator: plain(V.length(max: 250)),
+            validator: plain(V.length(max: 255)),
           ),
         ],
         build: (v, existing) => Patient(
@@ -534,9 +562,7 @@ class CardFormScreen extends StatelessWidget {
             key: 'openedOn',
             label: 'Дата открытия',
             required: true,
-            validator: plain(
-              V.combine([V.required('Укажите дату'), V.date()]),
-            ),
+            validator: plain(V.combine([V.required('Укажите дату'), V.date()])),
           ),
           TextSpec(
             key: 'allergies',
@@ -619,7 +645,9 @@ class _PaymentFormScreenState extends State<PaymentFormScreen> {
               ? _presetLabel
               : '${e.appointmentStart == null ? '' : formatDateTime(e.appointmentStart!.toLocal())} — ${e.patientName}',
           'amount': e != null
-              ? e.amount.toStringAsFixed(e.amount == e.amount.roundToDouble() ? 0 : 2)
+              ? e.amount.toStringAsFixed(
+                  e.amount == e.amount.roundToDouble() ? 0 : 2,
+                )
               : (_presetDebt > 0
                     ? _presetDebt.toStringAsFixed(
                         _presetDebt == _presetDebt.roundToDouble() ? 0 : 2,
@@ -656,7 +684,9 @@ class _PaymentFormScreenState extends State<PaymentFormScreen> {
             key: 'method',
             label: 'Способ оплаты',
             required: true,
-            options: (_) => [for (final m in PayMethod.values) (m.value, m.label)],
+            options: (_) => [
+              for (final m in PayMethod.values) (m.value, m.label),
+            ],
           ),
           DateTimeSpec(
             key: 'paidAt',
@@ -706,7 +736,10 @@ class UserFormScreen extends StatelessWidget {
             label: 'Имя',
             required: true,
             validator: plain(
-              V.combine([V.required('Укажите имя'), V.length(min: 2, max: 100)]),
+              V.combine([
+                V.required('Укажите имя'),
+                V.length(min: 2, max: 100),
+              ]),
             ),
           ),
           TextSpec(
@@ -749,4 +782,3 @@ class UserFormScreen extends StatelessWidget {
     );
   }
 }
-

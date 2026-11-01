@@ -159,13 +159,16 @@ class _LoginScreenState extends State<LoginScreen> {
                           prefixIcon: const Icon(Icons.lock_outline),
                           border: const OutlineInputBorder(),
                           suffixIcon: IconButton(
-                            tooltip: _obscure ? 'Показать пароль' : 'Скрыть пароль',
+                            tooltip: _obscure
+                                ? 'Показать пароль'
+                                : 'Скрыть пароль',
                             icon: Icon(
                               _obscure
                                   ? Icons.visibility_outlined
                                   : Icons.visibility_off_outlined,
                             ),
-                            onPressed: () => setState(() => _obscure = !_obscure),
+                            onPressed: () =>
+                                setState(() => _obscure = !_obscure),
                           ),
                         ),
                         validator: V.required('Введите пароль'),
@@ -182,9 +185,18 @@ class _LoginScreenState extends State<LoginScreen> {
                             ? const SizedBox(
                                 height: 20,
                                 width: 20,
-                                child: CircularProgressIndicator(strokeWidth: 2),
+                                child: CircularProgressIndicator(
+                                  strokeWidth: 2,
+                                ),
                               )
                             : const Text('Войти'),
+                      ),
+                      TextButton(
+                        key: const ValueKey('login-to-register'),
+                        onPressed: () => context.go('/register'),
+                        child: const Text(
+                          'Нет учётной записи? Зарегистрироваться',
+                        ),
                       ),
                       if (demoMode) ...[
                         const Divider(height: 32),

@@ -277,10 +277,7 @@ class DoctorsScreen extends StatelessWidget {
           numeric: true,
           build: (e) => Text('${e.experienceYears}'),
         ),
-        TableColumnSpec<Doctor>(
-          label: 'Телефон',
-          build: (e) => Text(e.phone),
-        ),
+        TableColumnSpec<Doctor>(label: 'Телефон', build: (e) => Text(e.phone)),
       ],
       filters: (s) => [
         DropdownFilter<String>(
@@ -418,7 +415,8 @@ class CardsScreen extends StatelessWidget {
         TableColumnSpec<PatientCard>(
           label: 'Открыта',
           sortField: 'openedOn',
-          build: (e) => Text(e.openedOn == null ? '—' : formatDate(e.openedOn!)),
+          build: (e) =>
+              Text(e.openedOn == null ? '—' : formatDate(e.openedOn!)),
         ),
         TableColumnSpec<PatientCard>(
           label: 'Аллергии',
@@ -471,8 +469,7 @@ class AppointmentsScreen extends StatelessWidget {
       itemPath: (e) => '/appointments/${e.id}',
       createPath: '/appointments/new',
       editPath: (e) => '/appointments/${e.id}/edit',
-      itemTitle: (e) =>
-          'Приём ${formatDateTime(e.startAt)} — ${e.patientName}',
+      itemTitle: (e) => 'Приём ${formatDateTime(e.startAt)} — ${e.patientName}',
       isDeleted: (e) => e.isDeleted,
       extraActions: (e) => [
         if (role == Role.registrar &&
@@ -490,9 +487,8 @@ class AppointmentsScreen extends StatelessWidget {
         TableColumnSpec<Appointment>(
           label: 'Дата и время',
           sortField: 'startAt',
-          build: (e) => Text(
-            '${formatDateTime(e.startAt)}–${formatTime(e.endAt)}',
-          ),
+          build: (e) =>
+              Text('${formatDateTime(e.startAt)}–${formatTime(e.endAt)}'),
         ),
         TableColumnSpec<Appointment>(
           label: 'Пациент',
@@ -585,14 +581,15 @@ class PaymentsScreen extends StatelessWidget {
       itemPath: (e) => '/cash/${e.id}',
       createPath: '/cash/new',
       editPath: (e) => '/cash/${e.id}/edit',
-      itemTitle: (e) =>
-          'Платёж ${formatMoney(e.amount)} — ${e.patientName}',
+      itemTitle: (e) => 'Платёж ${formatMoney(e.amount)} — ${e.patientName}',
       isDeleted: (e) => e.isDeleted,
       columns: [
         TableColumnSpec<Payment>(
           label: 'Дата оплаты',
           sortField: 'paidAt',
-          build: (e) => Text(e.paidAt == null ? '—' : formatDateTime(e.paidAt!.toLocal())),
+          build: (e) => Text(
+            e.paidAt == null ? '—' : formatDateTime(e.paidAt!.toLocal()),
+          ),
         ),
         TableColumnSpec<Payment>(
           label: 'Пациент',

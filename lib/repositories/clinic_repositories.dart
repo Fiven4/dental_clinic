@@ -161,7 +161,8 @@ class PatientCardRepository extends PbRepository<PatientCard> {
         sortMap: const {'patient': 'patient.fullName'},
         rules: {
           'patient': equals('patient'),
-          'hasAllergies': (v) => v == 'yes' ? 'allergies != ""' : 'allergies = ""',
+          'hasAllergies': (v) =>
+              v == 'yes' ? 'allergies != ""' : 'allergies = ""',
           'openedFrom': dayFrom('openedOn'),
           'openedTo': dayTo('openedOn'),
         },
@@ -202,7 +203,10 @@ class AppointmentRepository extends PbRepository<Appointment> {
   static const _expand =
       'patient,doctor.cabinet,services,payments_via_appointment';
 
-  Future<List<Appointment>> forDoctorOnDay(String doctorId, DateTime day) async {
+  Future<List<Appointment>> forDoctorOnDay(
+    String doctorId,
+    DateTime day,
+  ) async {
     final from = DateTime(day.year, day.month, day.day);
     final to = DateTime(day.year, day.month, day.day + 1);
     final response = await guard(

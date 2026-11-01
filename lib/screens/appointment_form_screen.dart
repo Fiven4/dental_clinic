@@ -103,7 +103,8 @@ class _AppointmentFormScreenState extends State<AppointmentFormScreen> {
     final appointments = context.read<AppointmentRepository>();
 
     List<Service> chosen(FormValues v) => [
-      for (final id in (v['services'] as List?)?.cast<String>() ?? const <String>[])
+      for (final id
+          in (v['services'] as List?)?.cast<String>() ?? const <String>[])
         ?ref.serviceById(id),
     ];
 
@@ -153,7 +154,8 @@ class _AppointmentFormScreenState extends State<AppointmentFormScreen> {
             label: 'Услуги',
             required: true,
             requiredMessage: 'Выберите хотя бы одну услугу',
-            helper: 'Длительность и стоимость приёма считаются по выбранным услугам',
+            helper:
+                'Длительность и стоимость приёма считаются по выбранным услугам',
             options: (_) => [
               for (final s in ref.services)
                 (s.id, '${s.name} · ${formatMoney(s.price)}'),
@@ -169,13 +171,13 @@ class _AppointmentFormScreenState extends State<AppointmentFormScreen> {
               final format = V.dateTime()(text);
               if (format != null) return format;
               final start = parseInputDateTime(text)!;
-              if (start.hour < clinicOpenHour || start.hour >= clinicCloseHour) {
+              if (start.hour < clinicOpenHour ||
+                  start.hour >= clinicCloseHour) {
                 return 'Клиника принимает с $clinicOpenHour:00 до $clinicCloseHour:00';
               }
-              final minutes = chosen(values).fold<int>(
-                0,
-                (sum, s) => sum + s.durationMin,
-              );
+              final minutes = chosen(
+                values,
+              ).fold<int>(0, (sum, s) => sum + s.durationMin);
               final end = start.add(Duration(minutes: minutes));
               final limit = DateTime(
                 start.year,
@@ -229,7 +231,8 @@ class _AppointmentFormScreenState extends State<AppointmentFormScreen> {
           ),
         ],
         build: (v, existing) {
-          final start = parseInputDateTime((v['startAt'] as String? ?? '').trim()) ??
+          final start =
+              parseInputDateTime((v['startAt'] as String? ?? '').trim()) ??
               DateTime.now();
           final minutes = chosen(v).fold<int>(0, (s, e) => s + e.durationMin);
           return Appointment(
@@ -325,7 +328,8 @@ class _AppointmentPreviewState extends State<AppointmentPreview> {
       setState(() {
         _busy = [
           for (final a in list)
-            if (a.status != AppointmentStatus.cancelled && a.id != widget.excludeId)
+            if (a.status != AppointmentStatus.cancelled &&
+                a.id != widget.excludeId)
               a,
         ];
         _error = null;
@@ -371,7 +375,10 @@ class _AppointmentPreviewState extends State<AppointmentPreview> {
           children: [
             Text('Расчёт приёма', style: theme.textTheme.titleMedium),
             const SizedBox(height: 8),
-            _row('Длительность', cost.minutes == 0 ? '—' : formatMinutes(cost.minutes)),
+            _row(
+              'Длительность',
+              cost.minutes == 0 ? '—' : formatMinutes(cost.minutes),
+            ),
             _row(
               'Окончание',
               end == null || cost.minutes == 0 ? '—' : formatTime(end),
@@ -405,7 +412,10 @@ class _AppointmentPreviewState extends State<AppointmentPreview> {
             ],
             if (_busy.isNotEmpty) ...[
               const SizedBox(height: 12),
-              Text('Занятость врача в этот день', style: theme.textTheme.labelLarge),
+              Text(
+                'Занятость врача в этот день',
+                style: theme.textTheme.labelLarge,
+              ),
               const SizedBox(height: 4),
               Wrap(
                 spacing: 6,

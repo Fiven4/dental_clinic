@@ -111,11 +111,8 @@ class ClinicScope extends StatelessWidget {
           ),
         ),
         ChangeNotifierProvider<ListNotifier<AppUser>>(
-          create: (c) => _list<AppUser>(
-            c.read<UserRepository>(),
-            usersSpec,
-            (e) => e.id,
-          ),
+          create: (c) =>
+              _list<AppUser>(c.read<UserRepository>(), usersSpec, (e) => e.id),
         ),
       ],
       child: child,

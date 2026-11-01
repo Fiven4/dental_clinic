@@ -35,8 +35,7 @@ class DemoInterceptor extends Interceptor {
       try {
         final state = jsonDecode(stored) as Map<String, dynamic>;
         final seededOn = DateTime.tryParse('${state['seededOn']}');
-        if (seededOn != null &&
-            DateTime.now().difference(seededOn) < _maxAge) {
+        if (seededOn != null && DateTime.now().difference(seededOn) < _maxAge) {
           return DemoInterceptor(DemoDb.restore(schema, state), prefs);
         }
       } catch (_) {}
@@ -71,7 +70,9 @@ class DemoInterceptor extends Interceptor {
     if (parts.length != 3) return null;
     try {
       final payload =
-          jsonDecode(utf8.decode(base64Url.decode(base64Url.normalize(parts[1]))))
+          jsonDecode(
+                utf8.decode(base64Url.decode(base64Url.normalize(parts[1]))),
+              )
               as Map<String, dynamic>;
       final exp = intOf(payload['exp']);
       if (exp * 1000 < _clock().millisecondsSinceEpoch) return null;
@@ -115,7 +116,9 @@ class DemoInterceptor extends Interceptor {
     final path = options.path.replaceFirst(RegExp(r'^https?://[^/]+'), '');
     final method = options.method.toUpperCase();
     final segments = path.split('/').where((s) => s.isNotEmpty).toList();
-    if (segments.length < 4 || segments[0] != 'api' || segments[1] != 'collections') {
+    if (segments.length < 4 ||
+        segments[0] != 'api' ||
+        segments[1] != 'collections') {
       throw const DemoError(404, 'The requested resource wasn\'t found.');
     }
     final collection = segments[2];
@@ -124,7 +127,9 @@ class DemoInterceptor extends Interceptor {
     final body = mapOf(options.data);
     final auth = _auth(options);
 
-    if (collection == 'users' && action == 'auth-with-password' && method == 'POST') {
+    if (collection == 'users' &&
+        action == 'auth-with-password' &&
+        method == 'POST') {
       final user = _db.authenticate(
         stringOf(body['identity']),
         stringOf(body['password']),
@@ -171,7 +176,13 @@ class DemoInterceptor extends Interceptor {
         case 'GET':
           return _db.view(auth, collection, id, expand: expand);
         case 'PATCH':
-          final updated = _db.update(auth, collection, id, body, expand: expand);
+          final updated = _db.update(
+            auth,
+            collection,
+            id,
+            body,
+            expand: expand,
+          );
           _save();
           return updated;
         case 'DELETE':

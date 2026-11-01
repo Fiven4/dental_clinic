@@ -1,7 +1,5 @@
-typedef FieldResolver = List<Object?> Function(
-  Map<String, dynamic> record,
-  String path,
-);
+typedef FieldResolver =
+    List<Object?> Function(Map<String, dynamic> record, String path);
 
 typedef RecordPredicate = bool Function(Map<String, dynamic> record);
 
@@ -112,7 +110,9 @@ List<_Token> _tokenize(String source) {
       i = number.end;
       continue;
     }
-    final ident = RegExp(r'[A-Za-z_@][A-Za-z0-9_.@:]*').matchAsPrefix(source, i);
+    final ident = RegExp(
+      r'[A-Za-z_@][A-Za-z0-9_.@:]*',
+    ).matchAsPrefix(source, i);
     if (ident != null) {
       tokens.add(_Token(_Kind.ident, ident.group(0)!));
       i = ident.end;

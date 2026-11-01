@@ -144,9 +144,7 @@ class _Navigation extends StatelessWidget {
             dense: true,
             leading: CircleAvatar(
               radius: 16,
-              child: Text(
-                userName.isEmpty ? '?' : userName[0].toUpperCase(),
-              ),
+              child: Text(userName.isEmpty ? '?' : userName[0].toUpperCase()),
             ),
             title: Text(userName, overflow: TextOverflow.ellipsis),
             subtitle: Text(roleLabel, key: const ValueKey('nav-role')),

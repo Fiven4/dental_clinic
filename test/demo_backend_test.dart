@@ -18,8 +18,7 @@ void main() {
     expect(db.tables['payments']!.isNotEmpty, isTrue);
   });
 
-  test('врач видит только свои приёмы и не видит оплат',
-      () async {
+  test('врач видит только свои приёмы и не видит оплат', () async {
     final env = await DemoEnv.create();
     await env.loginAs('doctor@clinic.test', 'Doctor123!');
     final repo = AppointmentRepository(env.dio);
@@ -82,9 +81,7 @@ void main() {
     );
     await expectLater(
       repo.create(clash),
-      throwsA(
-        isA<ConflictException>().having((e) => e.kind, 'kind', 'doctor'),
-      ),
+      throwsA(isA<ConflictException>().having((e) => e.kind, 'kind', 'doctor')),
     );
   });
 
@@ -105,8 +102,7 @@ void main() {
         status: AppointmentStatus.planned,
       ),
     );
-    final price =
-        (services[0]['price'] as num) + (services[1]['price'] as num);
+    final price = (services[0]['price'] as num) + (services[1]['price'] as num);
     final expected = price * (100 - created.discountPercent) / 100;
     expect(created.total, expected.roundToDouble());
   });
@@ -126,28 +122,28 @@ void main() {
     );
   });
 
-  test('ошибки полей приходят как 400 и превращаются в ValidationException',
-      () async {
-    final env = await DemoEnv.create();
-    await env.loginAs('admin@clinic.test', 'Admin123!');
-    final cards = PatientCardRepository(env.dio);
-    final patient = (await PatientRepository(env.dio).findAll()).first;
-    final card = (await cards.find(
-      FilterQuery(spec: cardsSpec, size: 1),
-    )).items.first;
-    await expectLater(
-      cards.create(
-        card.copyForCreate(patientId: patient.id, number: 'bad'),
-      ),
-      throwsA(
-        isA<ValidationException>().having(
-          (e) => e.errors.keys,
-          'fields',
-          contains('number'),
+  test(
+    'ошибки полей приходят как 400 и превращаются в ValidationException',
+    () async {
+      final env = await DemoEnv.create();
+      await env.loginAs('admin@clinic.test', 'Admin123!');
+      final cards = PatientCardRepository(env.dio);
+      final patient = (await PatientRepository(env.dio).findAll()).first;
+      final card = (await cards.find(
+        FilterQuery(spec: cardsSpec, size: 1),
+      )).items.first;
+      await expectLater(
+        cards.create(card.copyForCreate(patientId: patient.id, number: 'bad')),
+        throwsA(
+          isA<ValidationException>().having(
+            (e) => e.errors.keys,
+            'fields',
+            contains('number'),
+          ),
         ),
-      ),
-    );
-  });
+      );
+    },
+  );
 
   test('платёж не может превышать остаток по приёму', () async {
     final env = await DemoEnv.create();

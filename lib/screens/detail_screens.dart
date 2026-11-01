@@ -43,11 +43,9 @@ class DetailHost<T, R> extends StatelessWidget {
   Widget build(BuildContext context) {
     return ChangeNotifierProvider<RelatedDetailNotifier<T, R>>(
       key: ValueKey('detail-$T-$id'),
-      create: (_) => RelatedDetailNotifier<T, R>(
-        store,
-        id,
-        related ?? (_) async => <R>[],
-      )..load(),
+      create: (_) =>
+          RelatedDetailNotifier<T, R>(store, id, related ?? (_) async => <R>[])
+            ..load(),
       child: Consumer<RelatedDetailNotifier<T, R>>(
         builder: (context, notifier, _) => builder(notifier),
       ),
@@ -237,12 +235,10 @@ class DoctorDetailScreen extends StatelessWidget {
       id: id,
       store: context.read<DoctorRepository>(),
       related: canSeeAppointments
-          ? (id) => _page(
-              appointments,
-              appointmentsSpec,
-              {'doctor': id, 'status': 'planned'},
-              size: 10,
-            )
+          ? (id) => _page(appointments, appointmentsSpec, {
+              'doctor': id,
+              'status': 'planned',
+            }, size: 10)
           : null,
       builder: (n) => DetailView<Doctor>(
         notifier: n,
@@ -267,7 +263,8 @@ class DoctorDetailScreen extends StatelessWidget {
                     items: [
                       for (final a in n.related)
                         RelatedItem(
-                          title: '${formatDateTime(a.startAt)} — ${a.patientName}',
+                          title:
+                              '${formatDateTime(a.startAt)} — ${a.patientName}',
                           subtitle: a.serviceNames.join(', '),
                           path: '/appointments/${a.id}',
                         ),
@@ -278,8 +275,7 @@ class DoctorDetailScreen extends StatelessWidget {
                     alignment: Alignment.centerLeft,
                     child: TextButton.icon(
                       key: const ValueKey('doctor-schedule'),
-                      onPressed: () =>
-                          context.go('/schedule?doctor=${e.id}'),
+                      onPressed: () => context.go('/schedule?doctor=${e.id}'),
                       icon: const Icon(Icons.calendar_view_week_outlined),
                       label: const Text('Открыть расписание'),
                     ),
@@ -307,7 +303,9 @@ class PatientDetailScreen extends StatelessWidget {
       store: context.read<PatientRepository>(),
       related: (id) async => <Object>[
         ...await _page(cards, cardsSpec, {'patient': id}, size: 1),
-        ...await _page(appointments, appointmentsSpec, {'patient': id}, size: 10),
+        ...await _page(appointments, appointmentsSpec, {
+          'patient': id,
+        }, size: 10),
       ],
       builder: (n) => DetailView<Patient>(
         notifier: n,
@@ -400,10 +398,7 @@ class CardDetailScreen extends StatelessWidget {
         isDeleted: (e) => e.isDeleted,
         fields: (e) => [
           ('Пациент', Text(e.patientName)),
-          (
-            'Открыта',
-            Text(e.openedOn == null ? '—' : formatDate(e.openedOn!)),
-          ),
+          ('Открыта', Text(e.openedOn == null ? '—' : formatDate(e.openedOn!))),
           ('Аллергии', Text(e.allergies.isEmpty ? '—' : e.allergies)),
           ('Заметки', Text(e.notes.isEmpty ? '—' : e.notes)),
         ],

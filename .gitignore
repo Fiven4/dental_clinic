@@ -49,3 +49,4 @@ pocketbase/pb_data/
 pocketbase/pb_migrations/
 pocketbase/setup/node_modules/
 build/
+build/web_live/

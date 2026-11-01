@@ -215,10 +215,7 @@ void main() {
       final a = DateTime(2026, 1, 1, 10);
       final b = DateTime(2026, 1, 1, 11);
       expect(overlaps(a, b, b, b.add(const Duration(hours: 1))), isFalse);
-      expect(
-        overlaps(a, b, a.add(const Duration(minutes: 30)), b),
-        isTrue,
-      );
+      expect(overlaps(a, b, a.add(const Duration(minutes: 30)), b), isTrue);
     });
   });
 
@@ -298,6 +295,7 @@ void main() {
       expect(V.dateTime()('2026-02-20 24:10'), isNotNull);
       expect(V.dateTime()('2026-02-20 10:15'), isNull);
       expect(V.money()('0'), isNotNull);
+      expect(V.money()('0,5'), isNotNull);
       expect(V.money()('1500,50'), isNull);
     });
 
@@ -305,7 +303,10 @@ void main() {
       expect(formatMoney(1234567), '1 234 567 ₽');
       expect(formatMinutes(90), '1 ч 30 мин');
       expect(formatMinutes(45), '45 мин');
-      expect(parseInputDateTime('2026-11-02 09:05'), DateTime(2026, 11, 2, 9, 5));
+      expect(
+        parseInputDateTime('2026-11-02 09:05'),
+        DateTime(2026, 11, 2, 9, 5),
+      );
       expect(parseInputDateTime('2026-13-02 09:05'), isNull);
     });
   });
@@ -318,11 +319,11 @@ void main() {
     ];
 
     List<String> run(String filter) {
-      final p = compileFilter(
-        filter,
-        (r, path) => [r[path]],
-      );
-      return [for (final r in rows) if (p(r)) r['id'] as String];
+      final p = compileFilter(filter, (r, path) => [r[path]]);
+      return [
+        for (final r in rows)
+          if (p(r)) r['id'] as String,
+      ];
     }
 
     test('сравнения, регистронезависимый поиск и скобки', () {

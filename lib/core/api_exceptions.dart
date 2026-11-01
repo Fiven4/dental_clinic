@@ -14,7 +14,8 @@ sealed class ApiException extends RepositoryException {
 
 class NetworkException extends ApiException {
   const NetworkException([
-    super.message = 'Сервер недоступен. Проверьте соединение и повторите попытку.',
+    super.message =
+        'Сервер недоступен. Проверьте соединение и повторите попытку.',
   ]);
 }
 
@@ -78,7 +79,8 @@ Map<String, String> _fieldErrors(dynamic data) {
     if (value is Map) {
       final code = '${value['code'] ?? ''}';
       final message = '${value['message'] ?? ''}';
-      result['$key'] = _codeMessages[code] ?? (message.isEmpty ? code : message);
+      result['$key'] =
+          _codeMessages[code] ?? (message.isEmpty ? code : message);
     }
   });
   return result;
@@ -92,15 +94,14 @@ ApiException mapHttpError(int status, dynamic body) {
 
   return switch (status) {
     401 => UnauthorizedException(message ?? 'Требуется вход в систему.'),
-    403 => ForbiddenException(
-      'Недостаточно прав для этого действия.',
-    ),
+    403 => ForbiddenException('Недостаточно прав для этого действия.'),
     404 => NotFoundException(message ?? 'Запись не найдена.'),
     409 => ConflictException(
       message ?? 'Операция невозможна.',
       data is Map ? data['kind'] as String? : null,
     ),
     400 => _badRequest(message, data),
+    422 => _badRequest(message, data),
     _ => ServerException(message ?? 'Ошибка сервера (код $status).'),
   };
 }

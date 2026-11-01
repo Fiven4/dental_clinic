@@ -638,8 +638,7 @@ class _LookupDialogState extends State<_LookupDialog> {
                 border: OutlineInputBorder(),
                 isDense: true,
               ),
-              onChanged: (text) =>
-                  _debouncer.run(() => _load(text.trim())),
+              onChanged: (text) => _debouncer.run(() => _load(text.trim())),
             ),
             const SizedBox(height: 8),
             Expanded(

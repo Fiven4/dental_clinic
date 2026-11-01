@@ -49,7 +49,9 @@ class RelatedCard extends StatelessWidget {
                   subtitle: item.subtitle == null ? null : Text(item.subtitle!),
                   trailing:
                       item.trailing ??
-                      (item.path == null ? null : const Icon(Icons.chevron_right)),
+                      (item.path == null
+                          ? null
+                          : const Icon(Icons.chevron_right)),
                   onTap: item.path == null
                       ? null
                       : () => context.push(item.path!),

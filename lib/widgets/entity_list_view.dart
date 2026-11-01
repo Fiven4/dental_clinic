@@ -446,11 +446,11 @@ class _EntityListViewState<T, Q extends ListQuery<Q>>
         ),
       if (widget.permissions.delete)
         FilterChip(
-        key: const ValueKey('show-deleted'),
-        label: const Text('Показать удалённые'),
-        selected: query.includeDeleted,
-        onSelected: (value) => _go(query.withIncludeDeleted(value)),
-      ),
+          key: const ValueKey('show-deleted'),
+          label: const Text('Показать удалённые'),
+          selected: query.includeDeleted,
+          onSelected: (value) => _go(query.withIncludeDeleted(value)),
+        ),
       if (query.toParams().isNotEmpty)
         TextButton.icon(
           key: const ValueKey('reset-filters'),
@@ -560,7 +560,9 @@ class _EntityListViewState<T, Q extends ListQuery<Q>>
             items: n.result.items,
             idOf: widget.idOf,
             selected: n.selected,
-            onToggleSelect: widget.permissions.delete ? n.toggleSelection : null,
+            onToggleSelect: widget.permissions.delete
+                ? n.toggleSelection
+                : null,
             actions: _actions,
             isMuted: widget.isDeleted,
           )
@@ -569,7 +571,9 @@ class _EntityListViewState<T, Q extends ListQuery<Q>>
             items: n.result.items,
             idOf: widget.idOf,
             selected: n.selected,
-            onToggleSelect: widget.permissions.delete ? n.toggleSelection : null,
+            onToggleSelect: widget.permissions.delete
+                ? n.toggleSelection
+                : null,
             onToggleAll: n.setPageSelection,
             sortField: widget.query.sortField,
             sortAscending: widget.query.sortAscending,

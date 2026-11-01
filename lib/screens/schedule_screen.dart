@@ -73,9 +73,7 @@ class _ScheduleScreenState extends State<ScheduleScreen> {
   }
 
   void _go({DateTime? date, Object? doctor = #keep}) {
-    final params = <String, String>{
-      'date': inputDate(date ?? widget.date),
-    };
+    final params = <String, String>{'date': inputDate(date ?? widget.date)};
     final doctorId = doctor == #keep ? widget.doctorId : doctor as String?;
     if (doctorId != null) params['doctor'] = doctorId;
     context.go(buildLocation('/schedule', params));
@@ -175,7 +173,10 @@ class _ScheduleScreenState extends State<ScheduleScreen> {
                     for (final d in ref.doctors)
                       DropdownMenuItem<String?>(
                         value: d.id,
-                        child: Text(d.fullName, overflow: TextOverflow.ellipsis),
+                        child: Text(
+                          d.fullName,
+                          overflow: TextOverflow.ellipsis,
+                        ),
                       ),
                   ],
                   onChanged: (v) => _go(doctor: v),
@@ -229,9 +230,8 @@ class _Timeline extends StatelessWidget {
     final hours = clinicCloseHour - clinicOpenHour;
     final height = hours * _hourHeight;
     final now = DateTime.now();
-    final today = now.year == date.year &&
-        now.month == date.month &&
-        now.day == date.day;
+    final today =
+        now.year == date.year && now.month == date.month && now.day == date.day;
     final nowOffset =
         ((now.hour - clinicOpenHour) * 60 + now.minute) / 60 * _hourHeight;
 
@@ -333,11 +333,12 @@ class _DoctorColumn extends StatelessWidget {
     required this.onCreate,
   });
 
-  Color _color(ColorScheme scheme, AppointmentStatus status) => switch (status) {
-    AppointmentStatus.planned => scheme.secondaryContainer,
-    AppointmentStatus.done => scheme.primaryContainer,
-    AppointmentStatus.cancelled => scheme.errorContainer,
-  };
+  Color _color(ColorScheme scheme, AppointmentStatus status) =>
+      switch (status) {
+        AppointmentStatus.planned => scheme.secondaryContainer,
+        AppointmentStatus.done => scheme.primaryContainer,
+        AppointmentStatus.cancelled => scheme.errorContainer,
+      };
 
   @override
   Widget build(BuildContext context) {
@@ -365,7 +366,9 @@ class _DoctorColumn extends StatelessWidget {
               ),
             for (final a in items)
               Positioned(
-                top: ((a.startAt.hour - clinicOpenHour) * 60 + a.startAt.minute) /
+                top:
+                    ((a.startAt.hour - clinicOpenHour) * 60 +
+                        a.startAt.minute) /
                     60 *
                     _hourHeight,
                 left: 4,

@@ -10,7 +10,9 @@ String formatDateTime(DateTime date) =>
 
 String formatMoney(num value) {
   final negative = value < 0;
-  final fixed = value.abs().toStringAsFixed(value == value.roundToDouble() ? 0 : 2);
+  final fixed = value.abs().toStringAsFixed(
+    value == value.roundToDouble() ? 0 : 2,
+  );
   final parts = fixed.split('.');
   final digits = parts.first;
   final buffer = StringBuffer();
@@ -46,7 +48,11 @@ DateTime? parseInputDateTime(String text) {
   final y = int.parse(m[1]!), mo = int.parse(m[2]!), d = int.parse(m[3]!);
   final h = int.parse(m[4]!), mi = int.parse(m[5]!);
   final date = DateTime(y, mo, d, h, mi);
-  if (date.year != y || date.month != mo || date.day != d || h > 23 || mi > 59) {
+  if (date.year != y ||
+      date.month != mo ||
+      date.day != d ||
+      h > 23 ||
+      mi > 59) {
     return null;
   }
   return date;

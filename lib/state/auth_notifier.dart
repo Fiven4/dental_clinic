@@ -76,6 +76,19 @@ class AuthNotifier extends ChangeNotifier {
     notifyListeners();
   }
 
+  Future<void> register({
+    required String name,
+    required String email,
+    required String password,
+  }) async {
+    await _api.register(
+      name: name.trim(),
+      email: email.trim(),
+      password: password,
+    );
+    await login(email, password);
+  }
+
   Future<bool> refreshTokens() {
     return _refreshing ??= _renew()
         .then((_) => true)

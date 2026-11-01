@@ -10,11 +10,8 @@ enum AppointmentStatus {
 
   const AppointmentStatus(this.value, this.label);
 
-  static AppointmentStatus fromString(String? v) =>
-      AppointmentStatus.values.firstWhere(
-        (e) => e.value == v,
-        orElse: () => AppointmentStatus.planned,
-      );
+  static AppointmentStatus fromString(String? v) => AppointmentStatus.values
+      .firstWhere((e) => e.value == v, orElse: () => AppointmentStatus.planned);
 }
 
 class Appointment {

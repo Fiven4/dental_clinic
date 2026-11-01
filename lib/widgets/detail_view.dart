@@ -217,15 +217,15 @@ class DetailView<T> extends StatelessWidget {
                 children: [
                   ...?extraButtons?.call(item),
                   if (permissions.edit)
-                  FilledButton.tonalIcon(
-                    key: const ValueKey('detail-edit'),
-                    onPressed: () async {
-                      await context.push(editPath);
-                      if (context.mounted) notifier.load();
-                    },
-                    icon: const Icon(Icons.edit_outlined),
-                    label: const Text('Изменить'),
-                  ),
+                    FilledButton.tonalIcon(
+                      key: const ValueKey('detail-edit'),
+                      onPressed: () async {
+                        await context.push(editPath);
+                        if (context.mounted) notifier.load();
+                      },
+                      icon: const Icon(Icons.edit_outlined),
+                      label: const Text('Изменить'),
+                    ),
                   if (!deleted && permissions.delete)
                     OutlinedButton.icon(
                       key: const ValueKey('detail-delete'),
@@ -251,25 +251,25 @@ class DetailView<T> extends StatelessWidget {
                       label: const Text('Восстановить'),
                     ),
                   if (permissions.hardDelete)
-                  TextButton.icon(
-                    key: const ValueKey('detail-hard-delete'),
-                    style: TextButton.styleFrom(
-                      foregroundColor: theme.colorScheme.error,
+                    TextButton.icon(
+                      key: const ValueKey('detail-hard-delete'),
+                      style: TextButton.styleFrom(
+                        foregroundColor: theme.colorScheme.error,
+                      ),
+                      onPressed: () async {
+                        final ok = await _confirm(
+                          context,
+                          'Удалить навсегда?',
+                          'Запись будет стёрта безвозвратно.',
+                          'Удалить навсегда',
+                        );
+                        if (ok && context.mounted) {
+                          await _guard(context, notifier.hardDelete);
+                        }
+                      },
+                      icon: const Icon(Icons.delete_forever_outlined),
+                      label: const Text('Удалить навсегда'),
                     ),
-                    onPressed: () async {
-                      final ok = await _confirm(
-                        context,
-                        'Удалить навсегда?',
-                        'Запись будет стёрта безвозвратно.',
-                        'Удалить навсегда',
-                      );
-                      if (ok && context.mounted) {
-                        await _guard(context, notifier.hardDelete);
-                      }
-                    },
-                    icon: const Icon(Icons.delete_forever_outlined),
-                    label: const Text('Удалить навсегда'),
-                  ),
                 ],
               ),
             ],

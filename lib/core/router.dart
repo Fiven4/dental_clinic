@@ -12,6 +12,7 @@ import '../screens/list_screens.dart';
 import '../screens/login_screen.dart';
 import '../screens/my_day_screen.dart';
 import '../screens/not_found_screen.dart';
+import '../screens/register_screen.dart';
 import '../screens/report_screen.dart';
 import '../screens/schedule_screen.dart';
 import '../state/auth_notifier.dart';
@@ -19,7 +20,11 @@ import '../state/clinic_scope.dart';
 import 'access.dart';
 import 'format.dart';
 
-String? _guard(AuthNotifier auth, Section section, {bool Function(AuthNotifier a)? extra}) {
+String? _guard(
+  AuthNotifier auth,
+  Section section, {
+  bool Function(AuthNotifier a)? extra,
+}) {
   if (!canAccess(auth.role, section)) return '/forbidden';
   if (extra != null && !extra(auth)) return '/forbidden';
   return null;
@@ -78,7 +83,7 @@ GoRouter createRouter({required AuthNotifier auth, String? initialLocation}) {
     redirect: (context, state) {
       final loggedIn = auth.isAuthenticated;
       final path = state.uri.path;
-      final isLogin = path == '/login';
+      final isLogin = path == '/login' || path == '/register';
       if (!loggedIn && !isLogin) {
         final from = Uri.encodeComponent(state.uri.toString());
         return path == '/' ? '/login' : '/login?from=$from';
@@ -95,6 +100,7 @@ GoRouter createRouter({required AuthNotifier auth, String? initialLocation}) {
         path: '/login',
         builder: (c, s) => LoginScreen(from: s.uri.queryParameters['from']),
       ),
+      GoRoute(path: '/register', builder: (c, s) => const RegisterScreen()),
       GoRoute(path: '/forbidden', builder: (c, s) => const ForbiddenScreen()),
       GoRoute(path: '/', builder: (c, s) => const SizedBox.shrink()),
       ShellRoute(
@@ -106,9 +112,8 @@ GoRouter createRouter({required AuthNotifier auth, String? initialLocation}) {
           GoRoute(
             path: Section.mySchedule.path,
             redirect: (c, s) => _guard(auth, Section.mySchedule),
-            builder: (c, s) => MyDayScreen(
-              date: _dateParam(s, 'date', DateTime.now()),
-            ),
+            builder: (c, s) =>
+                MyDayScreen(date: _dateParam(s, 'date', DateTime.now())),
           ),
           GoRoute(
             path: Section.schedule.path,
@@ -123,7 +128,11 @@ GoRouter createRouter({required AuthNotifier auth, String? initialLocation}) {
             redirect: (c, s) => _guard(auth, Section.report),
             builder: (c, s) {
               final now = DateTime.now();
-              final to = _dateParam(s, 'to', DateTime(now.year, now.month, now.day));
+              final to = _dateParam(
+                s,
+                'to',
+                DateTime(now.year, now.month, now.day),
+              );
               final from = _dateParam(s, 'from', DateTime(now.year, now.month));
               return ReportScreen(from: from.isAfter(to) ? to : from, to: to);
             },

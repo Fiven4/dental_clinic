@@ -147,9 +147,12 @@ class DemoDb {
       for (final e in schemaJson.entries)
         e.key: CollectionDef(e.key, e.value as Map<String, dynamic>),
     };
-    final db = DemoDb._(schema, {
-      for (final name in schema.keys) name: <Map<String, dynamic>>[],
-    }, 0, _day(today));
+    final db = DemoDb._(
+      schema,
+      {for (final name in schema.keys) name: <Map<String, dynamic>>[]},
+      0,
+      _day(today),
+    );
     db._load(seed, today);
     return db;
   }
@@ -163,9 +166,12 @@ class DemoDb {
         e.key: CollectionDef(e.key, e.value as Map<String, dynamic>),
     };
     final raw = mapOf(state['tables']);
-    return DemoDb._(schema, {
-      for (final name in schema.keys) name: mapListOf(raw[name]),
-    }, intOf(state['counter']), stringOf(state['seededOn']));
+    return DemoDb._(
+      schema,
+      {for (final name in schema.keys) name: mapListOf(raw[name])},
+      intOf(state['counter']),
+      stringOf(state['seededOn']),
+    );
   }
 
   Map<String, dynamic> snapshot() => {
@@ -204,38 +210,46 @@ class DemoDb {
       }, validate: false);
       userIds['${u['email']}'] = record['id'] as String;
     }
-    List<String> insertAll(String collection, List<Map<String, dynamic>> list) =>
-        [
-          for (final item in list)
-            _insert(collection, item, validate: false)['id'] as String,
-        ];
-    final specs = insertAll('specializations', mapListOf(seed['specializations']));
+    List<String> insertAll(
+      String collection,
+      List<Map<String, dynamic>> list,
+    ) => [
+      for (final item in list)
+        _insert(collection, item, validate: false)['id'] as String,
+    ];
+    final specs = insertAll(
+      'specializations',
+      mapListOf(seed['specializations']),
+    );
     final cabs = insertAll('cabinets', mapListOf(seed['cabinets']));
     final cats = insertAll('service_categories', mapListOf(seed['categories']));
     final svcs = [
       for (final s in mapListOf(seed['services']))
         _insert('services', {
-          ...s,
-          'category': cats[intOf(s['category'])],
-        }, validate: false)['id'] as String,
+              ...s,
+              'category': cats[intOf(s['category'])],
+            }, validate: false)['id']
+            as String,
     ];
     final docs = [
       for (final d in mapListOf(seed['doctors']))
         _insert('doctors', {
-          'fullName': d['fullName'],
-          'specialization': specs[intOf(d['specialization'])],
-          'cabinet': cabs[intOf(d['cabinet'])],
-          'user': userIds['${d['userEmail']}'] ?? '',
-          'experienceYears': d['experienceYears'],
-          'phone': d['phone'],
-        }, validate: false)['id'] as String,
+              'fullName': d['fullName'],
+              'specialization': specs[intOf(d['specialization'])],
+              'cabinet': cabs[intOf(d['cabinet'])],
+              'user': userIds['${d['userEmail']}'] ?? '',
+              'experienceYears': d['experienceYears'],
+              'phone': d['phone'],
+            }, validate: false)['id']
+            as String,
     ];
     final pats = [
       for (final p in mapListOf(seed['patients']))
         _insert('patients', {
-          ...p,
-          'birthDate': '${p['birthDate']} 00:00:00.000Z',
-        }, validate: false)['id'] as String,
+              ...p,
+              'birthDate': '${p['birthDate']} 00:00:00.000Z',
+            }, validate: false)['id']
+            as String,
     ];
     for (final c in mapListOf(seed['patientCards'])) {
       _insert('patient_cards', {
@@ -368,13 +382,25 @@ class DemoDb {
       final password = record['password'];
       if (original == null && (password == null || '$password'.isEmpty)) {
         fail('password', 'validation_required', 'Cannot be blank.');
-      } else if (password != null && '$password'.isNotEmpty && '$password'.length < 8) {
-        fail('password', 'validation_min_text_constraint', 'Must be at least 8 character(s).');
+      } else if (password != null &&
+          '$password'.isNotEmpty &&
+          '$password'.length < 8) {
+        fail(
+          'password',
+          'validation_min_text_constraint',
+          'Must be at least 8 character(s).',
+        );
       }
     }
 
     for (final f in def.fields) {
-      if (const {'id', 'created', 'updated', 'file', 'autodate'}.contains(f.type) ||
+      if (const {
+            'id',
+            'created',
+            'updated',
+            'file',
+            'autodate',
+          }.contains(f.type) ||
           f.name == 'id') {
         continue;
       }
@@ -396,10 +422,18 @@ class DemoDb {
           continue;
         }
         if (f.min != null && n < f.min!) {
-          fail(f.name, 'validation_min_number_constraint', 'Must be no less than ${f.min}.');
+          fail(
+            f.name,
+            'validation_min_number_constraint',
+            'Must be no less than ${f.min}.',
+          );
         }
         if (f.max != null && n > f.max!) {
-          fail(f.name, 'validation_max_number_constraint', 'Must be no greater than ${f.max}.');
+          fail(
+            f.name,
+            'validation_max_number_constraint',
+            'Must be no greater than ${f.max}.',
+          );
         }
         if (f.onlyInt && n != n.roundToDouble()) {
           fail(f.name, 'validation_invalid_value', 'Must be an integer.');
@@ -416,17 +450,29 @@ class DemoDb {
         case 'email':
           final text = '$value';
           if (f.min != null && text.length < f.min!) {
-            fail(f.name, 'validation_min_text_constraint', 'Must be at least ${f.min} character(s).');
+            fail(
+              f.name,
+              'validation_min_text_constraint',
+              'Must be at least ${f.min} character(s).',
+            );
           }
           if (f.max != null && f.max! > 0 && text.length > f.max!) {
-            fail(f.name, 'validation_max_text_constraint', 'Must be no more than ${f.max} character(s).');
+            fail(
+              f.name,
+              'validation_max_text_constraint',
+              'Must be no more than ${f.max} character(s).',
+            );
           }
           if (f.pattern != null && !RegExp(f.pattern!).hasMatch(text)) {
             fail(f.name, 'validation_invalid_format', 'Invalid value format.');
           }
           if (f.type == 'email' &&
               !RegExp(r'^[\w.+-]+@[\w-]+\.[\w.-]+$').hasMatch(text)) {
-            fail(f.name, 'validation_is_email', 'Must be a valid email address.');
+            fail(
+              f.name,
+              'validation_is_email',
+              'Must be a valid email address.',
+            );
           }
         case 'select':
           if (!(f.values ?? const []).contains('$value')) {
@@ -435,7 +481,11 @@ class DemoDb {
         case 'relation':
           for (final id in _ids(value)) {
             if (byId(f.collection!, id) == null) {
-              fail(f.name, 'validation_missing_rel_records', 'Failed to find all relation records.');
+              fail(
+                f.name,
+                'validation_missing_rel_records',
+                'Failed to find all relation records.',
+              );
             }
           }
         case 'date':
@@ -447,16 +497,21 @@ class DemoDb {
 
     for (final u in def.unique) {
       if (u.columns.any((c) => schema[collection]!.field(c) == null)) continue;
-      final values = [for (final c in u.columns) '${record[c] ?? ''}'.toLowerCase()];
+      final values = [
+        for (final c in u.columns) '${record[c] ?? ''}'.toLowerCase(),
+      ];
       if (u.nonEmpty && values.every((v) => v.isEmpty)) continue;
       final clash = _rows(collection).any(
         (other) =>
             other['id'] != record['id'] &&
-            [for (final c in u.columns) '${other[c] ?? ''}'.toLowerCase()]
-                    .join('|') ==
+            [
+                  for (final c in u.columns) '${other[c] ?? ''}'.toLowerCase(),
+                ].join('|') ==
                 values.join('|'),
       );
-      if (clash) fail(u.columns.first, 'validation_not_unique', 'Value must be unique.');
+      if (clash) {
+        fail(u.columns.first, 'validation_not_unique', 'Value must be unique.');
+      }
     }
 
     if (errors.isNotEmpty) {
@@ -473,7 +528,8 @@ class DemoDb {
         return auth.isAdmin || auth.isRegistrar;
       case 'appointments':
         if (auth.isAdmin || auth.isRegistrar) return true;
-        return auth.isDoctor && byId('doctors', '${r['doctor']}')?['user'] == auth.id;
+        return auth.isDoctor &&
+            byId('doctors', '${r['doctor']}')?['user'] == auth.id;
       case 'patients':
         if (auth.isAdmin || auth.isRegistrar) return true;
         return auth.isDoctor && _doctorHasPatient(auth, '${r['id']}');
@@ -485,13 +541,12 @@ class DemoDb {
     }
   }
 
-  bool _doctorHasPatient(DemoAuth auth, String patientId) => _rows(
-    'appointments',
-  ).any(
-    (a) =>
-        a['patient'] == patientId &&
-        byId('doctors', '${a['doctor']}')?['user'] == auth.id,
-  );
+  bool _doctorHasPatient(DemoAuth auth, String patientId) =>
+      _rows('appointments').any(
+        (a) =>
+            a['patient'] == patientId &&
+            byId('doctors', '${a['doctor']}')?['user'] == auth.id,
+      );
 
   bool canList(DemoAuth? auth, String collection, Map<String, dynamic> r) {
     if (collection == 'users') {
@@ -517,7 +572,8 @@ class DemoDb {
     final bool ok;
     switch (collection) {
       case 'users':
-        ok = auth.isAdmin ||
+        ok =
+            auth.isAdmin ||
             (action == 'update' &&
                 existing?['id'] == auth.id &&
                 !body.containsKey('role'));
@@ -529,7 +585,8 @@ class DemoDb {
         } else if (action == 'create') {
           ok = auth.isAdmin || auth.isRegistrar;
         } else {
-          ok = auth.isAdmin ||
+          ok =
+              auth.isAdmin ||
               auth.isRegistrar ||
               (auth.isDoctor &&
                   existing != null &&
@@ -544,10 +601,7 @@ class DemoDb {
         ok = auth.isAdmin;
     }
     if (!ok) {
-      throw const DemoError(
-        403,
-        'Only superusers can perform this action.',
-      );
+      throw const DemoError(403, 'Only superusers can perform this action.');
     }
   }
 
@@ -560,7 +614,9 @@ class DemoDb {
     final out = Map<String, dynamic>.from(record)
       ..remove('password')
       ..remove('tokenKey');
-    if (collection == 'users' && !(auth?.isAdmin ?? false) && out['id'] != auth?.id) {
+    if (collection == 'users' &&
+        !(auth?.isAdmin ?? false) &&
+        out['id'] != auth?.id) {
       out['email'] = '';
     }
     if (expand.trim().isNotEmpty) {
@@ -606,7 +662,11 @@ class DemoDb {
     return out;
   }
 
-  List<Object?> _resolve(String collection, Map<String, dynamic> record, String path) {
+  List<Object?> _resolve(
+    String collection,
+    Map<String, dynamic> record,
+    String path,
+  ) {
     var nodes = <(String, Map<String, dynamic>)>[(collection, record)];
     final parts = path.split('.');
     final values = <Object?>[];
@@ -676,7 +736,10 @@ class DemoDb {
         (record, path) => _resolve(collection, record, path),
       );
     } on FilterSyntaxException catch (e) {
-      throw DemoError(400, 'Something went wrong while processing your request. Invalid filter. ${e.message}');
+      throw DemoError(
+        400,
+        'Something went wrong while processing your request. Invalid filter. ${e.message}',
+      );
     }
     var items = [
       for (final r in _rows(collection))
@@ -697,7 +760,9 @@ class DemoDb {
           if (x is num && y is num) {
             order = x.compareTo(y);
           } else {
-            order = '${x ?? ''}'.toLowerCase().compareTo('${y ?? ''}'.toLowerCase());
+            order = '${x ?? ''}'.toLowerCase().compareTo(
+              '${y ?? ''}'.toLowerCase(),
+            );
           }
           if (order != 0) return desc ? -order : order;
         }
@@ -780,7 +845,9 @@ class DemoDb {
     if (record == null) {
       throw const DemoError(404, 'The requested resource wasn\'t found.');
     }
-    if (auth != null && !canView(auth, collection, record) && collection != 'users') {
+    if (auth != null &&
+        !canView(auth, collection, record) &&
+        collection != 'users') {
       throw const DemoError(404, 'The requested resource wasn\'t found.');
     }
     _requireWrite(auth, collection, 'update', record, body);
@@ -850,7 +917,8 @@ class DemoDb {
   }) {
     var total = 0;
     final parts = <String>[];
-    for (final (other, field, label) in _dependents[collection] ?? const <(String, String, String)>[]) {
+    for (final (other, field, label)
+        in _dependents[collection] ?? const <(String, String, String)>[]) {
       final count = _rows(other)
           .where(
             (o) =>
@@ -899,7 +967,8 @@ class DemoDb {
       'status',
       'deletedAt',
     ].any((f) => _changed(record, original, f));
-    final costChanged = _changed(record, original, 'services') ||
+    final costChanged =
+        _changed(record, original, 'services') ||
         _changed(record, original, 'patient');
     final start = DateTime.parse('${record['startAt']}'.replaceFirst(' ', 'T'));
     final end = DateTime.parse('${record['endAt']}'.replaceFirst(' ', 'T'));
@@ -927,13 +996,15 @@ class DemoDb {
       for (final id in _ids(record['services'])) {
         sum += doubleOf(byId('services', id)?['price']);
       }
-      final done = _rows('appointments').where(
-        (a) =>
-            a['patient'] == record['patient'] &&
-            a['status'] == 'done' &&
-            stringOf(a['deletedAt']).isEmpty &&
-            a['id'] != record['id'],
-      ).length;
+      final done = _rows('appointments')
+          .where(
+            (a) =>
+                a['patient'] == record['patient'] &&
+                a['status'] == 'done' &&
+                stringOf(a['deletedAt']).isEmpty &&
+                a['id'] != record['id'],
+          )
+          .length;
       final discount = done >= 10 ? 15 : (done >= 5 ? 10 : 0);
       record['discountPercent'] = discount;
       record['total'] = (sum * (100 - discount) / 100).roundToDouble();
@@ -949,7 +1020,9 @@ class DemoDb {
     final cabinet = stringOf(doctor?['cabinet']);
     String label(Map<String, dynamic> a) {
       String hm(Object? v) {
-        final d = DateTime.parse('$v'.replaceFirst(' ', 'T')).add(const Duration(hours: 3));
+        final d = DateTime.parse(
+          '$v'.replaceFirst(' ', 'T'),
+        ).add(const Duration(hours: 3));
         return '${d.hour.toString().padLeft(2, '0')}:${d.minute.toString().padLeft(2, '0')}';
       }
 
@@ -957,7 +1030,11 @@ class DemoDb {
     }
 
     final checks = <(String, String, bool Function(Map<String, dynamic>))>[
-      ('doctor', 'Врач занят в это время', (a) => a['doctor'] == record['doctor']),
+      (
+        'doctor',
+        'Врач занят в это время',
+        (a) => a['doctor'] == record['doctor'],
+      ),
       (
         'patient',
         'Пациент уже записан на это время',
@@ -1003,7 +1080,8 @@ class DemoDb {
       }
     }
     final rest = doubleOf(appointment['total']) - paid;
-    if (stringOf(record['deletedAt']).isEmpty && doubleOf(record['amount']) > rest) {
+    if (stringOf(record['deletedAt']).isEmpty &&
+        doubleOf(record['amount']) > rest) {
       throw DemoError(
         409,
         'Сумма оплат превышает стоимость приёма. Осталось оплатить: ${rest.toStringAsFixed(rest == rest.roundToDouble() ? 0 : 2)} ₽.',

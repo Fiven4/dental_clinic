@@ -49,7 +49,11 @@ class _ReportScreenState extends State<ReportScreen> {
       _error = null;
     });
     try {
-      final from = DateTime(widget.from.year, widget.from.month, widget.from.day);
+      final from = DateTime(
+        widget.from.year,
+        widget.from.month,
+        widget.from.day,
+      );
       final to = DateTime(widget.to.year, widget.to.month, widget.to.day + 1);
       final appointments = context.read<AppointmentRepository>();
       final payments = context.read<PaymentRepository>();
@@ -121,7 +125,9 @@ class _ReportScreenState extends State<ReportScreen> {
                 value: inputDate(widget.to),
                 onChanged: (v) {
                   final d = v == null ? null : parseInputDate(v);
-                  if (d != null) _go(widget.from.isAfter(d) ? d : widget.from, d);
+                  if (d != null) {
+                    _go(widget.from.isAfter(d) ? d : widget.from, d);
+                  }
                 },
               ),
               ActionChip(
@@ -137,7 +143,8 @@ class _ReportScreenState extends State<ReportScreen> {
               ActionChip(
                 key: const ValueKey('report-30'),
                 label: const Text('30 дней'),
-                onPressed: () => _go(now.subtract(const Duration(days: 29)), now),
+                onPressed: () =>
+                    _go(now.subtract(const Duration(days: 29)), now),
               ),
             ],
           ),
@@ -228,11 +235,23 @@ class _ReportBody extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Expanded(
-                    child: Column(children: [charts[0], const SizedBox(height: 12), charts[2]]),
+                    child: Column(
+                      children: [
+                        charts[0],
+                        const SizedBox(height: 12),
+                        charts[2],
+                      ],
+                    ),
                   ),
                   const SizedBox(width: 12),
                   Expanded(
-                    child: Column(children: [charts[1], const SizedBox(height: 12), charts[3]]),
+                    child: Column(
+                      children: [
+                        charts[1],
+                        const SizedBox(height: 12),
+                        charts[3],
+                      ],
+                    ),
                   ),
                 ],
               )

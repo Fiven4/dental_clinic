@@ -22,7 +22,10 @@ class NotFoundScreen extends StatelessWidget {
             children: [
               Text('404', style: Theme.of(context).textTheme.displayLarge),
               const SizedBox(height: 8),
-              Text('Адрес $location не существует', textAlign: TextAlign.center),
+              Text(
+                'Адрес $location не существует',
+                textAlign: TextAlign.center,
+              ),
               const SizedBox(height: 16),
               FilledButton(
                 key: const ValueKey('not-found-home'),

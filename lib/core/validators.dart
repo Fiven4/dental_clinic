@@ -108,7 +108,7 @@ class V {
     if (text.isEmpty) return null;
     final n = double.tryParse(text);
     if (n == null) return 'Введите число';
-    if (n <= 0) return 'Сумма должна быть больше нуля';
+    if (n < 1) return 'Сумма не меньше 1 ₽';
     if (n > max) return 'Слишком большая сумма';
     return null;
   };

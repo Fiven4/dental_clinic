@@ -26,9 +26,7 @@ class PatientCard {
   factory PatientCard.fromJson(Map<String, dynamic> json) => PatientCard(
     id: stringOf(json['id']),
     patientId: stringOf(json['patient']),
-    patientName: stringOf(
-      mapOf(mapOf(json['expand'])['patient'])['fullName'],
-    ),
+    patientName: stringOf(mapOf(mapOf(json['expand'])['patient'])['fullName']),
     number: stringOf(json['number']),
     allergies: stringOf(json['allergies']),
     notes: stringOf(json['notes']),

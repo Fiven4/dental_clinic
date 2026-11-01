@@ -15,12 +15,13 @@ class ServiceCategory {
 
   bool get isDeleted => deletedAt != null;
 
-  factory ServiceCategory.fromJson(Map<String, dynamic> json) => ServiceCategory(
-    id: stringOf(json['id']),
-    name: stringOf(json['name']),
-    description: stringOf(json['description']),
-    deletedAt: dateOf(json['deletedAt']),
-  );
+  factory ServiceCategory.fromJson(Map<String, dynamic> json) =>
+      ServiceCategory(
+        id: stringOf(json['id']),
+        name: stringOf(json['name']),
+        description: stringOf(json['description']),
+        deletedAt: dateOf(json['deletedAt']),
+      );
 
   Map<String, dynamic> toBody() => {'name': name, 'description': description};
 }

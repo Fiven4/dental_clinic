@@ -30,6 +30,25 @@ class AuthApi {
     }
   }
 
+  Future<void> register({
+    required String name,
+    required String email,
+    required String password,
+  }) async {
+    await guard(
+      () => _dio.post<dynamic>(
+        '/api/collections/users/records',
+        data: {
+          'name': name,
+          'email': email,
+          'password': password,
+          'passwordConfirm': password,
+          'emailVisibility': true,
+        },
+      ),
+    );
+  }
+
   Future<AuthSession> refresh() async {
     final response = await guard(
       () => _dio.post<dynamic>('/api/collections/users/auth-refresh'),

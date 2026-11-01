@@ -76,26 +76,27 @@ void main() {
     expect(find.text('Неверная почта или пароль.'), findsOneWidget);
   });
 
-  testWidgets('роль врача: после входа открывается «Мой приём» без админских разделов', (
-    tester,
-  ) async {
-    final h = await pumpApp(tester, location: '/login');
-    await tester.enterText(
-      find.byKey(const ValueKey('login-email')),
-      _doctor.$1,
-    );
-    await tester.enterText(
-      find.byKey(const ValueKey('login-password')),
-      _doctor.$2,
-    );
-    await tester.tap(find.byKey(const ValueKey('login-submit')));
-    await tester.pumpAndSettle();
-    expect(h.location, startsWith('/my-day'));
-    expect(find.byKey(const ValueKey('nav-mySchedule')), findsOneWidget);
-    expect(find.byKey(const ValueKey('nav-users')), findsNothing);
-    expect(find.byKey(const ValueKey('nav-report')), findsNothing);
-    expect(find.byKey(const ValueKey('nav-cash')), findsNothing);
-  });
+  testWidgets(
+    'роль врача: после входа открывается «Мой приём» без админских разделов',
+    (tester) async {
+      final h = await pumpApp(tester, location: '/login');
+      await tester.enterText(
+        find.byKey(const ValueKey('login-email')),
+        _doctor.$1,
+      );
+      await tester.enterText(
+        find.byKey(const ValueKey('login-password')),
+        _doctor.$2,
+      );
+      await tester.tap(find.byKey(const ValueKey('login-submit')));
+      await tester.pumpAndSettle();
+      expect(h.location, startsWith('/my-day'));
+      expect(find.byKey(const ValueKey('nav-mySchedule')), findsOneWidget);
+      expect(find.byKey(const ValueKey('nav-users')), findsNothing);
+      expect(find.byKey(const ValueKey('nav-report')), findsNothing);
+      expect(find.byKey(const ValueKey('nav-cash')), findsNothing);
+    },
+  );
 
   testWidgets('прямая ссылка на закрытый раздел даёт страницу 403', (
     tester,
@@ -233,5 +234,55 @@ void main() {
     expect(find.text('1 ч 15 мин'), findsOneWidget);
     expect(find.textContaining('4 000'), findsWidgets);
     expect(find.byKey(const ValueKey('preview-conflict')), findsOneWidget);
+  });
+
+  testWidgets('регистрация: занятая почта показывается у поля', (tester) async {
+    await pumpApp(tester, location: '/register');
+    await tester.enterText(
+      find.byKey(const ValueKey('register-name')),
+      'Новый Сотрудник',
+    );
+    await tester.enterText(
+      find.byKey(const ValueKey('register-email')),
+      _admin.$1,
+    );
+    await tester.enterText(
+      find.byKey(const ValueKey('register-password')),
+      'Password123',
+    );
+    await tester.enterText(
+      find.byKey(const ValueKey('register-confirm')),
+      'Password123',
+    );
+    await tester.tap(find.byKey(const ValueKey('register-submit')));
+    await tester.pumpAndSettle();
+    expect(find.text('Такое значение уже используется'), findsOneWidget);
+  });
+
+  testWidgets('регистрация: новая учётная запись получает роль регистратора', (
+    tester,
+  ) async {
+    final h = await pumpApp(tester, location: '/register');
+    await tester.enterText(
+      find.byKey(const ValueKey('register-name')),
+      'Новый Сотрудник',
+    );
+    await tester.enterText(
+      find.byKey(const ValueKey('register-email')),
+      'fresh@clinic.test',
+    );
+    await tester.enterText(
+      find.byKey(const ValueKey('register-password')),
+      'Password123',
+    );
+    await tester.enterText(
+      find.byKey(const ValueKey('register-confirm')),
+      'Password123',
+    );
+    await tester.tap(find.byKey(const ValueKey('register-submit')));
+    await tester.pumpAndSettle();
+    expect(h.location, startsWith('/schedule'));
+    expect(find.byKey(const ValueKey('nav-cash')), findsOneWidget);
+    expect(find.byKey(const ValueKey('nav-users')), findsNothing);
   });
 }
